@@ -107,7 +107,7 @@ def add_parts_grid(canvas: Image.Image, item: dict, font, make_detail_icon) -> N
 
     draw = ImageDraw.Draw(canvas)
     draw.rectangle((0, 1140, 1600, 1500), fill=(255, 246, 205), outline=(77, 58, 39), width=4)
-    draw.text((58, 1150), "颗粒明细  EXCEL编号 × 数量", font=font(20, True), fill=(42, 45, 48))
+    draw.text((58, 1150), "颗粒明细", font=font(20, True), fill=(42, 45, 48))
 
     columns = grid_columns(type_count)
     gap_x, gap_y = 12, 8
