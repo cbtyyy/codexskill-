@@ -4,13 +4,15 @@ import argparse
 from pathlib import Path
 
 import numpy as np
-from PIL import Image, ImageDraw, ImageEnhance, ImageFilter
+from PIL import Image, ImageChops, ImageDraw, ImageEnhance, ImageFilter, ImageFont
 
 
 SKILL_ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_MASTER = SKILL_ROOT / "assets" / "approved-color-box-master.png"
 DEFAULT_FRONT_QUAD = ((129, 84), (1087, 69), (1087, 690), (129, 738))
 PANEL_SIZE = (1920, 1260)
+IMPACT_FONT = Path("C:/Windows/Fonts/impact.ttf")
+ARIAL_BOLD_FONT = Path("C:/Windows/Fonts/arialbd.ttf")
 
 
 def parse_points(value: str, count: int) -> tuple[tuple[int, int], ...]:
@@ -88,6 +90,98 @@ def extract_age_badge(master: Image.Image, box: tuple[int, int, int, int]) -> Im
     mask = mask.filter(ImageFilter.MaxFilter(3)).filter(ImageFilter.GaussianBlur(0.35))
     crop.putalpha(mask)
     return crop_alpha(crop)
+
+
+def shifted_mask(mask: Image.Image, x: int, y: int) -> Image.Image:
+    shifted = Image.new("L", mask.size, 0)
+    shifted.paste(mask, (x, y))
+    return shifted
+
+
+def metallic_text_line(text: str, font_size: int) -> Image.Image:
+    font = ImageFont.truetype(str(IMPACT_FONT), font_size)
+    left, top, right, bottom = font.getbbox(text)
+    padding = 34
+    extrusion = 20
+    size = (right - left + padding * 2 + extrusion, bottom - top + padding * 2 + extrusion)
+    origin = (padding - left, padding - top)
+    face_mask = Image.new("L", size, 0)
+    ImageDraw.Draw(face_mask).text(origin, text, font=font, fill=255)
+
+    result = Image.new("RGBA", size, (0, 0, 0, 0))
+    draw = ImageDraw.Draw(result)
+    for depth in range(extrusion, 0, -2):
+        draw.text(
+            (origin[0] + depth, origin[1] + depth),
+            text,
+            font=font,
+            fill=(47, 51, 52, 255),
+            stroke_width=13,
+            stroke_fill=(16, 20, 24, 255),
+        )
+    draw.text(
+        origin,
+        text,
+        font=font,
+        fill=(150, 154, 154, 255),
+        stroke_width=13,
+        stroke_fill=(18, 23, 28, 255),
+    )
+
+    gradient = Image.new("RGBA", size, (0, 0, 0, 0))
+    gradient_draw = ImageDraw.Draw(gradient)
+    face_top = max(0, top + origin[1])
+    face_bottom = min(size[1] - 1, bottom + origin[1])
+    for y in range(face_top, face_bottom + 1):
+        ratio = (y - face_top) / max(1, face_bottom - face_top)
+        if ratio < 0.28:
+            local = ratio / 0.28
+            start, end = (232, 235, 231), (181, 186, 185)
+        else:
+            local = (ratio - 0.28) / 0.72
+            start, end = (181, 186, 185), (103, 108, 110)
+        value = tuple(round(start[index] * (1 - local) + end[index] * local) for index in range(3))
+        gradient_draw.line((0, y, size[0], y), fill=(*value, 255))
+    result.alpha_composite(Image.composite(gradient, Image.new("RGBA", size), face_mask))
+
+    top_edge = ImageChops.subtract(face_mask, shifted_mask(face_mask, 0, 4))
+    highlight = Image.new("RGBA", size, (244, 246, 240, 0))
+    highlight.putalpha(top_edge.point(lambda value: round(value * 0.78)))
+    result.alpha_composite(highlight)
+    return crop_alpha(result)
+
+
+def make_metallic_title() -> Image.Image:
+    first = metallic_text_line("MAGNETIC", 164)
+    second = metallic_text_line("CUBE", 184)
+    width = max(first.width, second.width)
+    group = Image.new("RGBA", (width, first.height + second.height - 22), (0, 0, 0, 0))
+    group.alpha_composite(first, (0, 0))
+    group.alpha_composite(second, (8, first.height - 22))
+    group.thumbnail((650, 330), Image.Resampling.LANCZOS)
+    return group
+
+
+def make_age_badge() -> Image.Image:
+    size = (168, 136)
+    badge = Image.new("RGBA", size, (0, 0, 0, 0))
+    draw = ImageDraw.Draw(badge)
+    draw.rounded_rectangle((4, 4, 163, 131), radius=19, fill=(255, 255, 248, 255))
+    draw.rounded_rectangle((14, 14, 153, 121), radius=14, fill=(246, 164, 17, 255))
+    font = ImageFont.truetype(str(ARIAL_BOLD_FONT), 78)
+    text = "3+"
+    box = draw.textbbox((0, 0), text, font=font, stroke_width=1)
+    x = (size[0] - (box[2] - box[0])) // 2 - box[0]
+    y = (size[1] - (box[3] - box[1])) // 2 - box[1] - 2
+    draw.text(
+        (x, y),
+        text,
+        font=font,
+        fill=(255, 255, 255, 255),
+        stroke_width=1,
+        stroke_fill=(255, 255, 255, 255),
+    )
+    return badge
 
 
 def make_panel_sky(size: tuple[int, int]) -> Image.Image:
@@ -190,9 +284,8 @@ def build_panel(
     panel = make_panel_sky(PANEL_SIZE)
     draw_integrated_frame(panel)
 
-    title = extract_dark_art(master, title_crop)
-    title = title.resize((560, round(title.height * 560 / title.width)), Image.Resampling.LANCZOS)
-    panel.alpha_composite(title, (150, 135))
+    title = make_metallic_title()
+    panel.alpha_composite(title, (145, 118))
 
     scene = crop_alpha(Image.open(scene_path))
     alpha = scene.getchannel("A")
@@ -221,9 +314,8 @@ def build_panel(
     panel.alpha_composite(scene, (scene_x, scene_y))
 
     if include_age:
-        age_badge = extract_age_badge(master, age_crop)
-        age_badge.thumbnail((112, 112), Image.Resampling.LANCZOS)
-        panel.alpha_composite(age_badge, (1640, 238))
+        age_badge = make_age_badge()
+        panel.alpha_composite(age_badge, (1518, 207))
 
     lighting = Image.new("RGBA", PANEL_SIZE, (0, 0, 0, 0))
     lighting_draw = ImageDraw.Draw(lighting)

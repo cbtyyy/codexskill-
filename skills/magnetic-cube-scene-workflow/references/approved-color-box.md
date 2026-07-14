@@ -30,6 +30,12 @@ catalog sheet. Reuse the approved transparent asset exactly.
   checkerboard.
 - Keep `3+` fully inside the blue display area. Do not show a PCS badge on this
   approved universal front.
+- Draw `MAGNETIC CUBE` as a two-line silver-gray dimensional block logo: dark
+  outer stroke, deep lower-right extrusion, light top highlight, and a
+  light-to-dark metallic face. Do not upscale the former flat black title.
+- Draw the enlarged `3+` badge from clean vector shapes: white outer border,
+  orange rounded square, and centered bold white text. Keep visible blue space
+  between the badge and the right green frame.
 - Insert the exact locked Blender scene render. Do not regenerate the scene with
   an image model and do not alter cube geometry, spacing, or face artwork.
 - Apply color, contrast, print softness, and right-side lighting to the complete
@@ -75,4 +81,3 @@ Inspect at 200-400% before delivery:
 - No detached green blocks inside the blue field.
 - No halo around the transparent catalog cutout.
 - The downscaled package remains readable without oversharpened pixel edges.
-
