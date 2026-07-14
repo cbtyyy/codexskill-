@@ -38,6 +38,16 @@ catalog sheet. Reuse the approved transparent asset exactly.
   between the badge and the right green frame.
 - Insert the exact locked Blender scene render. Do not regenerate the scene with
   an image model and do not alter cube geometry, spacing, or face artwork.
+- Size the SKU scene with alpha-mask collision detection, not one fixed
+  rectangular thumbnail box. Search for the largest placement that keeps the
+  actual visible pixels clear of the title, PCS/size block, age badge, and STEM
+  footer. Tall and wide scenes must therefore receive different placements.
+- Reject any package where the scene is merely reduced to avoid overlap while
+  unused irregular space remains beside the fixed information blocks.
+- The five lower-right STEM swatches are SKU-specific. Select five visually
+  significant material families from the actual scene, then sample their final
+  front-face textures. Never use the generic fallback palette for a production
+  SKU, and do not let raw PCS ranking omit a theme-defining color.
 - Apply color, contrast, print softness, and right-side lighting to the complete
   front panel, not to individual fragments.
 
@@ -84,3 +94,6 @@ Inspect at 200-400% before delivery:
   studio floor/shadow, store zero RGB in fully transparent pixels, and be
   resized in premultiplied-alpha mode before catalog composition.
 - The downscaled package remains readable without oversharpened pixel edges.
+- The lower-right swatches visibly match colors present in the package scene;
+  different themes must not show the same fixed swatch row unless their sampled
+  materials are genuinely identical.

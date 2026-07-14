@@ -49,7 +49,9 @@ Use this as the default for future magnetic-cube scene/SKU image requests.
 - Heading: `颗粒明细`. Do not append `EXCEL编号 × 数量`.
 - Grid: `6 columns x 2 rows` for 12 types. For 13-15 types, use `8+5`, `7+7`, or `8+7` while preserving readable icon size; never exceed two rows.
 - Each detail icon is the same canonical clean 3D cube silhouette, not independently cropped.
-- Excel number sits at the cell's upper-left.
+- Source-aware Excel number sits at the cell's upper-left. In mixed-library
+  work it must read `表1-<编号>` or `表2-<编号>`; never show a bare number that
+  leaves the source table ambiguous.
 - `×quantity` sits centered directly below the cube, never at the cell's left edge.
 - Sum of all detail quantities must equal displayed PCS exactly.
 

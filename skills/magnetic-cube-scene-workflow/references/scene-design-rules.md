@@ -214,10 +214,13 @@ When PCS is 120-169, use one primary element plus one support element. When PCS 
 
 ## Aesthetic-First PCS Rule
 
+- When PCS is unspecified, `80-200 PCS` is a feasibility range, not a target.
 - PCS is an output of the approved scene, not a quota that the model must fill. Stop adding cubes when the hero silhouette, supporting structure, character story, and foreground rhythm are complete.
 - Never consume a requested range by extending the base, building a gift row, stacking generic walls, repeating decorations, or adding hidden support cubes without visible semantic value.
 - After the scene passes visual review, count the actual cubes and propagate that exact number to the badge, parts detail, package, dimensions, weights, and carton calculations.
 - Different themes in the same batch may have different PCS. Visual quality and theme readability take precedence over matching counts.
+- Select support-element count from visual need: normally one primary silhouette plus one support element below 120 PCS, one or two supports at 120-159 PCS, and up to three supports at 160-200 PCS only when each support improves recognition or story. These are soft limits; delete a support that weakens the composition.
+- Do not start batch production from a requested theme list. First complete and approve one full sample through particle sheet, geometry audit, raw scene, detail panel, and package-scene color matching.
 
 ## Anti-Template Layout Gate
 
@@ -227,6 +230,17 @@ When PCS is 120-169, use one primary element plus one support element. When PCS 
 - Figure placement is selected from the scene story and camera visibility, not fixed slots. Prefer a mixed arrangement: at least one figure integrated near the hero structure, one figure near a secondary element or in the midground, and an optional foreground figure used only when it does not shrink or obscure the scene.
 - Vary character depth, lateral position, and relationship to the subject between themes. Do not reuse the same left/center/right coordinates across a batch.
 - Before publishing two or more scenes, compare their black silhouettes and figure-position maps. If they still look interchangeable without textures, rebuild one scene before rendering catalog sheets.
+- Compare every new scene against the recent approved templates with textures hidden. Reject it when the same base contour, hero position, height peak, open-space map, or figure map can be recognized as a recolored previous scene.
+- Every mature theme must have all three assets before batch use: a clear hero silhouette, a dedicated six-face particle family, and a tested structural model template. Screen out the theme when any one is missing and a strong result cannot be built without generic filler.
+
+## Cross-Theme Buyer Acceptance Gate
+
+- Hide all titles and PCS labels. A buyer must identify the scene category and its main action or location within one glance. Color alone does not count as identification.
+- The largest visual mass must be the theme hero. Secondary elements must frame or explain it rather than compete with it.
+- Characters must perform theme-specific jobs and occupy camera-visible story positions. Do not reuse a generic cast, expression set, or fixed foreground lineup across themes.
+- Check the final production camera for complete hero silhouette, complete faces, readable doors/windows/symbols, and no overlap from detail panels, box art, badges, or dimension lines.
+- Tune color by material family, not by one global saturation multiplier. Match the scene and package-scene front faces to the detail icons while preserving natural directional side shading; never accept a gray side film or milky top film.
+- Publish only after geometry and presentation both pass: identical cube size, integer-grid alignment, one connected scene component unless a separate figure is intentional, no duplicates, no enclosed invisible filler, exact parts sum, and no visually unexplained cubes.
 
 ## User-View Quality
 

@@ -121,6 +121,24 @@ def add_2cm_icon(canvas: Image.Image, font, make_detail_icon) -> None:
     draw.text((line_x, y - 22), "2CM", font=font(24, True), fill=(42, 45, 43, 255), anchor="mm")
 
 
+def detail_label(detail: dict) -> str:
+    if detail.get("detail_label"):
+        return str(detail["detail_label"])
+    particle_key = detail.get("key") or detail.get("particle_key")
+    if isinstance(particle_key, str) and ":" in particle_key:
+        library_id, source_id = particle_key.split(":", 1)
+        if library_id == "table1":
+            return f"表1-{source_id}"
+        if library_id == "table2":
+            return f"表2-{source_id}"
+    sku = detail["sku"]
+    return f"{sku:03d}" if isinstance(sku, int) else str(sku)
+
+
+def detail_icon_key(detail: dict):
+    return detail.get("icon_key") or detail.get("key") or detail.get("particle_key") or detail["sku"]
+
+
 def add_parts_grid(canvas: Image.Image, item: dict, font, make_detail_icon) -> None:
     details = item["sku_counts"]
     type_count = len(details)
@@ -144,8 +162,8 @@ def add_parts_grid(canvas: Image.Image, item: dict, font, make_detail_icon) -> N
         x = start_x + column * (cell_w + gap_x)
         y = start_y + row * (cell_h + gap_y)
         draw.rectangle((x, y, x + cell_w, y + cell_h), fill=(255, 239, 188), outline=(91, 61, 35), width=3)
-        draw.text((x + 8, y + 5), f"{detail['sku']:03d}", font=font(17, True), fill=(72, 50, 31))
-        icon = make_detail_icon(detail["sku"], 82)
+        draw.text((x + 8, y + 5), detail_label(detail), font=font(17, True), fill=(72, 50, 31))
+        icon = make_detail_icon(detail_icon_key(detail), 82)
         canvas.alpha_composite(icon, (x + (cell_w - icon.width) // 2, y + 24))
         count = f"×{detail['count']}"
         count_font = font(20, True)

@@ -17,7 +17,7 @@ Use this skill to produce wholesale-ready magnetic cube scene assets. The output
   hue-matched printed perimeter; never use a visible gap or contact-shadow band
   to simulate the seam.
 - Cube count must match the displayed PCS exactly. If PCS is not specified,
-  finish the scene first, keep the result within 60-200 PCS, then display the
+  finish the scene first, keep the result within 80-200 PCS, then display the
   actual modeled count; never add filler only to reach a preset number.
 - The buyer must understand the scene without reading the scene name.
 - Use the competitor folder as the quality benchmark: `D:/Users/Administrator/Desktop/磁力方块场景/`.
@@ -26,6 +26,14 @@ Use this skill to produce wholesale-ready magnetic cube scene assets. The output
   Use Excel cells for formal IDs and the factory overview for pattern/color
   review. Never map workbook images by drawing order or load a perspective
   thumbnail crop as a cube material.
+- For the current two-table factory catalog, read
+  `references/dual-factory-particle-libraries.md` and use
+  `assets/dual_factory_library/` as the authoritative source. Keep every key
+  namespaced as `table1:<source-id>` or `table2:<source-id>`; never merge two
+  particles because their numbers or artwork look the same.
+- Mixed-library scenes are allowed. Every parts-detail cell must show the
+  source-aware label from the manifest, such as `表1-026` or `表2-026`, with
+  `×quantity` centered below the cube. A bare `026` is invalid in a mixed scene.
 - Keep the scene, parts-detail icons, and color-box scene visually consistent.
 - Keep side-face ink close to the approved front-face color. Create depth with
   balanced diffuse lighting and a thin edge shadow, never a gray side overlay
@@ -46,7 +54,7 @@ Use this skill to produce wholesale-ready magnetic cube scene assets. The output
 For scene pictures, SKU images, catalog sheets, “这种图片”, or requests to generate another theme in the same style:
 
 1. Read [references/approved-catalog-template.md](references/approved-catalog-template.md).
-2. Read [references/factory-particle-library.md](references/factory-particle-library.md) and validate the locked manifest before rendering.
+2. Read [references/dual-factory-particle-libraries.md](references/dual-factory-particle-libraries.md) for two-table work, or [references/factory-particle-library.md](references/factory-particle-library.md) for the legacy locked set, and validate the selected manifest before rendering.
 3. Use [assets/approved-catalog-template.png](assets/approved-catalog-template.png) as the visual acceptance target.
 4. Compose with `scripts/compose_approved_catalog_sheet.py`; do not restart background/layout exploration unless the user explicitly asks.
 5. Treat packaging as a separate optional workflow. Do not produce color boxes when the request is only for scene/SKU images.
@@ -66,10 +74,15 @@ For color-box creation or catalog insertion:
 
 1. Clarify the task type:
    - For scene generation or optimization, read `references/scene-design-rules.md`.
+   - For pirate or engineering themes, also read `references/pirate-engineer-templates.md` and start from the approved particle-first structural templates instead of recoloring another scene.
    - For local rendering commands and script locations, read `references/local-workflow.md`.
    - For color box composition, read `references/approved-color-box.md`.
    - For carton, weight, quantity, and package-size calculations, read `references/packaging-formulas.md`.
 2. Choose themes from the Excel table or user-specified topic. Prefer themes with clear buildable core elements.
+   - In two-table work, select particles by the manifest `key`, not by a bare
+     numeric ID. The same source number may legally exist in both tables.
+   - Use `scripts/dual_library_materials_blender.py` to install the selected
+     namespaced six-face materials into the scene builder.
 3. For a new theme family, use the particle-first gate before scene modeling:
    - Reuse an existing face from `assets/locked_factory_faces_v2/` whenever its SKU is listed in the approved manifest.
    - List every required structural, semantic, prop, and character particle.
@@ -96,7 +109,7 @@ For color-box creation or catalog insertion:
    - Aesthetic clarity beats using every listed element.
 7. If PCS is unspecified, use aesthetic-count mode (`MAGNETIC_AESTHETIC_PCS=1`)
    with a soft planning cap. Complete the silhouette, support element and props,
-   skip generic target filling, then use the actual 60-200 PCS result.
+   skip generic target filling, then use the actual 80-200 PCS result.
 8. Build a model-based scene around one primary silhouette. Add support elements only when they improve recognizability.
 9. For each theme, apply the archetype template before filling PCS. Fillers must stay subordinate to the main silhouette.
 10. Render and compose catalog sheets. Parts details and color-box scenes must reuse the exact locked particle textures and final scene render.
@@ -136,6 +149,8 @@ Before final response, check:
   package. Resize RGBA package assets in premultiplied-alpha mode so transparent
   white RGB or studio-floor shadow cannot bleed onto the blue catalog.
 - Sum of all parts-detail quantities equals PCS.
+- Every mixed-library detail label begins with `表1-` or `表2-` and resolves to
+  exactly one manifest record. Never infer the source from color or artwork.
 - Same cube size, no big/small cube.
 - No cube misalignment.
 - Grid audit reports zero fractional coordinates, one identical cube edge
