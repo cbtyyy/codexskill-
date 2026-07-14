@@ -17,10 +17,15 @@ Use this skill to produce wholesale-ready magnetic cube scene assets. The output
   hue-matched printed perimeter; never use a visible gap or contact-shadow band
   to simulate the seam.
 - Cube count must match the displayed PCS exactly. If PCS is not specified,
-  finish the scene first, keep the result within 100-200 PCS, then display the
+  finish the scene first, keep the result within 60-200 PCS, then display the
   actual modeled count; never add filler only to reach a preset number.
 - The buyer must understand the scene without reading the scene name.
 - Use the competitor folder as the quality benchmark: `D:/Users/Administrator/Desktop/磁力方块场景/`.
+- For factory SKU work, read `references/factory-particle-library.md` and use
+  `assets/locked_factory_faces_v1/` as the authoritative runtime texture source.
+  Use Excel cells for formal IDs and the factory overview for pattern/color
+  review. Never map workbook images by drawing order or load a perspective
+  thumbnail crop as a cube material.
 - Keep the scene, parts-detail icons, and color-box scene visually consistent.
 - Keep side-face ink close to the approved front-face color. Create depth with
   balanced diffuse lighting and a thin edge shadow, never a gray side overlay
@@ -41,10 +46,11 @@ Use this skill to produce wholesale-ready magnetic cube scene assets. The output
 For scene pictures, SKU images, catalog sheets, “这种图片”, or requests to generate another theme in the same style:
 
 1. Read [references/approved-catalog-template.md](references/approved-catalog-template.md).
-2. Use [assets/approved-catalog-template.png](assets/approved-catalog-template.png) as the visual acceptance target.
-3. Compose with `scripts/compose_approved_catalog_sheet.py`; do not restart background/layout exploration unless the user explicitly asks.
-4. Treat packaging as a separate optional workflow. Do not produce color boxes when the request is only for scene/SKU images.
-5. Reject delivery if the sheet has fewer than 12 or more than 15 SKU types, a figure is larger than a scene cube, any `×quantity` label is not centered below its cube, or the detail panel exceeds the approved bottom area.
+2. Read [references/factory-particle-library.md](references/factory-particle-library.md) and validate the locked manifest before rendering.
+3. Use [assets/approved-catalog-template.png](assets/approved-catalog-template.png) as the visual acceptance target.
+4. Compose with `scripts/compose_approved_catalog_sheet.py`; do not restart background/layout exploration unless the user explicitly asks.
+5. Treat packaging as a separate optional workflow. Do not produce color boxes when the request is only for scene/SKU images.
+6. Reject delivery if the sheet has fewer than 12 or more than 15 SKU types, a figure is larger than a scene cube, any `×quantity` label is not centered below its cube, or the detail panel exceeds the approved bottom area.
 
 ## Approved Color Box
 
@@ -65,12 +71,13 @@ For color-box creation or catalog insertion:
    - For carton, weight, quantity, and package-size calculations, read `references/packaging-formulas.md`.
 2. Choose themes from the Excel table or user-specified topic. Prefer themes with clear buildable core elements.
 3. For a new theme family, use the particle-first gate before scene modeling:
+   - Reuse an existing face from `assets/locked_factory_faces_v1/` whenever its SKU is listed in the approved manifest.
    - List every required structural, semantic, prop, and character particle.
    - Draw and lock separate `left`, `front`, `right`, `back`, `top`, and
      `bottom` artwork for each particle. New theme families must not reuse one
      generic side texture for all lateral faces.
    - Render every particle as one identical 3D cube and review the unit-cube contact sheet.
-   - Save the approved set as a versioned particle manifest. Scene code may reference only manifest materials.
+   - Save the approved set as a versioned particle manifest with relative paths and SHA-256 hashes. Scene code may reference only manifest materials.
    - If modeling reveals a missing particle, return to the particle library, add and re-audit it; never draw an improvised texture inside the scene stage.
    - Mix natural, clean graphic, and illustrated particles according to the theme. Do not force the entire set into pixel art.
 4. Before changing a reusable material family, isolate competitor detail cubes
@@ -89,7 +96,7 @@ For color-box creation or catalog insertion:
    - Aesthetic clarity beats using every listed element.
 7. If PCS is unspecified, use aesthetic-count mode (`MAGNETIC_AESTHETIC_PCS=1`)
    with a soft planning cap. Complete the silhouette, support element and props,
-   skip generic target filling, then use the actual 100-200 PCS result.
+   skip generic target filling, then use the actual 60-200 PCS result.
 8. Build a model-based scene around one primary silhouette. Add support elements only when they improve recognizability.
 9. For each theme, apply the archetype template before filling PCS. Fillers must stay subordinate to the main silhouette.
 10. Render and compose catalog sheets. Parts details and color-box scenes must reuse the exact locked particle textures and final scene render.
@@ -114,7 +121,7 @@ Aim for the competitor median brightness range, not raw overexposure:
 - Put generated files on the desktop under `D:/Users/Administrator/Desktop/生成的场景图/` unless the user specifies otherwise.
 - For batches, separate scene-only images and catalog sheets into subfolders.
 - Use Chinese scene names on catalog sheets; use English-style clean packaging copy on color boxes.
-- Catalog sheet size defaults to `2400x1650` unless the user chooses another resolution.
+- Catalog sheet size defaults to the approved `1600x1500` template unless the user chooses another resolution.
 - Include PCS badge, Chinese scene name, 20mm cube icon on catalog sheets.
 - Use `0.79 IN` on color boxes for foreign-facing size labeling.
 
@@ -123,6 +130,8 @@ Aim for the competitor median brightness range, not raw overexposure:
 Before final response, check:
 
 - Exact PCS count.
+- `scripts/validate_locked_factory_faces.py` passes with `64` SKUs, `192`
+  `512x512` RGB files, and no SHA-256 mismatch before factory-library rendering.
 - Sum of all parts-detail quantities equals PCS.
 - Same cube size, no big/small cube.
 - No cube misalignment.

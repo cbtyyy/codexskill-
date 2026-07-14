@@ -1,4 +1,4 @@
 interface:
   display_name: "厂图搭建场景"
   short_description: "按厂图Excel颗粒生成真3D磁力方块场景与商品资料图。"
-  default_prompt: "使用 $magnetic-cube-scene-workflow 按固定蓝色资料图模板生成磁力方块场景：统一20mm方块、12-15种Excel颗粒、实际PCS、右上场景名与PCS、明细数量居中在方块下方。"
+  default_prompt: "使用 $magnetic-cube-scene-workflow 和已锁定厂图重画贴图库，按固定蓝色资料图模板生成磁力方块场景：统一20mm方块、12-15种Excel编号颗粒、实际PCS、右上场景名与PCS、明细数量居中在方块下方。"

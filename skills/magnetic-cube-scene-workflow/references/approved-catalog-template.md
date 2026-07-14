@@ -25,7 +25,9 @@ Use this as the default for future magnetic-cube scene/SKU image requests.
 - Keep integer grid coordinates, one-unit edge length, zero duplicates, and line-to-line connections.
 - Show exactly one connected main scene. Only complete one-/two-cube figures may be detached.
 - Use the approved near-frontal three-quarter camera; no extreme side angle.
-- Preserve factory color/pattern. Reconstruct clean square face textures from the Excel reference; never paste the whole thumbnail or its gray shadow.
+- Preserve factory color/pattern. For approved factory SKUs, load the exact file
+  from `assets/locked_factory_faces_v1/` and its manifest. Never paste the whole
+  Excel/factory thumbnail, its perspective cube, gray shadow, or background.
 - When the user asks to show the approved universal color box, reserve the lower-right package area and pass `assets/approved-universal-color-box-cutout.png` to `scripts/compose_approved_catalog_sheet.py --color-box`. Do not redraw or re-cut the package.
 
 ## Particle Variety
@@ -54,6 +56,8 @@ Use this as the default for future magnetic-cube scene/SKU image requests.
 ## Color And Pattern QA
 
 - Use one tone profile for scene and detail icons.
+- Scene cubes and detail icons must resolve to the same locked face paths and
+  pass `scripts/validate_locked_factory_faces.py` before composition.
 - Keep color vivid but not neon; no gray side overlay or milky highlight veil.
 - Check faces with strong geometry: character eyes/mouth, chest bands, gift ribbons, bookshelves, furnaces, doors, glass grids, and wood planks.
 - Horizontal artwork must remain horizontal after face rectification.
