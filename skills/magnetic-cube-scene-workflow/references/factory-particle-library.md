@@ -1,18 +1,18 @@
-# Factory Particle Library V1
+# Factory Particle Library V2
 
 This is the approved runtime texture source for factory magnetic-cube scenes.
 
 ## Authoritative Files
 
-- Face textures: `assets/locked_factory_faces_v1/`
+- Face textures: `assets/locked_factory_faces_v2/`
 - Portable Excel SKU metadata, file paths, and SHA-256 hashes:
-  `references/locked-factory-faces-v1.json`
-- Factory-to-redraw review sheet: `assets/locked-factory-face-contact-sheet.png`
+  `references/locked-factory-faces-v2.json`
+- Factory-to-redraw review sheet: `assets/locked-factory-face-contact-sheet-v2.png`
 - Rebuild entry point: `scripts/build_locked_factory_faces.py`
 - Blender material loader: `scripts/locked_sku_materials_blender.py`
 - Integrity check: `scripts/validate_locked_factory_faces.py`
 
-The approved V1 set contains `64` Excel-confirmed SKU IDs and `192` RGB face
+The approved V2 set contains `64` Excel-confirmed SKU IDs and `192` RGB face
 textures. Each SKU has one `512 x 512` `top`, `side`, and `front` file. The
 manifest preserves the Excel name/size where those cells are populated; IDs
 `166`, `176`, `180`, `181`, `182`, `184`, and `185` are explicitly marked
@@ -27,7 +27,10 @@ manifest preserves the Excel name/size where those cells are populated; IDs
   a reliable SKU key.
 - Factory overview crops may appear only in the review contact sheet. They must
   never be loaded as Blender materials.
-- Runtime faces are procedurally redrawn square artwork. They are not
+- Runtime faces are procedurally redrawn square artwork. Natural materials use
+  a conservative multiscale print finish: 70% crisp base geometry, 30% softened
+  transition, plus a finer 64-cell grain. Exact character and prop geometry does
+  not receive the natural finish. The faces are not
   perspective crops, thumbnail cutouts, competitor pixels, or AI-generated
   texture guesses.
 - The raw Excel workbook and raw factory overview are private source materials.
@@ -35,7 +38,7 @@ manifest preserves the Excel name/size where those cells are populated; IDs
 
 ## Runtime Rules
 
-- If a requested SKU exists in V1, use its locked files without redrawing or
+- If a requested SKU exists in V2, use its locked files without redrawing or
   color substitution.
 - Scene cubes, parts-detail cubes, and color-box scenes must load the same file
   paths from the manifest.
@@ -43,7 +46,8 @@ manifest preserves the Excel name/size where those cells are populated; IDs
   They must use the same geometry and scale as every structural cube.
 - Put the complete buyer-facing figure artwork toward the production camera.
 - Do not use old `sku_faces`, `traced_faces`, `redrawn_faces`, or direct Excel
-  image extraction after the V1 library is available.
+  image extraction after the V2 library is available. V1 is retained only as a
+  rollback reference and is not the default runtime source.
 
 ## Rebuild
 

@@ -3,11 +3,12 @@ from __future__ import annotations
 import hashlib
 import json
 import os
+import random
 import sys
 from pathlib import Path
 
 from openpyxl import load_workbook
-from PIL import Image, ImageDraw, ImageEnhance, ImageFilter, ImageFont
+from PIL import Image, ImageChops, ImageDraw, ImageEnhance, ImageFilter, ImageFont
 
 
 SKILL_ROOT = Path(__file__).resolve().parents[1]
@@ -19,9 +20,9 @@ import factory_texture_redraw_rules as legacy
 
 SOURCE_XLSX = os.environ.get("MAGNETIC_FACTORY_XLSX")
 SOURCE_SKU_SHEET = os.environ.get("MAGNETIC_FACTORY_SKU_SHEET")
-FACE_DIR = SKILL_ROOT / "assets/locked_factory_faces_v1"
-MANIFEST_PATH = SKILL_ROOT / "references/locked-factory-faces-v1.json"
-CONTACT_PATH = SKILL_ROOT / "assets/locked-factory-face-contact-sheet.png"
+FACE_DIR = SKILL_ROOT / "assets/locked_factory_faces_v2"
+MANIFEST_PATH = SKILL_ROOT / "references/locked-factory-faces-v2.json"
+CONTACT_PATH = SKILL_ROOT / "assets/locked-factory-face-contact-sheet-v2.png"
 
 SKU_IDS = (
     1, 2, 6, 9, 10, 11, 13, 14, 15, 16, 17, 18, 19, 20, 22, 23,
@@ -30,6 +31,17 @@ SKU_IDS = (
     109, 129, 134, 145, 150, 151, 153, 154, 155, 156, 157, 161,
     166, 176, 180, 181, 182, 184, 185,
 )
+
+NATURAL_SKUS = {
+    1, 2, 6, 9, 10, 11, 13, 14, 15, 16, 17, 18, 19, 22, 23, 27,
+    48, 57, 81, 86, 87, 145, 150, 151, 153, 154, 156, 157, 161,
+    176, 180, 181, 185,
+}
+SUBTLE_GRAIN_SKUS = {
+    25, 26, 32, 33, 35, 45, 59, 60, 66, 67, 71, 73, 74, 75,
+    76, 77, 78, 79, 80, 82, 83, 155, 166, 184,
+}
+PALE_NATURAL_SKUS = {145, 150, 180, 181}
 
 
 def font(size: int, bold: bool = False) -> ImageFont.FreeTypeFont:
@@ -339,13 +351,51 @@ def draw_faces(sku: int) -> tuple[str, dict[str, Image.Image]]:
         return "manual_redraw_extended", custom_faces(sku)
 
 
-def finish_face(image: Image.Image) -> Image.Image:
-    # Keep the block-print structure while removing harsh nearest-neighbor
-    # stair steps. The final catalog downsample supplies the last antialiasing.
-    output = image.convert("RGB").resize((512, 512), Image.Resampling.NEAREST)
-    output = output.filter(ImageFilter.GaussianBlur(0.65))
-    output = ImageEnhance.Color(output).enhance(1.05)
-    return output.filter(ImageFilter.UnsharpMask(radius=0.8, percent=45, threshold=3))
+def grain_layer(seed: int, size: int, amplitude: int, chroma: int) -> Image.Image:
+    rng = random.Random(seed)
+    pixels = []
+    for _ in range(size * size):
+        value = rng.randint(-amplitude, amplitude)
+        pixels.append((
+            max(0, min(255, 128 + value + rng.randint(-chroma, chroma))),
+            max(0, min(255, 128 + value + rng.randint(-chroma, chroma))),
+            max(0, min(255, 128 + value + rng.randint(-chroma, chroma))),
+        ))
+    layer = Image.new("RGB", (size, size))
+    layer.putdata(pixels)
+    # A 64-cell print grain is four times denser than the base 16-cell drawing.
+    # Nearest expansion keeps PNGs compact; at catalog scale each grain cell is
+    # subpixel and reads as surface texture rather than another visible mosaic.
+    return layer.resize((512, 512), Image.Resampling.NEAREST)
+
+
+def add_grain(image: Image.Image, sku: int, face_name: str, amplitude: int, chroma: int) -> Image.Image:
+    face_index = {"top": 1, "side": 2, "front": 3}[face_name]
+    grain = grain_layer(sku * 1009 + face_index * 97, 64, amplitude, chroma)
+    return ImageChops.add(image, grain, scale=1.0, offset=-128)
+
+
+def finish_face(image: Image.Image, sku: int, face_name: str) -> Image.Image:
+    source = image.convert("RGB")
+    if sku in NATURAL_SKUS:
+        # Factory natural prints retain their block identity but contain much
+        # finer ink variation than a literal 16x16 nearest-neighbor upscale.
+        crisp = source.resize((512, 512), Image.Resampling.NEAREST)
+        soft = source.resize((512, 512), Image.Resampling.BICUBIC)
+        output = Image.blend(crisp, soft, 0.30)
+        amplitude = 2 if sku in PALE_NATURAL_SKUS else 6
+        chroma = 1 if sku in PALE_NATURAL_SKUS else 3
+        output = add_grain(output, sku, face_name, amplitude, chroma)
+        output = output.filter(ImageFilter.UnsharpMask(radius=0.9, percent=34, threshold=3))
+    else:
+        # Geometric prints keep exact lines; only a restrained print-grain pass
+        # is allowed on wood, brick, props, and other non-character surfaces.
+        output = source.resize((512, 512), Image.Resampling.NEAREST)
+        output = output.filter(ImageFilter.GaussianBlur(0.75))
+        if sku in SUBTLE_GRAIN_SKUS:
+            output = add_grain(output, sku, face_name, 3, 1)
+        output = output.filter(ImageFilter.UnsharpMask(radius=0.8, percent=38, threshold=3))
+    return ImageEnhance.Color(output).enhance(1.045)
 
 
 def sha256(path: Path) -> str:
@@ -409,7 +459,7 @@ def main() -> None:
         stale.unlink()
 
     manifest = {
-        "version": "locked_factory_faces_v1",
+        "version": "locked_factory_faces_v2",
         "source_excel": {
             "name": "磁力颗粒编号.xlsx",
             "bundled": False,
@@ -422,8 +472,8 @@ def main() -> None:
         },
         "mapping_policy": "Use Excel cell IDs; never map embedded images by drawing order.",
         "render_policy": (
-            "Procedurally redrawn square faces only; factory overview crops are contact-sheet "
-            "references and never become Blender materials."
+            "Procedurally redrawn square faces with factory-calibrated multiscale print grain; "
+            "factory overview crops are contact-sheet references and never become Blender materials."
         ),
         "face_size": 512,
         "skus": [],
@@ -431,11 +481,14 @@ def main() -> None:
     previews: list[tuple[int, str, dict[str, Image.Image]]] = []
     for sku in SKU_IDS:
         method, faces = draw_faces(sku)
-        finished = {name: finish_face(faces[name]) for name in ("top", "side", "front")}
+        finished = {
+            name: finish_face(faces[name], sku, name)
+            for name in ("top", "side", "front")
+        }
         files = {}
         for name, image in finished.items():
             path = FACE_DIR / f"sku_{sku:03d}_{name}.png"
-            image.save(path)
+            image.save(path, optimize=True)
             files[name] = {
                 "path": path.relative_to(SKILL_ROOT).as_posix(),
                 "sha256": sha256(path),
@@ -446,6 +499,13 @@ def main() -> None:
             "size": excel_skus[sku]["size"],
             "metadata_status": excel_skus[sku]["metadata_status"],
             "method": method,
+            "finish_profile": (
+                "natural_multiscale"
+                if sku in NATURAL_SKUS
+                else "geometric_subtle_grain"
+                if sku in SUBTLE_GRAIN_SKUS
+                else "geometric_exact"
+            ),
             "files": files,
         })
         previews.append((sku, method, finished))

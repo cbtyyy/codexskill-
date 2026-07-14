@@ -342,21 +342,39 @@ def perspective_coefficients(
 
 
 def edge_connected_white_cutout(image: Image.Image) -> Image.Image:
+    """Remove the studio background with the approved box silhouette.
+
+    Color thresholding retained off-white floor shadow and left transparent RGB
+    that bled into the blue catalog during downsampling. The master geometry is
+    fixed, so a feathered silhouette mask is deterministic and cleaner.
+    """
     rgba = image.convert("RGBA")
-    rgb = rgba.convert("RGB")
-    candidate = Image.new("L", rgb.size, 0)
-    candidate_pixels = candidate.load()
-    source_pixels = rgb.load()
-    for y in range(rgb.height):
-        for x in range(rgb.width):
-            red, green, blue = source_pixels[x, y]
-            if min(red, green, blue) >= 225 and max(red, green, blue) - min(red, green, blue) <= 20:
-                candidate_pixels[x, y] = 255
-    ImageDraw.floodfill(candidate, (0, 0), 128, thresh=0)
-    connected = candidate.point(lambda value: 255 if value == 128 else 0)
-    connected = connected.filter(ImageFilter.GaussianBlur(0.8))
-    rgba.putalpha(connected.point(lambda value: 255 - value))
-    return rgba
+    base_width, base_height = 1138, 771
+    sx = rgba.width / base_width
+    sy = rgba.height / base_height
+    silhouette = (
+        (68, 70),
+        (999, 52),
+        (1086, 69),
+        (1086, 690),
+        (130, 739),
+        (68, 725),
+    )
+    scale = 4
+    mask = Image.new("L", (rgba.width * scale, rgba.height * scale), 0)
+    points = [
+        (round(x * sx * scale), round(y * sy * scale))
+        for x, y in silhouette
+    ]
+    ImageDraw.Draw(mask).polygon(points, fill=255)
+    mask = mask.resize(rgba.size, Image.Resampling.LANCZOS)
+    rgba.putalpha(mask)
+
+    # Transparent pixels must not retain white studio RGB. Premultiplied resize
+    # then cannot pull a pale fringe back into the visible box edge.
+    pixels = np.asarray(rgba).copy()
+    pixels[:, :, :3][pixels[:, :, 3] == 0] = 0
+    return Image.fromarray(pixels, "RGBA")
 
 
 def main() -> None:

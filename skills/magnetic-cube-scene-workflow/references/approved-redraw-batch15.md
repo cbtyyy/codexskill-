@@ -32,7 +32,10 @@ Review image: `assets/approved-redraw-batch15-overview.png`
 - Main geometry uses integer coordinates, one-unit cubes, no duplicate positions,
   no enclosed cubes, and one connected structural component.
 - Parts-detail quantities sum exactly to displayed PCS.
-- Scene and detail cubes reuse the locked V1 face files.
+- Scene and detail cubes reuse the locked V2 face files. Natural materials use
+  the approved finer print finish; geometric and character artwork stays exact.
+- The lower-right package uses the silhouette cutout and premultiplied-alpha
+  resize, with no white studio-floor residue at its left or bottom edge.
 - All 15 output PNGs and all 192 face PNGs have unique, recorded hashes where
   uniqueness is expected.
 

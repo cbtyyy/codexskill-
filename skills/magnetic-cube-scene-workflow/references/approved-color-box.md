@@ -80,4 +80,7 @@ Inspect at 200-400% before delivery:
 - No rectangular seam between blue and green artwork.
 - No detached green blocks inside the blue field.
 - No halo around the transparent catalog cutout.
+- Run `scripts/validate_color_box_cutout.py`. The cutout must exclude the white
+  studio floor/shadow, store zero RGB in fully transparent pixels, and be
+  resized in premultiplied-alpha mode before catalog composition.
 - The downscaled package remains readable without oversharpened pixel edges.

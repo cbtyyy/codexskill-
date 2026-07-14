@@ -22,7 +22,7 @@ Use this skill to produce wholesale-ready magnetic cube scene assets. The output
 - The buyer must understand the scene without reading the scene name.
 - Use the competitor folder as the quality benchmark: `D:/Users/Administrator/Desktop/磁力方块场景/`.
 - For factory SKU work, read `references/factory-particle-library.md` and use
-  `assets/locked_factory_faces_v1/` as the authoritative runtime texture source.
+  `assets/locked_factory_faces_v2/` as the authoritative runtime texture source.
   Use Excel cells for formal IDs and the factory overview for pattern/color
   review. Never map workbook images by drawing order or load a perspective
   thumbnail crop as a cube material.
@@ -71,7 +71,7 @@ For color-box creation or catalog insertion:
    - For carton, weight, quantity, and package-size calculations, read `references/packaging-formulas.md`.
 2. Choose themes from the Excel table or user-specified topic. Prefer themes with clear buildable core elements.
 3. For a new theme family, use the particle-first gate before scene modeling:
-   - Reuse an existing face from `assets/locked_factory_faces_v1/` whenever its SKU is listed in the approved manifest.
+   - Reuse an existing face from `assets/locked_factory_faces_v2/` whenever its SKU is listed in the approved manifest.
    - List every required structural, semantic, prop, and character particle.
    - Draw and lock separate `left`, `front`, `right`, `back`, `top`, and
      `bottom` artwork for each particle. New theme families must not reuse one
@@ -132,6 +132,9 @@ Before final response, check:
 - Exact PCS count.
 - `scripts/validate_locked_factory_faces.py` passes with `64` SKUs, `192`
   `512x512` RGB files, and no SHA-256 mismatch before factory-library rendering.
+- `scripts/validate_color_box_cutout.py` passes before inserting the approved
+  package. Resize RGBA package assets in premultiplied-alpha mode so transparent
+  white RGB or studio-floor shadow cannot bleed onto the blue catalog.
 - Sum of all parts-detail quantities equals PCS.
 - Same cube size, no big/small cube.
 - No cube misalignment.

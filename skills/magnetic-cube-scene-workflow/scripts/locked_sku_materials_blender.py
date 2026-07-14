@@ -9,7 +9,7 @@ import bpy
 SKILL_ROOT = Path(__file__).resolve().parents[1]
 FACE_DIR = Path(os.environ.get(
     "MAGNETIC_LOCKED_FACE_DIR",
-    str(SKILL_ROOT / "assets/locked_factory_faces_v1"),
+    str(SKILL_ROOT / "assets/locked_factory_faces_v2"),
 ))
 FIGURE_HEAD_SKUS = {101, 102, 109, 129, 134, 182}
 

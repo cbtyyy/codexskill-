@@ -1,7 +1,9 @@
 from __future__ import annotations
 
 import argparse
+import importlib
 import json
+import os
 import sys
 from pathlib import Path
 
@@ -33,10 +35,13 @@ def import_pipeline(work_dir: Path):
     work_dir = work_dir.resolve()
     sys.path.insert(0, str(work_dir))
     try:
-        from compose_competitor_rebuild import font, make_detail_icon, prepare_scene
+        pipeline = importlib.import_module("compose_competitor_rebuild")
     except ImportError as exc:
         raise RuntimeError(f"Cannot import catalog helpers from {work_dir}") from exc
-    return font, make_detail_icon, prepare_scene
+    locked_faces = os.environ.get("MAGNETIC_LOCKED_FACE_DIR")
+    if locked_faces:
+        pipeline.FACE_DIR = Path(locked_faces)
+    return pipeline.font, pipeline.make_detail_icon, pipeline.prepare_scene
 
 
 def sky_background() -> Image.Image:
@@ -84,17 +89,36 @@ def crop_alpha(image: Image.Image) -> Image.Image:
     return rgba.crop(bounds) if bounds else rgba
 
 
+def alpha_safe_thumbnail(image: Image.Image, size: tuple[int, int]) -> Image.Image:
+    premultiplied = crop_alpha(image).convert("RGBa")
+    premultiplied.thumbnail(size, Image.Resampling.LANCZOS)
+    return premultiplied.convert("RGBA")
+
+
 def add_color_box(canvas: Image.Image, path: Path) -> None:
     if not path.exists():
         raise FileNotFoundError(path)
-    color_box = crop_alpha(Image.open(path))
-    color_box.thumbnail((420, 300), Image.Resampling.LANCZOS)
+    color_box = alpha_safe_thumbnail(Image.open(path), (420, 300))
     reserved = (1148, 690, 1578, 1005)
     x = reserved[0] + (reserved[2] - reserved[0] - color_box.width) // 2
     y = reserved[1] + (reserved[3] - reserved[1] - color_box.height) // 2
     if y + color_box.height >= 1030:
         raise RuntimeError("Color box overlaps the catalog divider")
     canvas.alpha_composite(color_box, (x, y))
+
+
+def add_2cm_icon(canvas: Image.Image, font, make_detail_icon) -> None:
+    draw = ImageDraw.Draw(canvas)
+    icon = make_detail_icon(2, 132)
+    x, y = 1405, 225
+    canvas.alpha_composite(icon, (x + (132 - icon.width) // 2, y))
+    line_x = x - 24
+    top, bottom = y + 8, y + 126
+    color = (54, 59, 57, 255)
+    draw.line((line_x, top, line_x, bottom), fill=color, width=3)
+    draw.line((line_x - 10, top, line_x + 10, top), fill=color, width=3)
+    draw.line((line_x - 10, bottom, line_x + 10, bottom), fill=color, width=3)
+    draw.text((line_x, y - 22), "2CM", font=font(24, True), fill=(42, 45, 43, 255), anchor="mm")
 
 
 def add_parts_grid(canvas: Image.Image, item: dict, font, make_detail_icon) -> None:
@@ -164,6 +188,7 @@ def main() -> None:
     canvas.alpha_composite(scene, (x, y))
     if args.color_box:
         add_color_box(canvas, args.color_box.resolve())
+    add_2cm_icon(canvas, font, make_detail_icon)
 
     draw = ImageDraw.Draw(canvas)
     draw.text((64, 38), args.title, font=font(56, True), fill=(42, 48, 51))

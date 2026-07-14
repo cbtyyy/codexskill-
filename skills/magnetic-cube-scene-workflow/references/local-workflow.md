@@ -7,8 +7,8 @@
 - Competitor references: `D:/Users/Administrator/Desktop/磁力方块场景/`
 - Theme Excel: `D:/Users/Administrator/Desktop/海外热度IP节日磁力方块场景主题表.xlsx`
 - Default output root: `D:/Users/Administrator/Desktop/生成的场景图/`
-- Approved factory faces: `assets/locked_factory_faces_v1/`
-- Factory face manifest: `references/locked-factory-faces-v1.json`
+- Approved factory faces: `assets/locked_factory_faces_v2/`
+- Factory face manifest: `references/locked-factory-faces-v2.json`
 
 Main scripts:
 
@@ -17,6 +17,7 @@ Main scripts:
 - `scripts/build_locked_factory_faces.py`
 - `scripts/validate_locked_factory_faces.py`
 - `scripts/locked_sku_materials_blender.py`
+- `scripts/validate_color_box_cutout.py`
 - `work/blender_magnetic_cube_batch.py`
 - `work/generate_excel_theme_scenes_blender.py`
 - `work/generate_core_element_5_outputs.py`
@@ -25,16 +26,22 @@ Main scripts:
 - `work/render_color_boxes_blender.py`
 - `work/analyze_competitor_cube_samples.py`
 
-## Approved Factory Particle Library V1
+## Approved Factory Particle Library V2
 
 Read `references/factory-particle-library.md` before a factory SKU batch. The
 approved runtime library contains 64 SKUs and 192 redrawn `512 x 512` face PNGs.
 It is independent of the original workbook's embedded-image order.
 
+V2 reduces oversized mosaic blocks only on natural materials. It preserves
+exact line geometry for characters, gifts, chests, glass, doors, and other
+structured prints. V1 remains available for rollback but must not be selected
+for new production renders.
+
 Validate it before Blender rendering:
 
 ```powershell
 python scripts/validate_locked_factory_faces.py
+python scripts/validate_color_box_cutout.py
 ```
 
 Load it in Blender through `scripts/locked_sku_materials_blender.py`. The loader

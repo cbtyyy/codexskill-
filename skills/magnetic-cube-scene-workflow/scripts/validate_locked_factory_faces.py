@@ -8,7 +8,7 @@ from PIL import Image
 
 
 SKILL_ROOT = Path(__file__).resolve().parents[1]
-MANIFEST_PATH = SKILL_ROOT / "references/locked-factory-faces-v1.json"
+MANIFEST_PATH = SKILL_ROOT / "references/locked-factory-faces-v2.json"
 EXPECTED_FACE_NAMES = {"top", "side", "front"}
 EXPECTED_SIZE = (512, 512)
 
@@ -33,6 +33,12 @@ def main() -> None:
             errors.append(f"SKU {sku}: invalid Excel metadata status")
         if metadata_status == "complete" and (not entry.get("name") or not entry.get("size")):
             errors.append(f"SKU {sku}: incomplete Excel metadata marked complete")
+        if entry.get("finish_profile") not in {
+            "natural_multiscale",
+            "geometric_subtle_grain",
+            "geometric_exact",
+        }:
+            errors.append(f"SKU {sku}: invalid finish profile")
 
         files = entry.get("files", {})
         if set(files) != EXPECTED_FACE_NAMES:
