@@ -5,11 +5,20 @@
 - Magnetic cube size: `2cm x 2cm x 2cm`.
 - Magnetic cubes connect into compact rows. The airplane-box width is based on
   five connected cubes plus clearance.
-- Use these locked finished outside airplane-box dimensions (`L x W x H`):
-  - Up to `120 PCS`, including retained legacy samples below 80 PCS:
-    `17.5 x 11 x 7cm`.
-  - `121-160 PCS`: `23.5 x 11 x 7cm`.
-  - `161-200 PCS`: `23.5 x 11 x 9cm`.
+- Use these locked packing tiers and finished outside airplane-box dimensions
+  (`L x W x H`):
+  - `80-120 PCS`: `8 x 5 x 3 = 120` capacity, cube occupancy
+    `16 x 10 x 6cm`, effective inner size `16.5 x 10.5 x 6.5cm`, finished
+    outside size `17.5 x 11 x 7cm`.
+  - `121-160 PCS`: `11 x 5 x 3 = 165` capacity, cube occupancy
+    `22 x 10 x 6cm`, effective inner size `22.5 x 10.5 x 6.5cm`, finished
+    outside size `23.5 x 11 x 7cm`.
+  - `161-200 PCS`: `11 x 5 x 4 = 220` capacity, cube occupancy
+    `22 x 10 x 8cm`, effective inner size `22.5 x 10.5 x 8.5cm`, finished
+    outside size `23.5 x 11 x 9cm`.
+- Tier boundaries are inclusive: `120` uses the first tier, `160` uses the
+  second tier, and `161` starts the third tier. Do not search for a different
+  box grid from the exact PCS count.
 - The production scene range remains `80-200 PCS`. The below-80 exception only
   allows existing audited SKUs to use the smallest box; it does not permit new
   below-80 scene generation.
@@ -35,6 +44,8 @@ Use the user's fixed rule:
   weight would require a separate cube-only calculation.
 
 Use `scripts/calculate_airplane_carton.py` instead of rewriting these formulas.
+The calculator rejects new scenes below 80 PCS by default. Pass
+`--allow-legacy-below-80` only when recalculating a retained, audited legacy SKU.
 
 ## HTML Carton Algorithm
 
@@ -80,7 +91,8 @@ When updating the user's `极客智玩.xlsx` quotation workbook:
 - Continue product codes sequentially from the user-specified starting code.
 - Product name format is exactly
   `支持OEM定制-场景名 XXPCS 磁力方块磁性方块磁力积木我的世界磁性积木`.
-- Unit price = `PCS * 0.38`, rounded to two decimal places.
+- Unit price = `PCS * 0.38`, rounded to one decimal place and displayed with
+  the `0.0` number format.
 - 包装 = `彩盒`.
 - 装箱量、外箱规格、毛重、净重、包装规格 must come from
   `scripts/calculate_airplane_carton.py`.

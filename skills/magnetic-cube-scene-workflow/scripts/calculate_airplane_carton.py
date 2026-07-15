@@ -40,9 +40,11 @@ def round_up_half(value: float) -> float:
     return math.ceil((value - 1e-9) * 2) / 2
 
 
-def color_box_for_pcs(pcs: int) -> tuple[float, float, float]:
-    if pcs <= 0 or pcs > 200:
-        raise ValueError("PCS must be between 1 and 200")
+def color_box_for_pcs(
+    pcs: int, *, allow_legacy_below_80: bool = False
+) -> tuple[float, float, float]:
+    if pcs <= 0 or pcs > 200 or (pcs < 80 and not allow_legacy_below_80):
+        raise ValueError("PCS must be between 80 and 200")
     if pcs <= 120:
         return (17.5, 11.0, 7.0)
     if pcs <= 160:
@@ -122,8 +124,12 @@ def html_carton_layout(
     return arrangement, carton
 
 
-def calculate(name: str, pcs: int) -> Result:
-    color_box = color_box_for_pcs(pcs)
+def calculate(
+    name: str, pcs: int, *, allow_legacy_below_80: bool = False
+) -> Result:
+    color_box = color_box_for_pcs(
+        pcs, allow_legacy_below_80=allow_legacy_below_80
+    )
     quantity, box_weight, exact, declared_net, declared_gross = choose_carton_quantity(pcs)
     arrangement, carton = html_carton_layout(color_box, quantity)
     return Result(
@@ -144,8 +150,25 @@ def main() -> None:
     parser = argparse.ArgumentParser(description="Calculate locked magnetic-cube airplane-box carton data")
     parser.add_argument("pcs", type=int)
     parser.add_argument("--name", default="")
+    parser.add_argument(
+        "--allow-legacy-below-80",
+        action="store_true",
+        help="Allow an existing audited SKU below 80 PCS; never use for new scenes",
+    )
     args = parser.parse_args()
-    print(json.dumps(asdict(calculate(args.name, args.pcs)), ensure_ascii=False, indent=2))
+    print(
+        json.dumps(
+            asdict(
+                calculate(
+                    args.name,
+                    args.pcs,
+                    allow_legacy_below_80=args.allow_legacy_below_80,
+                )
+            ),
+            ensure_ascii=False,
+            indent=2,
+        )
+    )
 
 
 if __name__ == "__main__":
