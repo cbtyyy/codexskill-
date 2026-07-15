@@ -3,6 +3,7 @@ from __future__ import annotations
 import argparse
 import json
 from collections import Counter
+from itertools import combinations
 from pathlib import Path
 
 
@@ -38,11 +39,22 @@ def axis_difference(left: dict, right: dict) -> int:
     return sum(left[name] != right[name] for name in AXES)
 
 
+def normalize_face_hashes(value: object) -> set[str]:
+    if isinstance(value, dict):
+        values = value.values()
+    elif isinstance(value, list):
+        values = value
+    else:
+        return set()
+    return {str(item).strip().lower() for item in values if str(item).strip()}
+
+
 def validate(scenes: list[dict]) -> dict:
     errors: list[str] = []
     signatures: list[dict] = []
     names: list[str] = []
     pcs_values: list[int] = []
+    theme_editions: dict[str, list[dict]] = {}
 
     for index, scene in enumerate(scenes, start=1):
         name = str(scene.get("name") or scene.get("name_cn") or f"scene-{index}")
@@ -63,6 +75,16 @@ def validate(scenes: list[dict]) -> dict:
         if missing:
             errors.append(f"{name}: missing signature fields {', '.join(missing)}")
         signatures.append(signature)
+
+        theme_key = str(scene.get("theme_key") or scene.get("theme") or "").strip().casefold()
+        if theme_key:
+            theme_editions.setdefault(theme_key, []).append(
+                {
+                    "name": name,
+                    "library_id": str(scene.get("particle_library_id") or "").strip(),
+                    "face_hashes": normalize_face_hashes(scene.get("particle_face_hashes")),
+                }
+            )
 
     if errors:
         return {"status": "fail", "scene_count": len(scenes), "errors": errors}
@@ -109,6 +131,41 @@ def validate(scenes: list[dict]) -> dict:
                     f"change only {difference}/5 geometry axes"
                 )
 
+    repeated_theme_counts: dict[str, int] = {}
+    for theme_key, editions in theme_editions.items():
+        if len(editions) < 2:
+            continue
+        repeated_theme_counts[theme_key] = len(editions)
+        missing_ids = [edition["name"] for edition in editions if not edition["library_id"]]
+        if missing_ids:
+            errors.append(
+                f"theme {theme_key!r} has editions without particle_library_id: "
+                f"{', '.join(missing_ids)}"
+            )
+        library_counts = Counter(edition["library_id"] for edition in editions if edition["library_id"])
+        for library_id, count in library_counts.items():
+            if count > 1:
+                duplicates = [
+                    edition["name"] for edition in editions if edition["library_id"] == library_id
+                ]
+                errors.append(
+                    f"theme {theme_key!r} reuses particle library {library_id!r}: "
+                    f"{', '.join(duplicates)}"
+                )
+        missing_hashes = [edition["name"] for edition in editions if not edition["face_hashes"]]
+        if missing_hashes:
+            errors.append(
+                f"theme {theme_key!r} has editions without particle_face_hashes: "
+                f"{', '.join(missing_hashes)}"
+            )
+        for left, right in combinations(editions, 2):
+            overlap = left["face_hashes"] & right["face_hashes"]
+            if overlap:
+                errors.append(
+                    f"theme {theme_key!r} editions {left['name']} and {right['name']} "
+                    f"reuse {len(overlap)} exact particle face hashes"
+                )
+
     return {
         "status": "pass" if not errors else "fail",
         "scene_count": len(scenes),
@@ -116,6 +173,7 @@ def validate(scenes: list[dict]) -> dict:
         "pcs_bands": dict(sorted(Counter(band(pcs) for pcs in pcs_values).items())),
         "archetype_count": len({signature["archetype"] for signature in signatures}),
         "template_counts": dict(sorted(template_counts.items())),
+        "repeated_theme_counts": dict(sorted(repeated_theme_counts.items())),
         "errors": errors,
     }
 

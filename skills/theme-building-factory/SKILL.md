@@ -1,6 +1,6 @@
 ---
 name: theme-building-factory
-description: Build production-ready magnetic cube theme SKUs with a particle-first workflow, dedicated structural templates, PCS-accurate parts panels, catalog images, color boxes, and carton calculations. Use for multi-theme factory generation, especially engineering, pirate, Christmas, Halloween, firefighting, police, or other scenes that require same-size grid-aligned cubes, reusable six-face art, buyer-readable silhouettes, and fixed packaging formulas.
+description: Build production-ready magnetic cube theme SKUs with a particle-first workflow, dedicated structural templates, PCS-accurate parts panels, catalog images, color boxes, and carton calculations. Use for multi-theme factory generation, especially engineering, pirate, Christmas, Halloween, firefighting, police, or other scenes that require same-size grid-aligned cubes, SKU-specific six-face art, buyer-readable silhouettes, and fixed packaging formulas.
 ---
 
 # Magnetic Cube Scene Workflow
@@ -65,6 +65,14 @@ Use this skill to produce wholesale-ready magnetic cube scene assets. The output
   low-level cube helpers and generic support components may be shared across
   themes; the hero silhouette, circulation path, props, and elevation rhythm
   must be designed for that theme.
+- Treat every repeated request for the same theme as a new SKU edition. Read
+  `references/same-theme-variation-rules.md`, assign a new particle-library ID,
+  redraw all particle face art and characters, and choose a different approved
+  topology. Previous same-theme libraries are duplicate-rejection references,
+  never material sources. Reuse technical infrastructure only: cube mesh, UV
+  convention, camera, lighting, catalog layout, packaging template, and formulas.
+  Within the new SKU, the scene, parts panel, and color-box scene must still use
+  that edition's exact same particle library and tone chain.
 - Keep at least three structurally distinct archetypes for every reusable theme
   family. Generate low-resolution geometry candidates before final texturing,
   score their footprint, dominant mass, major void, depth layers, height rhythm,
@@ -124,6 +132,9 @@ For color-box creation or catalog insertion:
    - For scene generation or optimization, read `references/scene-design-rules.md`.
    - For scenes containing people, animals, vehicles, occupations, or a buyer-
      visible story, also read `references/character-story-and-template-rules.md`.
+   - When the requested theme has been generated before, read
+     `references/same-theme-variation-rules.md`, load its prior library manifests
+     only for duplicate checking, and create a new library before modeling.
    - For pirate or engineering themes, also read `references/pirate-engineer-templates.md` and start from the approved particle-first structural templates instead of recoloring another scene.
    - For engineering, pirate, Christmas, Halloween, firefighting, or police
      themes, also read `references/approved-six-theme-factory-templates.md`.
@@ -280,6 +291,9 @@ Before final response, check:
   no duplicate structural signature, overused template, or artificially
   clustered PCS batch is accepted. Do not force every PCS band when doing so
   would weaken the scene; visual quality and actual modeled count remain first.
+- Repeated same-theme SKUs have unique `particle_library_id` values and zero
+  exact overlap in `particle_face_hashes`. Compare the new manifest with all
+  archived editions of that theme; renaming an old library is not a new design.
 - Different PCS labels refer to genuinely different modeled geometry and exact
   counts. Never relabel one render as several PCS variants.
 - Main-scene white/snow matches the detail icon's neutral white; do not accept
