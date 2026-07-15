@@ -7,5 +7,6 @@
 | 英文技术名 | 中文显示名 | 目录 |
 | --- | --- | --- |
 | `magnetic-cube-scene-workflow` | 厂图搭建场景 | `skills/magnetic-cube-scene-workflow/` |
+| `theme-building-factory` | 主题搭建厂家 | `skills/theme-building-factory/` |
 
 后续 Skill 统一放在 `skills/<english-skill-name>/` 下。

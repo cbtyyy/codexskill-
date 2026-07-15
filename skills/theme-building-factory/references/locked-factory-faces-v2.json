@@ -1,0 +1,1426 @@
+{
+  "version": "locked_factory_faces_v2",
+  "source_excel": {
+    "name": "磁力颗粒编号.xlsx",
+    "bundled": false,
+    "role": "formal SKU cell IDs; product names and sizes where populated"
+  },
+  "source_sku_sheet": {
+    "name": "磁力颗粒SKU大图.png",
+    "bundled": false,
+    "role": "factory color and pattern reference"
+  },
+  "mapping_policy": "Use Excel cell IDs; never map embedded images by drawing order.",
+  "render_policy": "Procedurally redrawn square faces with factory-calibrated multiscale print grain; factory overview crops are contact-sheet references and never become Blender materials.",
+  "face_size": 512,
+  "skus": [
+    {
+      "sku": "001",
+      "name": "泥土",
+      "size": "2x2x2 cm",
+      "metadata_status": "complete",
+      "method": "manual_redraw_extended",
+      "finish_profile": "natural_multiscale",
+      "files": {
+        "top": {
+          "path": "assets/locked_factory_faces_v2/sku_001_top.png",
+          "sha256": "6c37ef9d37d8fa7d8d8fb43a85434559467359cdd96c940b50ec1a3cf48ef8b7"
+        },
+        "side": {
+          "path": "assets/locked_factory_faces_v2/sku_001_side.png",
+          "sha256": "41554009a238585715073b80bb0d715ef55f4a9e2a50d98f57ca0a4a40afa71a"
+        },
+        "front": {
+          "path": "assets/locked_factory_faces_v2/sku_001_front.png",
+          "sha256": "db89d29d879da3cf8140c67ccc4f24053f58718369a5c36c8f73d4b8288384b0"
+        }
+      }
+    },
+    {
+      "sku": "002",
+      "name": "草",
+      "size": "2x2x2 cm",
+      "metadata_status": "complete",
+      "method": "manual_redraw_extended",
+      "finish_profile": "natural_multiscale",
+      "files": {
+        "top": {
+          "path": "assets/locked_factory_faces_v2/sku_002_top.png",
+          "sha256": "ba2828c852ba363a5dd6dd8eeee5dcd4e4efa1bd31945e76d47f785ce8dc2980"
+        },
+        "side": {
+          "path": "assets/locked_factory_faces_v2/sku_002_side.png",
+          "sha256": "0fe1d24f9b6015e008ace9e7d4eb0450ca46db731a393b00b28717ba1a3d14b1"
+        },
+        "front": {
+          "path": "assets/locked_factory_faces_v2/sku_002_front.png",
+          "sha256": "9da4cda22da2e7d66cbdbf32304fc83ff5cff76990e5d5740f710db71c4a3a74"
+        }
+      }
+    },
+    {
+      "sku": "006",
+      "name": "水",
+      "size": "2x2x2 cm",
+      "metadata_status": "complete",
+      "method": "manual_redraw_existing",
+      "finish_profile": "natural_multiscale",
+      "files": {
+        "top": {
+          "path": "assets/locked_factory_faces_v2/sku_006_top.png",
+          "sha256": "ca63573096ba34387d7da8ea29ddcb1c5a335f3903241e1fc36eafe4d565321a"
+        },
+        "side": {
+          "path": "assets/locked_factory_faces_v2/sku_006_side.png",
+          "sha256": "e6f69811f048a2bc9532b64a30ca137bf2a47eb018913de7354195a9873b45fb"
+        },
+        "front": {
+          "path": "assets/locked_factory_faces_v2/sku_006_front.png",
+          "sha256": "c9cf1abebef6a1849f41c140c6c2edd460277931f3beb7cb6528634e18a32556"
+        }
+      }
+    },
+    {
+      "sku": "009",
+      "name": "基岩",
+      "size": "2x2x2 cm",
+      "metadata_status": "complete",
+      "method": "manual_redraw_existing",
+      "finish_profile": "natural_multiscale",
+      "files": {
+        "top": {
+          "path": "assets/locked_factory_faces_v2/sku_009_top.png",
+          "sha256": "a622a7a2defdc90812f55769157d0dcc6fa828a96cc06fe1b650eb5ba55ae2a3"
+        },
+        "side": {
+          "path": "assets/locked_factory_faces_v2/sku_009_side.png",
+          "sha256": "21c62e62d399bf58ab5c29f765150a5f86fdcf47badc5a01c16e9da6c75e8d87"
+        },
+        "front": {
+          "path": "assets/locked_factory_faces_v2/sku_009_front.png",
+          "sha256": "cf7efafc88095aa2b40e089248105b8f285e9d5e9a5242ac5d853458f4aa3502"
+        }
+      }
+    },
+    {
+      "sku": "010",
+      "name": "煤矿石",
+      "size": "2x2x2 cm",
+      "metadata_status": "complete",
+      "method": "manual_redraw_existing",
+      "finish_profile": "natural_multiscale",
+      "files": {
+        "top": {
+          "path": "assets/locked_factory_faces_v2/sku_010_top.png",
+          "sha256": "c1543744aca10aeb6f6a31f9fde377c1df749a5a0433bc3ceffa2f4e9f3c0585"
+        },
+        "side": {
+          "path": "assets/locked_factory_faces_v2/sku_010_side.png",
+          "sha256": "58e644fe1f471e3d473f572ab5b5d7414636a5a6065e11f4029b302e5408798c"
+        },
+        "front": {
+          "path": "assets/locked_factory_faces_v2/sku_010_front.png",
+          "sha256": "07c70bff50ec07b979130cd1b67ac458f63eb334a4952111dd472d88176c590a"
+        }
+      }
+    },
+    {
+      "sku": "011",
+      "name": "铁矿石",
+      "size": "2x2x2 cm",
+      "metadata_status": "complete",
+      "method": "manual_redraw_existing",
+      "finish_profile": "natural_multiscale",
+      "files": {
+        "top": {
+          "path": "assets/locked_factory_faces_v2/sku_011_top.png",
+          "sha256": "0250815a20e5db38f8b897932206180e2dabdb61247fb238c0cc4d789aec0be3"
+        },
+        "side": {
+          "path": "assets/locked_factory_faces_v2/sku_011_side.png",
+          "sha256": "70eda5cb0f5b1c1d7cff5a32c834ec2bf2a5ffcc2357c734f83c6c2c862fccdd"
+        },
+        "front": {
+          "path": "assets/locked_factory_faces_v2/sku_011_front.png",
+          "sha256": "1441fab0b19a7cf812f3201747ce10520d41fb3db21fecd1e5e393ca1669862a"
+        }
+      }
+    },
+    {
+      "sku": "013",
+      "name": "金矿石",
+      "size": "2x2x2 cm",
+      "metadata_status": "complete",
+      "method": "manual_redraw_existing",
+      "finish_profile": "natural_multiscale",
+      "files": {
+        "top": {
+          "path": "assets/locked_factory_faces_v2/sku_013_top.png",
+          "sha256": "320df847ea46396a6e1f80e24ad64bccab982b3745a9a9a00ecf3b1c61e17f81"
+        },
+        "side": {
+          "path": "assets/locked_factory_faces_v2/sku_013_side.png",
+          "sha256": "30fae958416e4a2b1d9912629b2205af34b9b7f47b739145da57ac6662c5fa1b"
+        },
+        "front": {
+          "path": "assets/locked_factory_faces_v2/sku_013_front.png",
+          "sha256": "3943e26475dfa272f6c0a7e4ab4ecf7c6defcd1ba3c91d9d369ae8d9648a49a2"
+        }
+      }
+    },
+    {
+      "sku": "014",
+      "name": "青矿石",
+      "size": "2x2x2 cm",
+      "metadata_status": "complete",
+      "method": "manual_redraw_existing",
+      "finish_profile": "natural_multiscale",
+      "files": {
+        "top": {
+          "path": "assets/locked_factory_faces_v2/sku_014_top.png",
+          "sha256": "5ab8dec2ecba0420270232a14844f2e6d3c456468e94211a6db1d16b0b44348b"
+        },
+        "side": {
+          "path": "assets/locked_factory_faces_v2/sku_014_side.png",
+          "sha256": "5f3c056236b7c6bd3138968521333d1c27f435c955e2e863d6ad5f9b421f0e1c"
+        },
+        "front": {
+          "path": "assets/locked_factory_faces_v2/sku_014_front.png",
+          "sha256": "a35a15833872373087abcfd4b622f9a08b0d39ee947b2f6a714a79c0a3967864"
+        }
+      }
+    },
+    {
+      "sku": "015",
+      "name": "红矿石",
+      "size": "2x2x2 cm",
+      "metadata_status": "complete",
+      "method": "manual_redraw_existing",
+      "finish_profile": "natural_multiscale",
+      "files": {
+        "top": {
+          "path": "assets/locked_factory_faces_v2/sku_015_top.png",
+          "sha256": "b88bfb6b7c3c7a0758c2826794a3b6f7fb7414644cfa61908fd992d0e3dd6468"
+        },
+        "side": {
+          "path": "assets/locked_factory_faces_v2/sku_015_side.png",
+          "sha256": "965b42b8cbe06609fbd3b7672cb5d66bb15367817bd5b8e32ac572e4cc49ac2a"
+        },
+        "front": {
+          "path": "assets/locked_factory_faces_v2/sku_015_front.png",
+          "sha256": "1e330169ec8e0360583b613aaf6684930fa0893e19261d7c5583d8c518c7c376"
+        }
+      }
+    },
+    {
+      "sku": "016",
+      "name": "钻石矿石",
+      "size": "2x2x2 cm",
+      "metadata_status": "complete",
+      "method": "manual_redraw_existing",
+      "finish_profile": "natural_multiscale",
+      "files": {
+        "top": {
+          "path": "assets/locked_factory_faces_v2/sku_016_top.png",
+          "sha256": "bd323f0d273d95ff40a8ed7b64fb9325070694f4570d667a2ba35f7b440fd536"
+        },
+        "side": {
+          "path": "assets/locked_factory_faces_v2/sku_016_side.png",
+          "sha256": "b1d6208cd5327795ff52b42a6969e6dc0958bacada03ec9b50cb0033beaab9a1"
+        },
+        "front": {
+          "path": "assets/locked_factory_faces_v2/sku_016_front.png",
+          "sha256": "d4560891ef172c783fdba7f2da068c0c1cbafc63562b1d70c54e9e07698c6386"
+        }
+      }
+    },
+    {
+      "sku": "017",
+      "name": "绿宝石矿石",
+      "size": "2x2x2 cm",
+      "metadata_status": "complete",
+      "method": "manual_redraw_existing",
+      "finish_profile": "natural_multiscale",
+      "files": {
+        "top": {
+          "path": "assets/locked_factory_faces_v2/sku_017_top.png",
+          "sha256": "023a1b177fdfdba14b0eb8eb14adc7ece7791f9590dd9998d1736afd7e109d91"
+        },
+        "side": {
+          "path": "assets/locked_factory_faces_v2/sku_017_side.png",
+          "sha256": "879f87b13369cf11285f29034b8d4ff78a54f140a844f2635058a9b1266f5a6b"
+        },
+        "front": {
+          "path": "assets/locked_factory_faces_v2/sku_017_front.png",
+          "sha256": "94d8816732b49769f6881280b63e40fd60f1851647f32e94164f7496a3574590"
+        }
+      }
+    },
+    {
+      "sku": "018",
+      "name": "萤辉石",
+      "size": "2x2x2 cm",
+      "metadata_status": "complete",
+      "method": "manual_redraw_existing",
+      "finish_profile": "natural_multiscale",
+      "files": {
+        "top": {
+          "path": "assets/locked_factory_faces_v2/sku_018_top.png",
+          "sha256": "9eaa149f0f8c54d03a4cea10a380c0a5ccfc93772f2c6732448bb5e087d704c1"
+        },
+        "side": {
+          "path": "assets/locked_factory_faces_v2/sku_018_side.png",
+          "sha256": "a2f4e8a48ac8936219de5d486ebc4e7bbdd57bd7cbcb58fcd961ff093d02708e"
+        },
+        "front": {
+          "path": "assets/locked_factory_faces_v2/sku_018_front.png",
+          "sha256": "781e4bf1d866ef6fa3625f8ed53663e278f9643902b917664ce795acd9730998"
+        }
+      }
+    },
+    {
+      "sku": "019",
+      "name": "石头",
+      "size": "2x2x2 cm",
+      "metadata_status": "complete",
+      "method": "manual_redraw_existing",
+      "finish_profile": "natural_multiscale",
+      "files": {
+        "top": {
+          "path": "assets/locked_factory_faces_v2/sku_019_top.png",
+          "sha256": "ce686c3224e4029d2f92e5cf2cf0eda04a37b40b52e2967cf3e27057ebc4753c"
+        },
+        "side": {
+          "path": "assets/locked_factory_faces_v2/sku_019_side.png",
+          "sha256": "d1886e8e577aca0e79f43997817ac420666156a4f2ae3432bf9d91e87afcc57a"
+        },
+        "front": {
+          "path": "assets/locked_factory_faces_v2/sku_019_front.png",
+          "sha256": "f1bf312606bdac26cffc6ad883b756fd073b51f384e0e5c495fea70a74a165d8"
+        }
+      }
+    },
+    {
+      "sku": "020",
+      "name": "鹅卵石",
+      "size": "2x2x2 cm",
+      "metadata_status": "complete",
+      "method": "manual_redraw_existing",
+      "finish_profile": "geometric_exact",
+      "files": {
+        "top": {
+          "path": "assets/locked_factory_faces_v2/sku_020_top.png",
+          "sha256": "4079a5a79ca56c32c5c4e95cefb604e7c68f7c0b4d3e872b6cd7da74afc71189"
+        },
+        "side": {
+          "path": "assets/locked_factory_faces_v2/sku_020_side.png",
+          "sha256": "845bfc89c3bd884ea8a4d46131edcbde071c0a2c06015db52bcf9d5629e15f41"
+        },
+        "front": {
+          "path": "assets/locked_factory_faces_v2/sku_020_front.png",
+          "sha256": "b4355687ff3c56b2e3ffd3107fe37312bcc09d1176524f3f1d46518047d510dc"
+        }
+      }
+    },
+    {
+      "sku": "022",
+      "name": "地狱岩",
+      "size": "2x2x2 cm",
+      "metadata_status": "complete",
+      "method": "manual_redraw_extended",
+      "finish_profile": "natural_multiscale",
+      "files": {
+        "top": {
+          "path": "assets/locked_factory_faces_v2/sku_022_top.png",
+          "sha256": "8acd5d23d4799c63224154a18fb94fc2a6ae29611ce37ec57f07d39a9bcfd1b4"
+        },
+        "side": {
+          "path": "assets/locked_factory_faces_v2/sku_022_side.png",
+          "sha256": "eb7064e31003c054d6dd1eebf7f18b85d32e09877400fc7c83c59a772bea6be2"
+        },
+        "front": {
+          "path": "assets/locked_factory_faces_v2/sku_022_front.png",
+          "sha256": "b67f8ae07801a9f9d4bfdb632a7db135480401c841216e74adbc04cd4c0c86b6"
+        }
+      }
+    },
+    {
+      "sku": "023",
+      "name": "黑曜石",
+      "size": "2x2x2 cm",
+      "metadata_status": "complete",
+      "method": "manual_redraw_existing",
+      "finish_profile": "natural_multiscale",
+      "files": {
+        "top": {
+          "path": "assets/locked_factory_faces_v2/sku_023_top.png",
+          "sha256": "97cf2a79cdcb928009242421bf1bf22afadd72c0194a0ed09506862c76d80459"
+        },
+        "side": {
+          "path": "assets/locked_factory_faces_v2/sku_023_side.png",
+          "sha256": "1681907d1525f7be1c7c08b1f7bfb57031f9767e9849f91805e7476f40d03a94"
+        },
+        "front": {
+          "path": "assets/locked_factory_faces_v2/sku_023_front.png",
+          "sha256": "9884b789bd434ba9b424d6e5c34271737e3edaba9dd77ec392a5a3a81b2b2900"
+        }
+      }
+    },
+    {
+      "sku": "025",
+      "name": "桦木",
+      "size": "2x2x2 cm",
+      "metadata_status": "complete",
+      "method": "manual_redraw_extended",
+      "finish_profile": "geometric_subtle_grain",
+      "files": {
+        "top": {
+          "path": "assets/locked_factory_faces_v2/sku_025_top.png",
+          "sha256": "a700e1255694b9eb5fa34240edec916a6ae05bff5465b24728fe59cafe2dc03c"
+        },
+        "side": {
+          "path": "assets/locked_factory_faces_v2/sku_025_side.png",
+          "sha256": "be58acd93892deb7e6b08d74caa5d28e432b01d03d2e01a08e06df02d1576a01"
+        },
+        "front": {
+          "path": "assets/locked_factory_faces_v2/sku_025_front.png",
+          "sha256": "6e9ac000d975746e27854a3e3d90418839613bd1c3d19c505d7e4f90bd193bbe"
+        }
+      }
+    },
+    {
+      "sku": "026",
+      "name": "橡木",
+      "size": "2x2x2 cm",
+      "metadata_status": "complete",
+      "method": "manual_redraw_existing",
+      "finish_profile": "geometric_subtle_grain",
+      "files": {
+        "top": {
+          "path": "assets/locked_factory_faces_v2/sku_026_top.png",
+          "sha256": "57a2abf15d9413f365b58ceb8fd4ac1362b05583febea74ef28bcb93906c7646"
+        },
+        "side": {
+          "path": "assets/locked_factory_faces_v2/sku_026_side.png",
+          "sha256": "8ff05b8feff00a5ea28049d79af8463b101e8d6dc543271268f5541baa226990"
+        },
+        "front": {
+          "path": "assets/locked_factory_faces_v2/sku_026_front.png",
+          "sha256": "4ade7e8f9b7d2abb61e473ced7cc5bad002d77658e278de7dea2da58e851e051"
+        }
+      }
+    },
+    {
+      "sku": "027",
+      "name": "橡树叶",
+      "size": "2x2x2 cm",
+      "metadata_status": "complete",
+      "method": "manual_redraw_existing",
+      "finish_profile": "natural_multiscale",
+      "files": {
+        "top": {
+          "path": "assets/locked_factory_faces_v2/sku_027_top.png",
+          "sha256": "9d7a03768a7087285af6b4c12e147fff30b7dd6a13520e721d40f68c80cd2b93"
+        },
+        "side": {
+          "path": "assets/locked_factory_faces_v2/sku_027_side.png",
+          "sha256": "1c0803abb4f385d9652115d5edcf679c3185bd1f55439f340a464746cd8a90ba"
+        },
+        "front": {
+          "path": "assets/locked_factory_faces_v2/sku_027_front.png",
+          "sha256": "4d82cb06057423b8b2f3107f5d96ae72fceab895b475eff65066924afb6a5673"
+        }
+      }
+    },
+    {
+      "sku": "032",
+      "name": "南瓜灯",
+      "size": "2x2x2 cm",
+      "metadata_status": "complete",
+      "method": "manual_redraw_extended",
+      "finish_profile": "geometric_subtle_grain",
+      "files": {
+        "top": {
+          "path": "assets/locked_factory_faces_v2/sku_032_top.png",
+          "sha256": "3ae8fd93e2197c5f914722454fccb9bae45f757705382b9c7d613707e223c30b"
+        },
+        "side": {
+          "path": "assets/locked_factory_faces_v2/sku_032_side.png",
+          "sha256": "37b6dbd299d0caa661e405a5e3e402c8724a84fdf04450366e15062f55dedfe8"
+        },
+        "front": {
+          "path": "assets/locked_factory_faces_v2/sku_032_front.png",
+          "sha256": "95ba3866245800433951b62bc77ed846ea2c7a88b9164f9ff3e7de3e539eb34c"
+        }
+      }
+    },
+    {
+      "sku": "033",
+      "name": "木板",
+      "size": "2x2x2 cm",
+      "metadata_status": "complete",
+      "method": "manual_redraw_existing",
+      "finish_profile": "geometric_subtle_grain",
+      "files": {
+        "top": {
+          "path": "assets/locked_factory_faces_v2/sku_033_top.png",
+          "sha256": "ffb63aa6eb2f2fdd117c120f3399dabbda2276defaf7a7cc698c2e1f96c1dc81"
+        },
+        "side": {
+          "path": "assets/locked_factory_faces_v2/sku_033_side.png",
+          "sha256": "13c12b9f46cf699f3dc7c325eb8386862cc1cf05893228c755694896f4b4625b"
+        },
+        "front": {
+          "path": "assets/locked_factory_faces_v2/sku_033_front.png",
+          "sha256": "8b7953f3423f623a5df254ff01b2326bb113bc5f5dae197f2433db854d08cd67"
+        }
+      }
+    },
+    {
+      "sku": "035",
+      "name": "云杉木板",
+      "size": "2x2x2 cm",
+      "metadata_status": "complete",
+      "method": "manual_redraw_extended",
+      "finish_profile": "geometric_subtle_grain",
+      "files": {
+        "top": {
+          "path": "assets/locked_factory_faces_v2/sku_035_top.png",
+          "sha256": "b01c24884711d62d72b9fa1be5f205a751ec5fe415269245a16caa513e1ea91a"
+        },
+        "side": {
+          "path": "assets/locked_factory_faces_v2/sku_035_side.png",
+          "sha256": "0f2b63049b10a96bbf34dd3b7d41845e80847e624ae1a5cac9de2cb1f4855bab"
+        },
+        "front": {
+          "path": "assets/locked_factory_faces_v2/sku_035_front.png",
+          "sha256": "1fc5afd3c5eb19ad7efc2371c504900ec45d93cb544e831d6fc7fbe52ee6958d"
+        }
+      }
+    },
+    {
+      "sku": "045",
+      "name": "抛光黑石砖",
+      "size": "2x2x2 cm",
+      "metadata_status": "complete",
+      "method": "manual_redraw_existing",
+      "finish_profile": "geometric_subtle_grain",
+      "files": {
+        "top": {
+          "path": "assets/locked_factory_faces_v2/sku_045_top.png",
+          "sha256": "64723677fbd7f12fa6ae7d5f11f48bf597798f80c781bd43c071e46db32426c5"
+        },
+        "side": {
+          "path": "assets/locked_factory_faces_v2/sku_045_side.png",
+          "sha256": "6d653bf21d2a2a85cd1418c85bd9ab6cb09b40257c5e1ee2f1d7b15e21372da7"
+        },
+        "front": {
+          "path": "assets/locked_factory_faces_v2/sku_045_front.png",
+          "sha256": "ece10b63cfbb743a7f9200b73b6c9706c4389a5f8dd2c004037938e56916e4d2"
+        }
+      }
+    },
+    {
+      "sku": "048",
+      "name": "煤块",
+      "size": "2x2x2 cm",
+      "metadata_status": "complete",
+      "method": "manual_redraw_existing",
+      "finish_profile": "natural_multiscale",
+      "files": {
+        "top": {
+          "path": "assets/locked_factory_faces_v2/sku_048_top.png",
+          "sha256": "b46621afa2f5bbc385b073ee4b7ccf5862aaee2658385a5c65f67cac3257af25"
+        },
+        "side": {
+          "path": "assets/locked_factory_faces_v2/sku_048_side.png",
+          "sha256": "2c0608ef5d542eb1646d0239f308a8975418e2df21eed7f7790fcde913c57ff1"
+        },
+        "front": {
+          "path": "assets/locked_factory_faces_v2/sku_048_front.png",
+          "sha256": "fcad533c856d077f4678c96b661569f45302e1a4d0aa59674cf8f744cef1c6c2"
+        }
+      }
+    },
+    {
+      "sku": "057",
+      "name": "紫水晶块",
+      "size": "2x2x2 cm",
+      "metadata_status": "complete",
+      "method": "manual_redraw_existing",
+      "finish_profile": "natural_multiscale",
+      "files": {
+        "top": {
+          "path": "assets/locked_factory_faces_v2/sku_057_top.png",
+          "sha256": "210cabebdef1f6edce69c95a05ac76678a61285522bcf26d325d96a7dbec2e1f"
+        },
+        "side": {
+          "path": "assets/locked_factory_faces_v2/sku_057_side.png",
+          "sha256": "491bc9978100a682bf35ed828adfc51279bba474eade7d2a1c26d1c585185ba6"
+        },
+        "front": {
+          "path": "assets/locked_factory_faces_v2/sku_057_front.png",
+          "sha256": "d131bc045e1974a9d1329acaeabc9ecf26d3ec908d3bc50f888e03d4b0fc519d"
+        }
+      }
+    },
+    {
+      "sku": "059",
+      "name": "熔炉",
+      "size": "2x2x2 cm",
+      "metadata_status": "complete",
+      "method": "manual_redraw_existing",
+      "finish_profile": "geometric_subtle_grain",
+      "files": {
+        "top": {
+          "path": "assets/locked_factory_faces_v2/sku_059_top.png",
+          "sha256": "741daf3c1fe3faa211336d357d2e942a6861019e115a090f1b899ed600c92f67"
+        },
+        "side": {
+          "path": "assets/locked_factory_faces_v2/sku_059_side.png",
+          "sha256": "56ca1a4b32fe5b9e6c2a10c21aa60c02678aff9360456ab37aa4e2de0f33896c"
+        },
+        "front": {
+          "path": "assets/locked_factory_faces_v2/sku_059_front.png",
+          "sha256": "66f402082446e74bd141c4fda88d0ee307eadc8bcade0f6fe43a630d72b96241"
+        }
+      }
+    },
+    {
+      "sku": "060",
+      "name": "工作台",
+      "size": "2x2x2 cm",
+      "metadata_status": "complete",
+      "method": "manual_redraw_existing",
+      "finish_profile": "geometric_subtle_grain",
+      "files": {
+        "top": {
+          "path": "assets/locked_factory_faces_v2/sku_060_top.png",
+          "sha256": "7a63ed6b26ed587041f3c8eceec2293662dfe35db1a43aac2252812e074aec26"
+        },
+        "side": {
+          "path": "assets/locked_factory_faces_v2/sku_060_side.png",
+          "sha256": "54d391e1ad62a76ffc6c7aeabed3f51fb5c47985515ecb5c04d2c9468a19f794"
+        },
+        "front": {
+          "path": "assets/locked_factory_faces_v2/sku_060_front.png",
+          "sha256": "a5a637b96c0d4f9790b2dfb33a25556ca54e3fa790cb6df3115d4da6fbbcfed3"
+        }
+      }
+    },
+    {
+      "sku": "066",
+      "name": "织布机",
+      "size": "2x2x2 cm",
+      "metadata_status": "complete",
+      "method": "manual_redraw_existing",
+      "finish_profile": "geometric_subtle_grain",
+      "files": {
+        "top": {
+          "path": "assets/locked_factory_faces_v2/sku_066_top.png",
+          "sha256": "3e1e08245b62c14dcd2e690e6c4f28bb09edeb4d991cbe404d756c8610d8a922"
+        },
+        "side": {
+          "path": "assets/locked_factory_faces_v2/sku_066_side.png",
+          "sha256": "51cd158604ddb6d55453eb2dbc93c0c44cd0a50766fc0a059054400a696ab037"
+        },
+        "front": {
+          "path": "assets/locked_factory_faces_v2/sku_066_front.png",
+          "sha256": "c5a75aeeb17f259492d25ac9b0755e4eae35b42e23925c5ee2914045adabf744"
+        }
+      }
+    },
+    {
+      "sku": "067",
+      "name": "附魔台",
+      "size": "2x2x2 cm",
+      "metadata_status": "complete",
+      "method": "manual_redraw_existing",
+      "finish_profile": "geometric_subtle_grain",
+      "files": {
+        "top": {
+          "path": "assets/locked_factory_faces_v2/sku_067_top.png",
+          "sha256": "def7c97e86a99652da7f1846a6e9e33faefc0d5471e47be268f49e56802700c4"
+        },
+        "side": {
+          "path": "assets/locked_factory_faces_v2/sku_067_side.png",
+          "sha256": "58598e9fe0cee38379c4dfa58bc1b197fc22d4afeee2cb30485dca0e3aae0c2a"
+        },
+        "front": {
+          "path": "assets/locked_factory_faces_v2/sku_067_front.png",
+          "sha256": "f6bf0bd77e89d29c3cf8ec230f9d6698ca87a477335167ba5986ba6c25d25bc8"
+        }
+      }
+    },
+    {
+      "sku": "071",
+      "name": "红石灯",
+      "size": "2x2x2 cm",
+      "metadata_status": "complete",
+      "method": "manual_redraw_extended",
+      "finish_profile": "geometric_subtle_grain",
+      "files": {
+        "top": {
+          "path": "assets/locked_factory_faces_v2/sku_071_top.png",
+          "sha256": "879273301f105208524eeb6f518eca63866aba90239f8b573e6c239d580cee2e"
+        },
+        "side": {
+          "path": "assets/locked_factory_faces_v2/sku_071_side.png",
+          "sha256": "b5b89bff6e9958ed53397ff5b6cc5a14093487c2b8ff367e7343fdfbe7ebdb98"
+        },
+        "front": {
+          "path": "assets/locked_factory_faces_v2/sku_071_front.png",
+          "sha256": "1860500f97f9bc735f43542dbfa40df2ee95a0b4310932db365298c96c5bb189"
+        }
+      }
+    },
+    {
+      "sku": "073",
+      "name": "单人床   2颗拼",
+      "size": "4x2x2 cm",
+      "metadata_status": "complete",
+      "method": "manual_redraw_existing",
+      "finish_profile": "geometric_subtle_grain",
+      "files": {
+        "top": {
+          "path": "assets/locked_factory_faces_v2/sku_073_top.png",
+          "sha256": "27ed8449b51f951a5271061c969fe5579cb8c563a088ef7c476b031ed3b14e53"
+        },
+        "side": {
+          "path": "assets/locked_factory_faces_v2/sku_073_side.png",
+          "sha256": "a0498e3d29712a10f92b93d7251e35d12bee8b7357fdb96849b60ea29f7bcc88"
+        },
+        "front": {
+          "path": "assets/locked_factory_faces_v2/sku_073_front.png",
+          "sha256": "97b18d06e5b8d2c6532fa9dc80f614361a643b244d640f5761eeca798c4e9de2"
+        }
+      }
+    },
+    {
+      "sku": "074",
+      "name": "音乐盒",
+      "size": "2x2x2 cm",
+      "metadata_status": "complete",
+      "method": "manual_redraw_existing",
+      "finish_profile": "geometric_subtle_grain",
+      "files": {
+        "top": {
+          "path": "assets/locked_factory_faces_v2/sku_074_top.png",
+          "sha256": "cdf31122f5e23f6e37c6ebda9abdf2edb801f08816e5338ebfb04792a2f80db3"
+        },
+        "side": {
+          "path": "assets/locked_factory_faces_v2/sku_074_side.png",
+          "sha256": "0905ae743e04ed372df6c03539be074e83e04575a28269ebcd8f603ce619d842"
+        },
+        "front": {
+          "path": "assets/locked_factory_faces_v2/sku_074_front.png",
+          "sha256": "9c01f0f7b928e7034574413df23ad039914517b836d1b0bab0731005c616e998"
+        }
+      }
+    },
+    {
+      "sku": "075",
+      "name": "书架",
+      "size": "2x2x2 cm",
+      "metadata_status": "complete",
+      "method": "manual_redraw_existing",
+      "finish_profile": "geometric_subtle_grain",
+      "files": {
+        "top": {
+          "path": "assets/locked_factory_faces_v2/sku_075_top.png",
+          "sha256": "61b499f912a004d2e469917fd1c5912a75b29b8293489d1dea3345e1c2032ec7"
+        },
+        "side": {
+          "path": "assets/locked_factory_faces_v2/sku_075_side.png",
+          "sha256": "5eafe427bba2982eb7131591bbe06ec26f7d8d91c5a456aef5809e23f8517370"
+        },
+        "front": {
+          "path": "assets/locked_factory_faces_v2/sku_075_front.png",
+          "sha256": "9ad231d9a8387f09398521d86d051bde4f7e81fd6cee267670c8e40597971495"
+        }
+      }
+    },
+    {
+      "sku": "076",
+      "name": "木箱",
+      "size": "2x2x2 cm",
+      "metadata_status": "complete",
+      "method": "manual_redraw_existing",
+      "finish_profile": "geometric_subtle_grain",
+      "files": {
+        "top": {
+          "path": "assets/locked_factory_faces_v2/sku_076_top.png",
+          "sha256": "c0f200e787a15a0766a2d2094aa192ca3afa8c5a434e823bd0d0c57550244e54"
+        },
+        "side": {
+          "path": "assets/locked_factory_faces_v2/sku_076_side.png",
+          "sha256": "b0d182f0aa9dd95e905fe71c03a60cd2108ee9da27b594f2f3008e316a15012f"
+        },
+        "front": {
+          "path": "assets/locked_factory_faces_v2/sku_076_front.png",
+          "sha256": "ee0050ae39482286e0d5bd7d782f5f050833cfaaff0a034916abde3c36f33c99"
+        }
+      }
+    },
+    {
+      "sku": "077",
+      "name": "木桶",
+      "size": "2x2x2 cm",
+      "metadata_status": "complete",
+      "method": "manual_redraw_extended",
+      "finish_profile": "geometric_subtle_grain",
+      "files": {
+        "top": {
+          "path": "assets/locked_factory_faces_v2/sku_077_top.png",
+          "sha256": "fcd095d457b967bfc457d961a6c6ca3c4ab7c675c538e00bd47ab85891c66e69"
+        },
+        "side": {
+          "path": "assets/locked_factory_faces_v2/sku_077_side.png",
+          "sha256": "c99946171473f830da5b01ae941bb752649c4368c3b7b964fb713530e9a01ce9"
+        },
+        "front": {
+          "path": "assets/locked_factory_faces_v2/sku_077_front.png",
+          "sha256": "2cbc1574f0001bd10aeca975d9855ee7e7a6394190e26da43424602ae012ad09"
+        }
+      }
+    },
+    {
+      "sku": "078",
+      "name": "圣诞礼物",
+      "size": "2x2x2 cm",
+      "metadata_status": "complete",
+      "method": "manual_redraw_existing",
+      "finish_profile": "geometric_subtle_grain",
+      "files": {
+        "top": {
+          "path": "assets/locked_factory_faces_v2/sku_078_top.png",
+          "sha256": "f0b96244cb8b66e6afa9bd4ce4d48df8c2c2f31d7cb8f9d983015848e263bfe4"
+        },
+        "side": {
+          "path": "assets/locked_factory_faces_v2/sku_078_side.png",
+          "sha256": "ac91d34fb2156cdd6c54c9a4ea60385035518bea6bc4a056d369861db6b17af1"
+        },
+        "front": {
+          "path": "assets/locked_factory_faces_v2/sku_078_front.png",
+          "sha256": "db9337fc26e9863d966d312e06c1d91c5916aa18e72822defeb62ed341e44fde"
+        }
+      }
+    },
+    {
+      "sku": "079",
+      "name": "蜂巢",
+      "size": "2x2x2 cm",
+      "metadata_status": "complete",
+      "method": "manual_redraw_existing",
+      "finish_profile": "geometric_subtle_grain",
+      "files": {
+        "top": {
+          "path": "assets/locked_factory_faces_v2/sku_079_top.png",
+          "sha256": "72f3bd9b5792348dd0056f9269aeaf47e250b483f090a5b5d6ff4247fff45ec7"
+        },
+        "side": {
+          "path": "assets/locked_factory_faces_v2/sku_079_side.png",
+          "sha256": "64668302c97beb7325154461cd86cc4aad3551dc94f30240821b120d6a7849a8"
+        },
+        "front": {
+          "path": "assets/locked_factory_faces_v2/sku_079_front.png",
+          "sha256": "ffd056dfd1bba7bfb372d969d40c14349fe7b544183c4a375ec2e10d77fda3f0"
+        }
+      }
+    },
+    {
+      "sku": "080",
+      "name": "蜂箱",
+      "size": "2x2x2 cm",
+      "metadata_status": "complete",
+      "method": "manual_redraw_existing",
+      "finish_profile": "geometric_subtle_grain",
+      "files": {
+        "top": {
+          "path": "assets/locked_factory_faces_v2/sku_080_top.png",
+          "sha256": "c5390194e56e08685ada6be13c31568e97dff93106e7a111b1972615c132fcb7"
+        },
+        "side": {
+          "path": "assets/locked_factory_faces_v2/sku_080_side.png",
+          "sha256": "281e0819e78c4487ecfc1c81c9288ca45ea6415fbf155b14d89daaf6189dd3db"
+        },
+        "front": {
+          "path": "assets/locked_factory_faces_v2/sku_080_front.png",
+          "sha256": "3db365b98b0ff17ad220b558b40b12cb2967fcaf7eefbd830b626577f21f9cd7"
+        }
+      }
+    },
+    {
+      "sku": "081",
+      "name": "蜂窝块",
+      "size": "2x2x2 cm",
+      "metadata_status": "complete",
+      "method": "manual_redraw_extended",
+      "finish_profile": "natural_multiscale",
+      "files": {
+        "top": {
+          "path": "assets/locked_factory_faces_v2/sku_081_top.png",
+          "sha256": "edddd78efcfed1dcf738ff647aa4003a4e85298ad900d0dc05215c4f6f9b8a21"
+        },
+        "side": {
+          "path": "assets/locked_factory_faces_v2/sku_081_side.png",
+          "sha256": "57f4aa78f86aeb59f0493cabb88e4119eb39d5136d84823e09c1dfa2b6bd04de"
+        },
+        "front": {
+          "path": "assets/locked_factory_faces_v2/sku_081_front.png",
+          "sha256": "aad54012e912425859774413ca3363431585a4c5adfa6b771c7c70a58fac4904"
+        }
+      }
+    },
+    {
+      "sku": "082",
+      "name": "干草块",
+      "size": "2x2x2 cm",
+      "metadata_status": "complete",
+      "method": "manual_redraw_extended",
+      "finish_profile": "geometric_subtle_grain",
+      "files": {
+        "top": {
+          "path": "assets/locked_factory_faces_v2/sku_082_top.png",
+          "sha256": "1f6b0cddd9f4a29751607edec0da9cb06f0c82a3deab812a78d36d941d8bd4a0"
+        },
+        "side": {
+          "path": "assets/locked_factory_faces_v2/sku_082_side.png",
+          "sha256": "2cb9a971dd948d4310ec106ed0ff0cf2de48d0529f4d227d02d70b0ce20cb9db"
+        },
+        "front": {
+          "path": "assets/locked_factory_faces_v2/sku_082_front.png",
+          "sha256": "7c7ad0efac97943586e5146e6288a705ff9835927229da4627126462bf0c2b63"
+        }
+      }
+    },
+    {
+      "sku": "083",
+      "name": "蛋糕",
+      "size": "2x2x2 cm",
+      "metadata_status": "complete",
+      "method": "manual_redraw_existing",
+      "finish_profile": "geometric_subtle_grain",
+      "files": {
+        "top": {
+          "path": "assets/locked_factory_faces_v2/sku_083_top.png",
+          "sha256": "f80ef973c4421405292ef0672236985335feadcb49a531ddb914adaa9d036c63"
+        },
+        "side": {
+          "path": "assets/locked_factory_faces_v2/sku_083_side.png",
+          "sha256": "3c9515d9e4538a60223d5ce3eaa557eb9150af0ca64714224bf8e7ef62091e50"
+        },
+        "front": {
+          "path": "assets/locked_factory_faces_v2/sku_083_front.png",
+          "sha256": "5f3c6de887bde4bb8ba47abfcc0bc0f7db452ced806ad2fbc76e53871ba801f3"
+        }
+      }
+    },
+    {
+      "sku": "086",
+      "name": "岩浆块",
+      "size": "2x2x2 cm",
+      "metadata_status": "complete",
+      "method": "manual_redraw_existing",
+      "finish_profile": "natural_multiscale",
+      "files": {
+        "top": {
+          "path": "assets/locked_factory_faces_v2/sku_086_top.png",
+          "sha256": "722cbf0d3c96608615e6c8c0321f3e756f8500ba3c5438ba3920ff6c7f427dff"
+        },
+        "side": {
+          "path": "assets/locked_factory_faces_v2/sku_086_side.png",
+          "sha256": "2c8fa617ebe7b7bd27d51a6fdb9ef03d2afe4e7828f61540b32479e88278de8e"
+        },
+        "front": {
+          "path": "assets/locked_factory_faces_v2/sku_086_front.png",
+          "sha256": "eac997f0a110c7deddb538f48efbb45524c224c49b0669244ccb8a845c5e057c"
+        }
+      }
+    },
+    {
+      "sku": "087",
+      "name": "岩浆",
+      "size": "2x2x2 cm",
+      "metadata_status": "complete",
+      "method": "manual_redraw_existing",
+      "finish_profile": "natural_multiscale",
+      "files": {
+        "top": {
+          "path": "assets/locked_factory_faces_v2/sku_087_top.png",
+          "sha256": "ff881c7114df50c6caefde70fa7fcb5b333390995d9046b3d48a5f8576d56c92"
+        },
+        "side": {
+          "path": "assets/locked_factory_faces_v2/sku_087_side.png",
+          "sha256": "cd6b26a329a64fdb42a934ab0316c51f8c3a6f14ec05e76b91b6827d5a82f084"
+        },
+        "front": {
+          "path": "assets/locked_factory_faces_v2/sku_087_front.png",
+          "sha256": "e0e6a0f67e801d946b7bde253598e5a4913cc9d0ffd0ef8905aa16c1ddd64fb7"
+        }
+      }
+    },
+    {
+      "sku": "101",
+      "name": "史蒂夫",
+      "size": "2x2x2 cm",
+      "metadata_status": "complete",
+      "method": "manual_redraw_existing",
+      "finish_profile": "geometric_exact",
+      "files": {
+        "top": {
+          "path": "assets/locked_factory_faces_v2/sku_101_top.png",
+          "sha256": "6f2f0a784761275b36d5f0a3e08c9b233e5bff430ac1f37f7b6722d84be7b82c"
+        },
+        "side": {
+          "path": "assets/locked_factory_faces_v2/sku_101_side.png",
+          "sha256": "2027396d6806c949203025915d974dbd05bbf1a780381dce6b2b1776862ced84"
+        },
+        "front": {
+          "path": "assets/locked_factory_faces_v2/sku_101_front.png",
+          "sha256": "92494270334512fcf618b5093708d86bc143521b89bbe15436613bdcdee8f616"
+        }
+      }
+    },
+    {
+      "sku": "102",
+      "name": "阿里克斯",
+      "size": "2x2x2 cm",
+      "metadata_status": "complete",
+      "method": "manual_redraw_existing",
+      "finish_profile": "geometric_exact",
+      "files": {
+        "top": {
+          "path": "assets/locked_factory_faces_v2/sku_102_top.png",
+          "sha256": "dab8e831ca27356ddaaae7069f3248446792dc55e3616f0af663f5cef849f051"
+        },
+        "side": {
+          "path": "assets/locked_factory_faces_v2/sku_102_side.png",
+          "sha256": "4e227ce083f0a6ee6c7c4b01fef8f7dfb2c0ec92cbbcabfaa3bb183caac71d64"
+        },
+        "front": {
+          "path": "assets/locked_factory_faces_v2/sku_102_front.png",
+          "sha256": "15113f1a1e004dde55c461618383be4c6010752cc1387d375f6dea9ada63acae"
+        }
+      }
+    },
+    {
+      "sku": "109",
+      "name": "苦力怕",
+      "size": "2x2x2 cm",
+      "metadata_status": "complete",
+      "method": "manual_redraw_existing",
+      "finish_profile": "geometric_exact",
+      "files": {
+        "top": {
+          "path": "assets/locked_factory_faces_v2/sku_109_top.png",
+          "sha256": "4e96a9cf06d63a972e6e631c2cef9bde5610d5b13e27a49606cc72217c1b6a70"
+        },
+        "side": {
+          "path": "assets/locked_factory_faces_v2/sku_109_side.png",
+          "sha256": "6d4d83c275c559e61208a165c2184769767cb9188061dc8657184eb82de49865"
+        },
+        "front": {
+          "path": "assets/locked_factory_faces_v2/sku_109_front.png",
+          "sha256": "4e96a9cf06d63a972e6e631c2cef9bde5610d5b13e27a49606cc72217c1b6a70"
+        }
+      }
+    },
+    {
+      "sku": "129",
+      "name": "僵尸",
+      "size": "2x2x2 cm",
+      "metadata_status": "complete",
+      "method": "manual_redraw_existing",
+      "finish_profile": "geometric_exact",
+      "files": {
+        "top": {
+          "path": "assets/locked_factory_faces_v2/sku_129_top.png",
+          "sha256": "bd3d1df3a72d622a57f853f12670bba8d2d8de63072903d32eb13fb5543bba4c"
+        },
+        "side": {
+          "path": "assets/locked_factory_faces_v2/sku_129_side.png",
+          "sha256": "919aabc87e837aba910d7f8c765cd27d1cfa633f2cef31396a2ff30e3779f591"
+        },
+        "front": {
+          "path": "assets/locked_factory_faces_v2/sku_129_front.png",
+          "sha256": "bd3d1df3a72d622a57f853f12670bba8d2d8de63072903d32eb13fb5543bba4c"
+        }
+      }
+    },
+    {
+      "sku": "134",
+      "name": "末影人",
+      "size": "2x2x2 cm",
+      "metadata_status": "complete",
+      "method": "manual_redraw_existing",
+      "finish_profile": "geometric_exact",
+      "files": {
+        "top": {
+          "path": "assets/locked_factory_faces_v2/sku_134_top.png",
+          "sha256": "722c1313c50e1ea6e2fb0f4afb616fa73f62706643dc553b751686e43bbb8de7"
+        },
+        "side": {
+          "path": "assets/locked_factory_faces_v2/sku_134_side.png",
+          "sha256": "6669eac56f602337d16cfade294039228aaddb9c32cc2f2b7d1064ce9efe9307"
+        },
+        "front": {
+          "path": "assets/locked_factory_faces_v2/sku_134_front.png",
+          "sha256": "722c1313c50e1ea6e2fb0f4afb616fa73f62706643dc553b751686e43bbb8de7"
+        }
+      }
+    },
+    {
+      "sku": "145",
+      "name": "雪石头",
+      "size": "2x2x2 cm",
+      "metadata_status": "complete",
+      "method": "manual_redraw_extended",
+      "finish_profile": "natural_multiscale",
+      "files": {
+        "top": {
+          "path": "assets/locked_factory_faces_v2/sku_145_top.png",
+          "sha256": "fd511881335decc00548796572e07dc64e84579bd49b0a257ad665ff9f107d67"
+        },
+        "side": {
+          "path": "assets/locked_factory_faces_v2/sku_145_side.png",
+          "sha256": "788f325107572a9b5f7209508fb44357a0149b997b9a72aab2e0245f6ada6141"
+        },
+        "front": {
+          "path": "assets/locked_factory_faces_v2/sku_145_front.png",
+          "sha256": "bdaf49245ebcd444a2ab6db15b5b244de9a84bbf700dc7876faed34ebc391617"
+        }
+      }
+    },
+    {
+      "sku": "150",
+      "name": "雪像树叶",
+      "size": "2x2x2 cm",
+      "metadata_status": "complete",
+      "method": "manual_redraw_extended",
+      "finish_profile": "natural_multiscale",
+      "files": {
+        "top": {
+          "path": "assets/locked_factory_faces_v2/sku_150_top.png",
+          "sha256": "75aee85dbf5fa617a8f3332961b2d27ff3adaeda2820e396756e755b091d765f"
+        },
+        "side": {
+          "path": "assets/locked_factory_faces_v2/sku_150_side.png",
+          "sha256": "32dfb4f93f7c843ae95c2799342c55b678292a2cd3de3d10e27e4263e4033c87"
+        },
+        "front": {
+          "path": "assets/locked_factory_faces_v2/sku_150_front.png",
+          "sha256": "43bd7c30395a414335691d07e90fc4bd6aed68d6a67d5f5616293d0fc460f248"
+        }
+      }
+    },
+    {
+      "sku": "151",
+      "name": "农田",
+      "size": "2x2x2 cm",
+      "metadata_status": "complete",
+      "method": "manual_redraw_existing",
+      "finish_profile": "natural_multiscale",
+      "files": {
+        "top": {
+          "path": "assets/locked_factory_faces_v2/sku_151_top.png",
+          "sha256": "2cb8643a15c4d32e518d48d28a2d7f9f03cd91cc867d792784c5ef2bd8ab7c3c"
+        },
+        "side": {
+          "path": "assets/locked_factory_faces_v2/sku_151_side.png",
+          "sha256": "4c4e097fa385e45b89b641c65b73e4436cad5f7b4e83300b42396837cb696c7e"
+        },
+        "front": {
+          "path": "assets/locked_factory_faces_v2/sku_151_front.png",
+          "sha256": "f217a05322bdae3e94fd56f11922ff20871e8a5a373075e0d918925933db0c9f"
+        }
+      }
+    },
+    {
+      "sku": "153",
+      "name": "Pink glass",
+      "size": "2x2x2 cm",
+      "metadata_status": "complete",
+      "method": "manual_redraw_existing",
+      "finish_profile": "natural_multiscale",
+      "files": {
+        "top": {
+          "path": "assets/locked_factory_faces_v2/sku_153_top.png",
+          "sha256": "dcfe378c06501959bb06c058f3a307b1179b8de213c2e543351728dfc7608f65"
+        },
+        "side": {
+          "path": "assets/locked_factory_faces_v2/sku_153_side.png",
+          "sha256": "6f677d2d3f2ee187c3fb081d7e9d1b31542394d6de64c1a5e6259ba03aaebca1"
+        },
+        "front": {
+          "path": "assets/locked_factory_faces_v2/sku_153_front.png",
+          "sha256": "98e1051d8912320e5795fd24a2dc6de7d7b101914a92005dd74d4fbd2028a19b"
+        }
+      }
+    },
+    {
+      "sku": "154",
+      "name": "粉色玻璃",
+      "size": "2x2x2 cm",
+      "metadata_status": "complete",
+      "method": "manual_redraw_existing",
+      "finish_profile": "natural_multiscale",
+      "files": {
+        "top": {
+          "path": "assets/locked_factory_faces_v2/sku_154_top.png",
+          "sha256": "93ee26d94d87757519edcd94b66d9932078f0ee103727e2655f453250eff8939"
+        },
+        "side": {
+          "path": "assets/locked_factory_faces_v2/sku_154_side.png",
+          "sha256": "94dfe673783e53b7a764a0163cfc1618c0869518b37cd2a0642f27545b1d5927"
+        },
+        "front": {
+          "path": "assets/locked_factory_faces_v2/sku_154_front.png",
+          "sha256": "ef29db4be8df29215f7ee346d67a93645ca44bf17613ab227dfd581703de5759"
+        }
+      }
+    },
+    {
+      "sku": "155",
+      "name": "窗户",
+      "size": "2x2x2 cm",
+      "metadata_status": "complete",
+      "method": "manual_redraw_extended",
+      "finish_profile": "geometric_subtle_grain",
+      "files": {
+        "top": {
+          "path": "assets/locked_factory_faces_v2/sku_155_top.png",
+          "sha256": "d682b4123abe1527217b98ba599a7a724f53b1746ae8978f4c92a5bda0ccbde7"
+        },
+        "side": {
+          "path": "assets/locked_factory_faces_v2/sku_155_side.png",
+          "sha256": "6c17e3f3542527c2ca9df44661969c529537787608cc55df9fcaaaf780a70656"
+        },
+        "front": {
+          "path": "assets/locked_factory_faces_v2/sku_155_front.png",
+          "sha256": "ae98c32ccef20c098186139bf6cb9d3e268db8bf8a30250cd620cd8808f06ecb"
+        }
+      }
+    },
+    {
+      "sku": "156",
+      "name": "叶2",
+      "size": "2x2x2 cm",
+      "metadata_status": "complete",
+      "method": "manual_redraw_extended",
+      "finish_profile": "natural_multiscale",
+      "files": {
+        "top": {
+          "path": "assets/locked_factory_faces_v2/sku_156_top.png",
+          "sha256": "5901f280c62748b3437b3339de52ced26ec7dd59bb22f534e7c42922aa6e9174"
+        },
+        "side": {
+          "path": "assets/locked_factory_faces_v2/sku_156_side.png",
+          "sha256": "21bcb3a188c1d8991c6c9c875bc6c7751032184db2abc4d8607d0653a8ffcea5"
+        },
+        "front": {
+          "path": "assets/locked_factory_faces_v2/sku_156_front.png",
+          "sha256": "29c28259aa14f5bbbab3b6773966d6363e83428198d7cc810f8ac5708b245433"
+        }
+      }
+    },
+    {
+      "sku": "157",
+      "name": "花",
+      "size": "2x2x2 cm",
+      "metadata_status": "complete",
+      "method": "manual_redraw_existing",
+      "finish_profile": "natural_multiscale",
+      "files": {
+        "top": {
+          "path": "assets/locked_factory_faces_v2/sku_157_top.png",
+          "sha256": "db732bd62fde62df29f2ec2593126f5559b6dff8552fed0aa4c739c177e60327"
+        },
+        "side": {
+          "path": "assets/locked_factory_faces_v2/sku_157_side.png",
+          "sha256": "17875527d9effacc2c7e0707c80b2bea87f07d9443ad73bad4ad81ef43a363ec"
+        },
+        "front": {
+          "path": "assets/locked_factory_faces_v2/sku_157_front.png",
+          "sha256": "9c827b9f0f78dfa82552a5df603c05bc4f040fa862a961d332c811324b3613fc"
+        }
+      }
+    },
+    {
+      "sku": "161",
+      "name": "水2",
+      "size": "2x2x2 cm",
+      "metadata_status": "complete",
+      "method": "manual_redraw_existing",
+      "finish_profile": "natural_multiscale",
+      "files": {
+        "top": {
+          "path": "assets/locked_factory_faces_v2/sku_161_top.png",
+          "sha256": "042fc88c149ebf05e25b42ba0191cd78d1111654bbef064dc2d37751173d497a"
+        },
+        "side": {
+          "path": "assets/locked_factory_faces_v2/sku_161_side.png",
+          "sha256": "8887445c6bb7aa7a2534e301d4d02cece64bcc7e775d8c842468955196d93392"
+        },
+        "front": {
+          "path": "assets/locked_factory_faces_v2/sku_161_front.png",
+          "sha256": "426287b7189dfc696ccfd19fd311a3fe44ced0d41251255e9628cfe3340b6e7a"
+        }
+      }
+    },
+    {
+      "sku": "166",
+      "name": null,
+      "size": null,
+      "metadata_status": "id_only",
+      "method": "manual_redraw_extended",
+      "finish_profile": "geometric_subtle_grain",
+      "files": {
+        "top": {
+          "path": "assets/locked_factory_faces_v2/sku_166_top.png",
+          "sha256": "c8c34b097dd5de308b6e0776d6677bcddf1cb29d7a6e8d119b8aa9ffd6b7eaf7"
+        },
+        "side": {
+          "path": "assets/locked_factory_faces_v2/sku_166_side.png",
+          "sha256": "61076780d7af5a0cfd1c473170bb916aa4ba8e8a6d07a07553ab933dbb998c01"
+        },
+        "front": {
+          "path": "assets/locked_factory_faces_v2/sku_166_front.png",
+          "sha256": "b18cdccebb83bcc1db73d07f295801a05c086cfcd3877df4d49019dd3aeafb39"
+        }
+      }
+    },
+    {
+      "sku": "176",
+      "name": null,
+      "size": null,
+      "metadata_status": "id_only",
+      "method": "manual_redraw_extended",
+      "finish_profile": "natural_multiscale",
+      "files": {
+        "top": {
+          "path": "assets/locked_factory_faces_v2/sku_176_top.png",
+          "sha256": "a77c8d5f0f180aae0fb4116cefd5e7971611bdc07950e3453a108def7d962351"
+        },
+        "side": {
+          "path": "assets/locked_factory_faces_v2/sku_176_side.png",
+          "sha256": "f863f64e729bb2f8b1404395453096ef57d33f5f9da26eee98e5fc3788c20680"
+        },
+        "front": {
+          "path": "assets/locked_factory_faces_v2/sku_176_front.png",
+          "sha256": "bafe8bfee3f188a139cbc4a92ce82f6ed32f5bf25c54ecfa496a5c00cd3e9837"
+        }
+      }
+    },
+    {
+      "sku": "180",
+      "name": null,
+      "size": null,
+      "metadata_status": "id_only",
+      "method": "manual_redraw_extended",
+      "finish_profile": "natural_multiscale",
+      "files": {
+        "top": {
+          "path": "assets/locked_factory_faces_v2/sku_180_top.png",
+          "sha256": "454d160d65dca5ec335011159a4312c4e7bd5e90b5f74a2ff7bb9d742b6d9952"
+        },
+        "side": {
+          "path": "assets/locked_factory_faces_v2/sku_180_side.png",
+          "sha256": "e9aff0843cf14de0888f199fea595ead4383a858e1317a6c31eab26425a11481"
+        },
+        "front": {
+          "path": "assets/locked_factory_faces_v2/sku_180_front.png",
+          "sha256": "41dadac213aa63ef9ccb998d88c6a3fda8e72e53d596f1a45accae21974a13f4"
+        }
+      }
+    },
+    {
+      "sku": "181",
+      "name": null,
+      "size": null,
+      "metadata_status": "id_only",
+      "method": "manual_redraw_extended",
+      "finish_profile": "natural_multiscale",
+      "files": {
+        "top": {
+          "path": "assets/locked_factory_faces_v2/sku_181_top.png",
+          "sha256": "d3191002a4c7d284847d427eb1b70ee9b6df071994decd5e62489de396927057"
+        },
+        "side": {
+          "path": "assets/locked_factory_faces_v2/sku_181_side.png",
+          "sha256": "a994ad898431bb1febd5b34ee17303986ad35a0555dc1ea6e4be9c9a7c929c5a"
+        },
+        "front": {
+          "path": "assets/locked_factory_faces_v2/sku_181_front.png",
+          "sha256": "22cdc998535707a28473eed683fccc2b8f75fe675ad06ce1cbe7310485ce2b31"
+        }
+      }
+    },
+    {
+      "sku": "182",
+      "name": null,
+      "size": null,
+      "metadata_status": "id_only",
+      "method": "manual_redraw_extended",
+      "finish_profile": "geometric_exact",
+      "files": {
+        "top": {
+          "path": "assets/locked_factory_faces_v2/sku_182_top.png",
+          "sha256": "4c1e00a96e4a9f3353fc71c52fca1f48b52b688d5fe80b439a142ccd5740b28d"
+        },
+        "side": {
+          "path": "assets/locked_factory_faces_v2/sku_182_side.png",
+          "sha256": "91a531752e92af4e259e494aae63e959828fd8972974f7c416cf91e68476f422"
+        },
+        "front": {
+          "path": "assets/locked_factory_faces_v2/sku_182_front.png",
+          "sha256": "9bffc86ce4ead65111468d89395ffba0c710207d45d7664b67c75aecc3f8a03f"
+        }
+      }
+    },
+    {
+      "sku": "184",
+      "name": null,
+      "size": null,
+      "metadata_status": "id_only",
+      "method": "manual_redraw_existing",
+      "finish_profile": "geometric_subtle_grain",
+      "files": {
+        "top": {
+          "path": "assets/locked_factory_faces_v2/sku_184_top.png",
+          "sha256": "2ca191f0aa46b4a2095b5124658a9dab20ae5a959e8eaeebd9f02b83ccd6aee3"
+        },
+        "side": {
+          "path": "assets/locked_factory_faces_v2/sku_184_side.png",
+          "sha256": "42d5b418c7d5c9d42a326d78bc5d92ca7af8aa6dcd9ea5dcf5e2a78a1164190d"
+        },
+        "front": {
+          "path": "assets/locked_factory_faces_v2/sku_184_front.png",
+          "sha256": "b65c9691c7779373197a9a8ca87fcecab78da31b534629ca0132111641e33d4f"
+        }
+      }
+    },
+    {
+      "sku": "185",
+      "name": null,
+      "size": null,
+      "metadata_status": "id_only",
+      "method": "manual_redraw_extended",
+      "finish_profile": "natural_multiscale",
+      "files": {
+        "top": {
+          "path": "assets/locked_factory_faces_v2/sku_185_top.png",
+          "sha256": "cfc5a1d10d1432c010bd5bc4baed8887a48becd2bd2e6fdbe2216595bb18294a"
+        },
+        "side": {
+          "path": "assets/locked_factory_faces_v2/sku_185_side.png",
+          "sha256": "b34e985a0eee04dabda1fc8d7a2869555b848abea748c948fca32f672aba6927"
+        },
+        "front": {
+          "path": "assets/locked_factory_faces_v2/sku_185_front.png",
+          "sha256": "523a47db13aa3e21ae721783dc380c06f3eb763322fa993b3f39e6de8d6e43c5"
+        }
+      }
+    }
+  ]
+}

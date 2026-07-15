@@ -185,7 +185,7 @@ For color-box creation or catalog insertion:
       grid from the exact PCS count.
     - Weight is locked to `0.0025kg` per cube plus `0.070kg` per finished color
       box. Carton quantity is the largest multiple of `12` whose declared gross
-      weight is at most `25kg`; declared net weight rounds upward to `0.5kg`,
+      weight is at most `22kg`; declared net weight rounds upward to `0.5kg`,
       and declared gross weight is net plus `1.5kg`.
 11. Run `work/audit_scene_geometry_blender.py` before catalog composition. Reject any duplicate, enclosed, hidden, low-visibility, wrong-size, or unexpected non-figure component.
 12. Compare against competitor references before stopping. If it looks like colored material blocks instead of a recognizable scene, revise the model/texture plan.

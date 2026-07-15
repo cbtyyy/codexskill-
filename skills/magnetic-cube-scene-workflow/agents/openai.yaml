@@ -1,4 +1,4 @@
 interface:
-  display_name: "主题搭建厂家"
-  short_description: "先锁定颗粒贴图，再生成真3D主题场景、资料图和彩盒外箱数据。"
-  default_prompt: "使用 $magnetic-cube-scene-workflow 完成厂家主题搭建：先画并审核每颗方块的多面贴图，再选择专属结构模板搭建80-200PCS真3D场景，保证统一20mm方块、整数网格对齐、人物正脸可见；明细必须复用场景同一颗粒和实际数量；需要包装时按固定三档彩盒、2.5g/颗、70g/彩盒、12盒倍数、毛重不超过25kg、毛重比净重多1.5kg计算。"
+  display_name: "厂图搭建场景"
+  short_description: "按厂图Excel颗粒生成真3D磁力方块场景与商品资料图。"
+  default_prompt: "使用 $magnetic-cube-scene-workflow 和已锁定双厂表贴图库，按固定蓝色资料图模板生成磁力方块场景：统一20mm方块、表格1与表格2可混用、12-15种颗粒、实际PCS、右上场景名与PCS；明细必须显示表1-编号或表2-编号，数量居中在方块下方。"
