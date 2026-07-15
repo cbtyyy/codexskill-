@@ -10,8 +10,19 @@ from PIL import Image
 
 SKILL_ROOT = Path(__file__).resolve().parents[1]
 LIBRARY_ROOT = SKILL_ROOT / "assets" / "dual_factory_library"
-FACE_NAMES = ("top", "front", "right", "back", "left", "bottom")
+FACE_NAMES = ("top", "front", "right")
 WORKBOOK_BACKGROUND = (255, 245, 212)
+EXPECTED_VERSIONS = {
+    "table1": "table1_three_visible_faces_v3",
+    "table2": "table2_three_visible_faces_v3",
+}
+EXPECTED_TEXTURE_PROFILE = {
+    "name": "fine_print_v3",
+    "deblock_radius": 1.0,
+    "deblock_blend": 0.28,
+    "saturation_factor": 1.055,
+    "geometry_policy": "Preserve source artwork, line positions, and face registration exactly.",
+}
 
 
 def sha256(path: Path) -> str:
@@ -23,6 +34,10 @@ def validate_manifest(library_id: str) -> dict:
     manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
     if manifest["library_id"] != library_id:
         raise RuntimeError(f"Wrong library ID in {manifest_path}")
+    if manifest.get("version") != EXPECTED_VERSIONS[library_id]:
+        raise RuntimeError(f"Wrong texture-library version in {manifest_path}")
+    if manifest.get("texture_profile") != EXPECTED_TEXTURE_PROFILE:
+        raise RuntimeError(f"Wrong texture profile in {manifest_path}")
 
     expected_prefix = "表1-" if library_id == "table1" else "表2-"
     seen = set()
@@ -70,6 +85,7 @@ def validate_manifest(library_id: str) -> dict:
         "scene_eligible": sum(bool(r.get("scene_eligible")) for r in manifest["records"]),
         "face_references": face_count,
         "workbook_thumbnails": workbook_thumbnail_count,
+        "texture_profile": manifest["texture_profile"],
     }
 
 

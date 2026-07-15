@@ -19,7 +19,7 @@ MANIFEST_PATHS = {
     "table1": LIBRARY_ROOT / "table1_manifest.json",
     "table2": LIBRARY_ROOT / "table2_manifest.json",
 }
-FACE_NAMES = ("top", "front", "right", "back", "left", "bottom")
+FACE_NAMES = ("top", "front", "right")
 
 
 def _sha256(path: Path) -> str:
@@ -62,26 +62,14 @@ def make_image_material(name: str, image_path: Path) -> bpy.types.Material:
     nodes.clear()
 
     output = nodes.new("ShaderNodeOutputMaterial")
-    bsdf = nodes.new("ShaderNodeBsdfPrincipled")
     emission = nodes.new("ShaderNodeEmission")
-    mix = nodes.new("ShaderNodeMixShader")
     texture = nodes.new("ShaderNodeTexImage")
     texture.image = bpy.data.images.load(str(image_path), check_existing=True)
     texture.interpolation = "Linear"
 
-    bsdf.inputs["Roughness"].default_value = 0.40
-    if "Specular IOR Level" in bsdf.inputs:
-        bsdf.inputs["Specular IOR Level"].default_value = 0.13
-    if "Coat Weight" in bsdf.inputs:
-        bsdf.inputs["Coat Weight"].default_value = 0.018
-    emission.inputs["Strength"].default_value = 0.33
-    mix.inputs[0].default_value = 0.16
-
-    links.new(texture.outputs["Color"], bsdf.inputs["Base Color"])
+    emission.inputs["Strength"].default_value = 1.0
     links.new(texture.outputs["Color"], emission.inputs["Color"])
-    links.new(bsdf.outputs["BSDF"], mix.inputs[1])
-    links.new(emission.outputs["Emission"], mix.inputs[2])
-    links.new(mix.outputs["Shader"], output.inputs["Surface"])
+    links.new(emission.outputs["Emission"], output.inputs["Surface"])
     return material
 
 
@@ -108,6 +96,15 @@ def install_particle_materials(
             builder.MATERIALS[material_key] = make_image_material(material_key, path)
             face_materials[face_name] = material_key
 
-        builder.MATERIAL_SPEC[logical] = face_materials
+        # The production camera can only see top/front/right. Hidden faces use
+        # aliases solely to satisfy the closed cube mesh and are not source art.
+        builder.MATERIAL_SPEC[logical] = {
+            "top": face_materials["top"],
+            "front": face_materials["front"],
+            "right": face_materials["right"],
+            "back": face_materials["front"],
+            "left": face_materials["right"],
+            "bottom": face_materials["top"],
+        }
         installed[particle_key] = logical
     return installed

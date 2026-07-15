@@ -4,7 +4,7 @@
     "records": 308,
     "source_images": 306,
     "scene_eligible": 306,
-    "face_files": 1836,
+    "face_files": 918,
     "missing_ids": [
       "298",
       "302"
@@ -19,7 +19,7 @@
     "records": 189,
     "source_image_objects": 207,
     "scene_eligible": 179,
-    "face_files": 1074,
+    "face_files": 537,
     "missing_ids": [
       "038",
       "044",
@@ -39,5 +39,13 @@
     "表1-001",
     "表2-001"
   ],
-  "namespace_policy": "table1:<source-id> and table2:<source-id>"
+  "namespace_policy": "table1:<source-id> and table2:<source-id>",
+  "visible_face_policy": "top/front/right only; fixed near-front camera",
+  "texture_profile": {
+    "name": "fine_print_v3",
+    "deblock_radius": 1.0,
+    "deblock_blend": 0.28,
+    "saturation_factor": 1.055,
+    "geometry_policy": "Preserve source artwork, line positions, and face registration exactly."
+  }
 }

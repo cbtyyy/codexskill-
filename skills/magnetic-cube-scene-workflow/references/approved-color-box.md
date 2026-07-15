@@ -42,6 +42,12 @@ catalog sheet. Reuse the approved transparent asset exactly.
   rectangular thumbnail box. Search for the largest placement that keeps the
   actual visible pixels clear of the title, PCS/size block, age badge, and STEM
   footer. Tall and wide scenes must therefore receive different placements.
+- Keep the front title compact and left aligned. Its reserved collision area
+  must follow the actual text bounds; do not retain an oversized invisible
+  title rectangle that forces the SKU scene to render smaller than necessary.
+- Keep the PCS badge and cube-size mark grouped in the upper-right corner.
+  Scale them together for legibility, preserve a clear outer margin, and reserve
+  their actual combined bounds so enlarged scene artwork cannot overlap them.
 - Reject any package where the scene is merely reduced to avoid overlap while
   unused irregular space remains beside the fixed information blocks.
 - The five lower-right STEM swatches are SKU-specific. Select five visually
@@ -87,6 +93,10 @@ Inspect at 200-400% before delivery:
 
 - No front artwork crosses onto the lid or left side.
 - No white hairline, double contour, or exposed old artwork along any fold.
+- The connected front-top fold and left-front vertical fold use one constant
+  3D offset and one constant line radius from end to end. Do not taper the line
+  by changing endpoint depth or height offsets, and do not stack a second edge
+  curve over either segment.
 - No rectangular seam between blue and green artwork.
 - No detached green blocks inside the blue field.
 - No halo around the transparent catalog cutout.

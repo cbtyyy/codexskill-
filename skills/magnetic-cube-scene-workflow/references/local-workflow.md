@@ -10,6 +10,27 @@
 - Approved factory faces: `assets/locked_factory_faces_v2/`
 - Factory face manifest: `references/locked-factory-faces-v2.json`
 
+## Dual-Table Three-Face Production
+
+For the current `表格1.xlsx` + `表格2.xlsx` factory catalog, use
+`assets/dual_factory_library/` and
+`scripts/dual_library_materials_blender.py`. This library intentionally stores
+only top/front/right. It is for the locked near-front camera and must not be
+treated as a six-face turntable asset.
+
+Current production baseline:
+
+- Camera: `(span*0.22, -span*1.82, span*0.64)` from scene center.
+- Cube edge: `1.0`; coordinates: integer; bevel: `0.001`.
+- Material: roughness `0.66`, specular IOR level `0.065`, coat `0`, no
+  emission mix.
+- Color management: Standard, no high-contrast look, scene exposure around
+  `0.06`.
+- Detail icons: same three textures and camera, with lower light energy than the
+  large scene to prevent white-particle washout.
+- Catalog details: 12-15 types, labels such as `表1-026` or `表2-026`, and
+  `×quantity` centered below the cube.
+
 Main scripts:
 
 - `scripts/compose_approved_catalog_sheet.py`

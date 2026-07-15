@@ -31,6 +31,10 @@ Use this skill to produce wholesale-ready magnetic cube scene assets. The output
   `assets/dual_factory_library/` as the authoritative source. Keep every key
   namespaced as `table1:<source-id>` or `table2:<source-id>`; never merge two
   particles because their numbers or artwork look the same.
+- The current two-table catalog is a fixed-camera three-visible-face library.
+  Store only `top`, `front`, and `right` source-backed textures. The
+  production camera must not reveal left/back/bottom. Runtime aliases may close
+  the mesh, but they are not factory artwork and must never be exported as such.
 - Mixed-library scenes are allowed. Every parts-detail cell must show the
   source-aware label from the manifest, such as `表1-026` or `表2-026`, with
   `×quantity` centered below the cube. A bare `026` is invalid in a mixed scene.
@@ -38,9 +42,31 @@ Use this skill to produce wholesale-ready magnetic cube scene assets. The output
 - Keep side-face ink close to the approved front-face color. Create depth with
   balanced diffuse lighting and a thin edge shadow, never a gray side overlay
   or a broad white specular film.
+- Current two-table factory exception: source-table color accuracy takes
+  priority over diffuse shading. Use the locked source-color shader that routes
+  the texture through emission at strength `1.0`, exposure `0`, with no added
+  diffuse/specular layer. This is a color-preserving print shader, not a glow
+  effect. Perspective, three visible faces, seams, and the printed perimeter
+  provide depth without darkening the factory artwork.
 - Place buyer-facing characters where their complete front artwork is visible
   from the production camera. Side/top character artwork must remain distinct,
   but it must not replace or hide the primary face in the catalog view.
+- For any character-led scene, read `references/character-story-and-template-rules.md`.
+  Lock each role's expression, costume, six-face continuation, story function,
+  and camera-facing placement before modeling. A repeated dot-eye/curve-mouth
+  face or a duplicated front texture on the side is a rejection condition.
+- A new theme must use a theme-specific model template. Reusing the same wall,
+  stair, platform, or tower skeleton with different colors is prohibited. Only
+  low-level cube helpers and generic support components may be shared across
+  themes; the hero silhouette, circulation path, props, and elevation rhythm
+  must be designed for that theme.
+- In the current two-table factory catalog, every source particle classified as
+  a person, head, face character, or creature head is an isolated one-cube
+  foreground component. Never use one as a wall, roof, floor, tree, bridge, or
+  other structural cube. Reject the scene when a figure particle is face-
+  adjacent to the main component or when its connected-component size is not 1.
+  Keep each registered figure key to one cube per scene unless the user
+  explicitly approves duplicates.
 - Avoid long flat strips, large empty planes, random material blocks, misaligned characters, and repeated generic figures.
 - Apply a premium-toy design gate: repeated decoration cannot be used as PCS filler. Every visible print block must have a role such as wall, window, door, fireplace, foliage, tree ornament, gift, lamp, or character.
 - Keep white/snow blocks white, but preserve seams with thin gray edges.
@@ -74,6 +100,8 @@ For color-box creation or catalog insertion:
 
 1. Clarify the task type:
    - For scene generation or optimization, read `references/scene-design-rules.md`.
+   - For scenes containing people, animals, vehicles, occupations, or a buyer-
+     visible story, also read `references/character-story-and-template-rules.md`.
    - For pirate or engineering themes, also read `references/pirate-engineer-templates.md` and start from the approved particle-first structural templates instead of recoloring another scene.
    - For local rendering commands and script locations, read `references/local-workflow.md`.
    - For color box composition, read `references/approved-color-box.md`.
@@ -86,9 +114,10 @@ For color-box creation or catalog insertion:
 3. For a new theme family, use the particle-first gate before scene modeling:
    - Reuse an existing face from `assets/locked_factory_faces_v2/` whenever its SKU is listed in the approved manifest.
    - List every required structural, semantic, prop, and character particle.
-   - Draw and lock separate `left`, `front`, `right`, `back`, `top`, and
-     `bottom` artwork for each particle. New theme families must not reuse one
-     generic side texture for all lateral faces.
+   - For a new full-view theme family, draw and lock separate `left`, `front`,
+     `right`, `back`, `top`, and `bottom` artwork. The current dual-table
+     fixed-camera catalog is the explicit exception and uses only source-backed
+     top/front/right.
    - Render every particle as one identical 3D cube and review the unit-cube contact sheet.
    - Save the approved set as a versioned particle manifest with relative paths and SHA-256 hashes. Scene code may reference only manifest materials.
    - If modeling reveals a missing particle, return to the particle library, add and re-audit it; never draw an improvised texture inside the scene stage.
@@ -111,11 +140,21 @@ For color-box creation or catalog insertion:
    with a soft planning cap. Complete the silhouette, support element and props,
    skip generic target filling, then use the actual 80-200 PCS result.
 8. Build a model-based scene around one primary silhouette. Add support elements only when they improve recognizability.
-9. For each theme, apply the archetype template before filling PCS. Fillers must stay subordinate to the main silhouette.
+9. For each theme, apply its dedicated archetype template before filling PCS.
+   Run the hidden-title recognition test and the cross-theme silhouette test:
+   the theme and role relationship must remain readable without the title, and
+   the model must not reduce to another theme's skeleton after recoloring.
+   Fillers must stay subordinate to the main silhouette.
 10. Render and compose catalog sheets. Parts details and color-box scenes must reuse the exact locked particle textures and final scene render.
 11. Run `work/audit_scene_geometry_blender.py` before catalog composition. Reject any duplicate, enclosed, hidden, low-visibility, wrong-size, or unexpected non-figure component.
 12. Compare against competitor references before stopping. If it looks like colored material blocks instead of a recognizable scene, revise the model/texture plan.
 13. When color direction is not approved, render the same geometry in controlled saturation variants. Do not change the model, materials, PCS, or layout between variants, and validate scene/detail/package tone separately for each variant.
+14. For the two-table factory catalog, render the main scene and every detail
+    icon with the same source-color material profile, exposure `0`, Standard
+    color management, fixed camera direction, and no cast shadows. The texture
+    must feed a strength-`1.0` emission shader directly; never mix it on top of
+    diffuse shading or apply per-scene gamma, saturation, brightness, or a
+    white-overlay fix.
 
 ## Visual Target
 
@@ -156,18 +195,43 @@ Before final response, check:
 - Grid audit reports zero fractional coordinates, one identical cube edge
   length, and exact one-unit center spacing for every adjacent pair.
 - Exactly one connected main component; only complete one- or two-cube figures may be separate.
+- For the current two-table factory catalog, all person/head/face-character
+  particles are separate one-cube components. Their component sizes must all
+  equal 1, the embedded-figure count must equal 0, and the duplicate-figure
+  count must equal 0.
 - Geometry audit reports zero enclosed cubes, zero camera-hidden cubes, zero low-visibility cubes, and zero cube-size errors. Use at least 12 visible face samples per cube for the production camera.
 - White blocks do not merge into the background or each other.
 - Top and side faces have no milky veil: side ink remains saturated, white tops remain neutral white, and their thin gray perimeter survives final downscaling.
-- Six-face unit renders retain the locked print color: top/right colored ink
-  must not be clipped or covered by a gray/white lighting layer.
+- Unit renders retain the locked print color: top/right colored ink must not be
+  clipped or covered by a gray/white lighting layer. For the dual-table catalog,
+  validate the three source-backed visible faces only.
 - Reject a technically valid scene if it still reads as a repeated block pile. The hero silhouette, interior/foreground story, texture rhythm, and figure placement must pass a buyer-view aesthetic review before batch generation.
 - Parts-detail icons do not overlap counts.
 - All one-cube detail icons use one fixed orthographic crop and one canonical alpha silhouette; never crop each material independently.
 - Parts-detail colors match scene colors.
 - Main-scene colored faces, parts-detail icons, and the color-box scene use one
   locked tone profile; reject visible side-face desaturation or gray drift.
+- Pixel-compare detached one-cube figure/head particles against their exact
+  detail icons after alpha-crop normalization. Median RGB and luminance error
+  must each stay within `4/255`. This verifies the shared scene/detail renderer;
+  reject any scene-only color adjustment even when aggregate averages look close.
+- Project the top/front/right polygons of every detail icon and compare their
+  color statistics against the corresponding authoritative source face files.
+  Across the current batch, require median luminance error at most `1/255`, 95th
+  percentile at most `3.5/255`, maximum at most `7/255`, and 95th-percentile
+  saturation error at most `0.02`.
 - Every featured character shows its complete front face without scene overlap.
+- Every featured character has a role-specific expression and costume. Side,
+  back, and top faces continue the headgear, hair, ears, sleeves, and clothing;
+  none duplicates the front face.
+- Character placement follows the story and is staggered across foreground,
+  midground, and the hero structure. Reject a straight repeated front-row
+  lineup or any placement that hides the face from the production camera.
+- Theme templates pass the cross-theme silhouette test. Police, pirate,
+  Christmas, engineering, farm, and other themes may not share one recolored
+  wall/platform/stair skeleton.
+- Different PCS labels refer to genuinely different modeled geometry and exact
+  counts. Never relabel one render as several PCS variants.
 - Main-scene white/snow matches the detail icon's neutral white; do not accept
   cool gray or blue-cyan snow. Preserve only one thin neutral-gray seam.
 - Color-box scene matches catalog scene brightness.

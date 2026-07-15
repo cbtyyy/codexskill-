@@ -1,5 +1,12 @@
 # Scene Design Rules
 
+## Current Dual-Table Camera Exception
+
+The processed Table 1 + Table 2 catalog has only three source-backed visible
+faces. For these scenes, lock the orthographic camera near
+`center + (span*0.22, -span*1.82, span*0.64)` so only top/front/right appear.
+Do not rotate the camera to reveal a runtime-aliased hidden face.
+
 ## Competitor Benchmark
 
 Competitor scenes work because they have:
@@ -162,6 +169,10 @@ When PCS is 120-169, use one primary element plus one support element. When PCS 
 - Use plastic highlight/catchlight, but keep seams and do not wash out white blocks.
 - Generate a separate top-face material for every reusable print family. Never reuse the front texture's baked broad catchlight on an upward face; preserve the material hue with a small top-only chroma/brightness compensation and retain directional shader shading for depth.
 - Parts-detail blocks should use the same texture family as the scene. Treat the detail icons as the color reference: after scene lighting and sheet compositing, colored front faces in the main scene and color-box scene should have the same apparent brightness, saturation, and contrast as the corresponding detail icon. Preserve directional shading on side faces instead of flattening the whole model.
+- Two-table factory-catalog exception: the Excel-derived source face is the
+  color reference, not the lit detail icon. Use the locked source-color shader
+  so scene and detail both preserve that face. Keep depth through geometry,
+  perspective, seams, and printed outlines rather than diffuse darkening.
 - Theme-specific printed blocks should carry the theme from a distance: race scenes need flags, tires, hazard stripes and flame blocks; ice scenes need snowflakes, crystal/crown blocks and blue ice bridges; Christmas scenes need tree garlands, gifts, wreaths, brick house walls, snow caps and themed figures. Do not let generic material cubes dominate the subject.
 
 ## Figures
@@ -193,6 +204,11 @@ When PCS is 120-169, use one primary element plus one support element. When PCS 
 - In the production camera, every primary door, window, face, badge, and symbol must remain a complete readable print. A projecting return wall may show depth, but it must not mask half of an adjacent front-face print; relocate the print to a fully visible grid cell when perspective creates a false misalignment.
 - For the approved product angle, use an orthographic camera with lateral offset `0.32 x scene span`, depth offset `-1.50 x span`, and height offset `0.50 x span`. Keep this locked across the scene, details, and package unless the user explicitly selects another angle.
 - Foreground figures must not overlap each other in the rendered camera view. Keep roughly three cube widths between neighboring figures for the current three-quarter camera, then inspect the raw render before composing the sheet.
+- Two-table factory-catalog exception: a source SKU that is itself a one-cube
+  head, face character, or creature head must remain one complete detached
+  cube. It may be shown as a foreground character/prop, but it must never be
+  inserted into a wall, roof, ground, tree canopy, or other connected structure.
+  Audit by material key after all remapping; visual intent alone is not enough.
 
 ## Designer-Grade Particle Art Gate
 
