@@ -83,11 +83,11 @@ def validate(scenes: list[dict]) -> dict:
         if len(archetypes) < 4:
             errors.append(f"batch has {len(archetypes)} archetypes; at least 4 are required")
 
-    if len(scenes) >= 6:
-        present_bands = {band(pcs) for pcs in pcs_values}
-        missing_bands = [name for name in ("80-119", "120-159", "160-200") if name not in present_bands]
-        if missing_bands:
-            errors.append(f"missing PCS bands: {', '.join(missing_bands)}")
+    if len(scenes) >= 6 and max(pcs_values) - min(pcs_values) < 24:
+        errors.append(
+            f"PCS spread is only {max(pcs_values) - min(pcs_values)}; "
+            "candidate counts appear artificially clustered"
+        )
 
     for index in range(1, len(scenes)):
         difference = axis_difference(signatures[index - 1], signatures[index])

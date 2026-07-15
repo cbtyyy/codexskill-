@@ -103,3 +103,33 @@ Reject the scene unless all are true:
 6. Characters occupy story-driven positions rather than a fixed lineup.
 7. The scene has distinct foreground, midground, and background layers.
 8. The displayed PCS equals the actual modeled count.
+
+## 9. Multi-archetype generation and rejection
+
+For every theme family intended for reuse, maintain at least three different
+topologies. For example, police may use a checkpoint station, an intersection
+precinct, and an open garage courtyard; pirate may use a docked ship, a skull
+cave dock, and a lookout-tower cove. These are topology changes, not recolors.
+
+Generate low-detail gray candidates before final particle art and record:
+
+- footprint and top-view occupancy;
+- dominant mass and secondary mass;
+- major opening or negative space;
+- foreground, midground, and background depth layers;
+- height levels and longest uninterrupted run;
+- circulation/story path and character anchors.
+
+Reject a candidate when any is true:
+
+- top-view occupancy similarity to another candidate is above `0.70`;
+- fewer than three structural properties differ from the nearest candidate;
+- a long wall, strip, or platform becomes the scene's dominant silhouette;
+- no door, arch, bridge gap, garage opening, road turn, dock gap, or comparable
+  negative space is readable;
+- character anchors repeat the same front-edge lineup;
+- removing decals makes the theme unrecognizable.
+
+Only approved geometry receives the locked six-face particle art. PCS may vary
+from 80 to 200, but the chosen count must improve the silhouette and story rather
+than pad a weak template.

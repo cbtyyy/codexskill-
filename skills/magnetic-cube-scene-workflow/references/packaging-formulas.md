@@ -38,7 +38,7 @@ Use the user's fixed rule:
   This conservative rounding is required because a 12-multiple quantity will
   generally not produce an exact integer or half-kilogram result.
 - Declared gross weight = declared net weight + `1.5kg`.
-- Choose the largest multiple of `12` where declared gross weight is `<=22kg`.
+- Choose the largest multiple of `12` where declared gross weight is `<=25kg`.
 - Under this user-specific convention, declared net weight includes the 70g
   color box. Label it as packed-goods net weight internally; customs pure net
   weight would require a separate cube-only calculation.
