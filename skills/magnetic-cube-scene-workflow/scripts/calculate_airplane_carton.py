@@ -52,7 +52,9 @@ def color_box_for_pcs(
     return (23.5, 11.0, 9.0)
 
 
-def choose_carton_quantity(pcs: int) -> tuple[int, float, float, float, float]:
+def carton_weight_options(
+    pcs: int,
+) -> tuple[float, list[tuple[int, float, float, float]]]:
     packed_box_weight = pcs * CUBE_WEIGHT_KG + COLOR_BOX_WEIGHT_KG
     valid: list[tuple[int, float, float, float]] = []
     for quantity in range(QUANTITY_MULTIPLE, 1000, QUANTITY_MULTIPLE):
@@ -63,8 +65,7 @@ def choose_carton_quantity(pcs: int) -> tuple[int, float, float, float, float]:
             valid.append((quantity, exact, declared_net, declared_gross))
     if not valid:
         raise ValueError(f"No valid 12-multiple carton quantity for {pcs} PCS")
-    quantity, exact, declared_net, declared_gross = valid[-1]
-    return quantity, packed_box_weight, exact, declared_net, declared_gross
+    return packed_box_weight, valid
 
 
 def html_carton_layout(
@@ -130,8 +131,34 @@ def calculate(
     color_box = color_box_for_pcs(
         pcs, allow_legacy_below_80=allow_legacy_below_80
     )
-    quantity, box_weight, exact, declared_net, declared_gross = choose_carton_quantity(pcs)
-    arrangement, carton = html_carton_layout(color_box, quantity)
+    box_weight, weight_options = carton_weight_options(pcs)
+    selected = None
+    for quantity, exact, declared_net, declared_gross in reversed(weight_options):
+        try:
+            arrangement, carton = html_carton_layout(color_box, quantity)
+        except ValueError:
+            continue
+        selected = (
+            quantity,
+            exact,
+            declared_net,
+            declared_gross,
+            arrangement,
+            carton,
+        )
+        break
+    if selected is None:
+        raise ValueError(
+            f"No valid 12-multiple carton quantity and layout for {pcs} PCS"
+        )
+    (
+        quantity,
+        exact,
+        declared_net,
+        declared_gross,
+        arrangement,
+        carton,
+    ) = selected
     return Result(
         name=name,
         pcs=pcs,

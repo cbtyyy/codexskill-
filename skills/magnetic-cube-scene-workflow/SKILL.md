@@ -19,10 +19,11 @@ Use this skill to produce wholesale-ready magnetic cube scene assets. The output
 - Cube count must match the displayed PCS exactly. If PCS is not specified,
   finish the scene first, keep the result within 80-200 PCS, then display the
   actual modeled count; never add filler only to reach a preset number.
-- For an unspecified-PCS batch of six or more scenes, cover all three count
-  bands: `80-119`, `120-159`, and `160-200`. High-PCS scenes must earn their
-  count through a more complete hero and meaningful support structures, not a
-  longer base, thicker hidden walls, or repeated decoration.
+- For an unspecified-PCS batch, vary PCS naturally when the finished designs
+  support it, but never weaken a scene merely to force coverage of every count
+  band. High-PCS scenes must earn their count through a more complete hero and
+  meaningful support structures, not a longer base, thicker hidden walls, or
+  repeated decoration.
 - The buyer must understand the scene without reading the scene name.
 - Use the competitor folder as the quality benchmark: `D:/Users/Administrator/Desktop/磁力方块场景/`.
 - For factory SKU work, read `references/factory-particle-library.md` and use
@@ -64,12 +65,23 @@ Use this skill to produce wholesale-ready magnetic cube scene assets. The output
   low-level cube helpers and generic support components may be shared across
   themes; the hero silhouette, circulation path, props, and elevation rhythm
   must be designed for that theme.
+- Keep at least three structurally distinct archetypes for every reusable theme
+  family. Generate low-resolution geometry candidates before final texturing,
+  score their footprint, dominant mass, major void, depth layers, height rhythm,
+  and story path, then keep only candidates that remain recognizable in plain
+  gray. Two candidates from one family must differ on at least three of those
+  properties; different PCS alone does not make a new archetype.
 - Before a multi-scene batch, assign each model a structural signature and run
   `scripts/validate_scene_batch_diversity.py`. A batch of five or more scenes
   must use at least four archetypes; one template ID may appear at most twice.
   Consecutive scenes and two variants of one template must differ on at least
   three of footprint, primary mass, major void, height rhythm, and foreground
   path.
+- Reject a candidate before final rendering when its top-view occupancy exceeds
+  `0.70` similarity with another candidate, its longest uninterrupted wall or
+  platform dominates the scene, it has no readable opening, or it repeats the
+  same low-front/high-back character lineup. Rebuild its topology rather than
+  changing decals, color, or PCS.
 - In the current two-table factory catalog, every source particle classified as
   a person, head, face character, or creature head is an isolated one-cube
   foreground component. Never use one as a wall, roof, floor, tree, bridge, or
@@ -113,6 +125,10 @@ For color-box creation or catalog insertion:
    - For scenes containing people, animals, vehicles, occupations, or a buyer-
      visible story, also read `references/character-story-and-template-rules.md`.
    - For pirate or engineering themes, also read `references/pirate-engineer-templates.md` and start from the approved particle-first structural templates instead of recoloring another scene.
+   - For engineering, pirate, Christmas, Halloween, firefighting, or police
+     themes, also read `references/approved-six-theme-factory-templates.md`.
+     Match the requested theme to its dedicated structural signature before
+     selecting particles or deciding PCS.
    - For local rendering commands and script locations, read `references/local-workflow.md`.
    - For color box composition, read `references/approved-color-box.md`.
    - For carton, weight, quantity, and package-size calculations, read `references/packaging-formulas.md`.
@@ -151,6 +167,11 @@ For color-box creation or catalog insertion:
    skip generic target filling, then use the actual 80-200 PCS result.
 8. Build a model-based scene around one primary silhouette. Add support elements only when they improve recognizability.
 9. For each theme, apply its dedicated archetype template before filling PCS.
+   For a new or recently rejected theme family, build at least three low-detail
+   candidates first and compare them without textures. Keep the candidate only
+   when its hero silhouette, major void, circulation path, and three depth zones
+   remain readable; discard occupancy similarity above `0.70`, dominant flat
+   planes, long-strip compositions, and fixed front-row character anchors.
    Run the hidden-title recognition test and the cross-theme silhouette test:
    the theme and role relationship must remain readable without the title, and
    the model must not reduce to another theme's skeleton after recoloring.
@@ -158,6 +179,14 @@ For color-box creation or catalog insertion:
    structural signatures, then run `validate_scene_batch_diversity.py` before
    rendering.
 10. Render and compose catalog sheets. Parts details and color-box scenes must reuse the exact locked particle textures and final scene render.
+    - For airplane-box and master-carton data, always call
+      `scripts/calculate_airplane_carton.py`. Use the locked three-tier color-box
+      dimensions from `references/packaging-formulas.md`; never infer a new box
+      grid from the exact PCS count.
+    - Weight is locked to `0.0025kg` per cube plus `0.070kg` per finished color
+      box. Carton quantity is the largest multiple of `12` whose declared gross
+      weight is at most `22kg`; declared net weight rounds upward to `0.5kg`,
+      and declared gross weight is net plus `1.5kg`.
 11. Run `work/audit_scene_geometry_blender.py` before catalog composition. Reject any duplicate, enclosed, hidden, low-visibility, wrong-size, or unexpected non-figure component.
 12. Compare against competitor references before stopping. If it looks like colored material blocks instead of a recognizable scene, revise the model/texture plan.
 13. When color direction is not approved, render the same geometry in controlled saturation variants. Do not change the model, materials, PCS, or layout between variants, and validate scene/detail/package tone separately for each variant.
@@ -194,8 +223,11 @@ Aim for the competitor median brightness range, not raw overexposure:
 Before final response, check:
 
 - Exact PCS count.
-- When PCS was not specified, every result is within `80-200 PCS`; batches of
-  six or more cover the low, middle, and high count bands.
+- When PCS was not specified, every result is within `80-200 PCS` and the
+  actual modeled count is used without filler.
+- Color-box tier, carton quantity, declared net/gross weight, and carton size
+  match `scripts/calculate_airplane_carton.py`; all declared weights and carton
+  dimensions end in `.0` or `.5`.
 - `scripts/validate_locked_factory_faces.py` passes with `64` SKUs, `192`
   `512x512` RGB files, and no SHA-256 mismatch before factory-library rendering.
 - `scripts/validate_color_box_cutout.py` passes before inserting the approved
@@ -245,8 +277,9 @@ Before final response, check:
   Christmas, engineering, farm, and other themes may not share one recolored
   wall/platform/stair skeleton.
 - `scripts/validate_scene_batch_diversity.py` passes for multi-scene batches;
-  no duplicate structural signature, overused template, or single-band PCS
-  batch is accepted.
+  no duplicate structural signature, overused template, or artificially
+  clustered PCS batch is accepted. Do not force every PCS band when doing so
+  would weaken the scene; visual quality and actual modeled count remain first.
 - Different PCS labels refer to genuinely different modeled geometry and exact
   counts. Never relabel one render as several PCS variants.
 - Main-scene white/snow matches the detail icon's neutral white; do not accept
