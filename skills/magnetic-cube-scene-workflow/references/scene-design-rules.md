@@ -59,7 +59,7 @@ Element count by PCS:
 Reject or postpone themes where no strong buildable core exists.
 
 When the user does not specify PCS, do not select a target first. Use a soft
-100-200 PCS planning range, complete only aesthetically necessary geometry, and
+80-200 PCS planning range, complete only aesthetically necessary geometry, and
 use the final modeled count in the badge, detail totals and packaging formulas.
 
 ## Buildability Screening
@@ -230,11 +230,17 @@ When PCS is 120-169, use one primary element plus one support element. When PCS 
 
 ## Aesthetic-First PCS Rule
 
-- When PCS is unspecified, `80-200 PCS` is a feasibility range, not a target.
+- When PCS is unspecified, `80-200 PCS` is the delivery range, not one fixed
+  target. If a theme cannot reach 80 without filler, reject or redesign it. If
+  it exceeds 200, simplify secondary structures while preserving the hero.
 - PCS is an output of the approved scene, not a quota that the model must fill. Stop adding cubes when the hero silhouette, supporting structure, character story, and foreground rhythm are complete.
 - Never consume a requested range by extending the base, building a gift row, stacking generic walls, repeating decorations, or adding hidden support cubes without visible semantic value.
 - After the scene passes visual review, count the actual cubes and propagate that exact number to the badge, parts detail, package, dimensions, weights, and carton calculations.
 - Different themes in the same batch may have different PCS. Visual quality and theme readability take precedence over matching counts.
+- A batch of six or more scenes must include at least one result in each band:
+  `80-119`, `120-159`, and `160-200`. Do not satisfy the high band by enlarging
+  a flat platform; use a genuinely more complete building, terrain system,
+  bridge, tower, courtyard, or paired core element.
 - Select support-element count from visual need: normally one primary silhouette plus one support element below 120 PCS, one or two supports at 120-159 PCS, and up to three supports at 160-200 PCS only when each support improves recognition or story. These are soft limits; delete a support that weakens the composition.
 - Do not start batch production from a requested theme list. First complete and approve one full sample through particle sheet, geometry audit, raw scene, detail panel, and package-scene color matching.
 
@@ -247,6 +253,19 @@ When PCS is 120-169, use one primary element plus one support element. When PCS 
 - Vary character depth, lateral position, and relationship to the subject between themes. Do not reuse the same left/center/right coordinates across a batch.
 - Before publishing two or more scenes, compare their black silhouettes and figure-position maps. If they still look interchangeable without textures, rebuild one scene before rendering catalog sheets.
 - Compare every new scene against the recent approved templates with textures hidden. Reject it when the same base contour, hero position, height peak, open-space map, or figure map can be recognized as a recolored previous scene.
+- Record a `structure_signature` for every scene with `template_id`,
+  `archetype`, `footprint`, `primary_mass`, `major_void`, `height_rhythm`, and
+  `foreground_path`. Use values that describe geometry, not theme names or
+  colors.
+- For five or more scenes, use at least four archetypes. A single `template_id`
+  may appear at most twice. Consecutive scenes and two scenes sharing a template
+  must differ in at least three of the five geometry axes.
+- Rotate among genuinely different families such as compact house/courtyard,
+  vertical tower, arch/portal, bridge/water route, terraced terrain/treehouse,
+  open workshop, and asymmetric island. These are families, not mandatory
+  prefabs.
+- Run `scripts/validate_scene_batch_diversity.py <batch-metadata.json>` before
+  rendering. A failure requires model revision, not relabeling the signature.
 - Every mature theme must have all three assets before batch use: a clear hero silhouette, a dedicated six-face particle family, and a tested structural model template. Screen out the theme when any one is missing and a strong result cannot be built without generic filler.
 
 ## Cross-Theme Buyer Acceptance Gate

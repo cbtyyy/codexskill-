@@ -19,6 +19,10 @@ Use this skill to produce wholesale-ready magnetic cube scene assets. The output
 - Cube count must match the displayed PCS exactly. If PCS is not specified,
   finish the scene first, keep the result within 80-200 PCS, then display the
   actual modeled count; never add filler only to reach a preset number.
+- For an unspecified-PCS batch of six or more scenes, cover all three count
+  bands: `80-119`, `120-159`, and `160-200`. High-PCS scenes must earn their
+  count through a more complete hero and meaningful support structures, not a
+  longer base, thicker hidden walls, or repeated decoration.
 - The buyer must understand the scene without reading the scene name.
 - Use the competitor folder as the quality benchmark: `D:/Users/Administrator/Desktop/磁力方块场景/`.
 - For factory SKU work, read `references/factory-particle-library.md` and use
@@ -60,6 +64,12 @@ Use this skill to produce wholesale-ready magnetic cube scene assets. The output
   low-level cube helpers and generic support components may be shared across
   themes; the hero silhouette, circulation path, props, and elevation rhythm
   must be designed for that theme.
+- Before a multi-scene batch, assign each model a structural signature and run
+  `scripts/validate_scene_batch_diversity.py`. A batch of five or more scenes
+  must use at least four archetypes; one template ID may appear at most twice.
+  Consecutive scenes and two variants of one template must differ on at least
+  three of footprint, primary mass, major void, height rhythm, and foreground
+  path.
 - In the current two-table factory catalog, every source particle classified as
   a person, head, face character, or creature head is an isolated one-cube
   foreground component. Never use one as a wall, roof, floor, tree, bridge, or
@@ -132,7 +142,7 @@ For color-box creation or catalog insertion:
    - Skip themes that have no readable silhouette, no dedicated print vocabulary, or tend to become flat walls/long strips.
    - Use `MAGNETIC_SCREEN_THEMES=1` for scripted screening reports.
 6. Select core elements by PCS and visual clarity:
-   - Under 120 PCS: 1 core element.
+   - 80-119 PCS: 1 core element.
    - 120-169 PCS: 2 core elements.
    - 170+ PCS: 2-3 core elements.
    - Aesthetic clarity beats using every listed element.
@@ -144,7 +154,9 @@ For color-box creation or catalog insertion:
    Run the hidden-title recognition test and the cross-theme silhouette test:
    the theme and role relationship must remain readable without the title, and
    the model must not reduce to another theme's skeleton after recoloring.
-   Fillers must stay subordinate to the main silhouette.
+   Fillers must stay subordinate to the main silhouette. Save the batch PCS and
+   structural signatures, then run `validate_scene_batch_diversity.py` before
+   rendering.
 10. Render and compose catalog sheets. Parts details and color-box scenes must reuse the exact locked particle textures and final scene render.
 11. Run `work/audit_scene_geometry_blender.py` before catalog composition. Reject any duplicate, enclosed, hidden, low-visibility, wrong-size, or unexpected non-figure component.
 12. Compare against competitor references before stopping. If it looks like colored material blocks instead of a recognizable scene, revise the model/texture plan.
@@ -182,6 +194,8 @@ Aim for the competitor median brightness range, not raw overexposure:
 Before final response, check:
 
 - Exact PCS count.
+- When PCS was not specified, every result is within `80-200 PCS`; batches of
+  six or more cover the low, middle, and high count bands.
 - `scripts/validate_locked_factory_faces.py` passes with `64` SKUs, `192`
   `512x512` RGB files, and no SHA-256 mismatch before factory-library rendering.
 - `scripts/validate_color_box_cutout.py` passes before inserting the approved
@@ -230,6 +244,9 @@ Before final response, check:
 - Theme templates pass the cross-theme silhouette test. Police, pirate,
   Christmas, engineering, farm, and other themes may not share one recolored
   wall/platform/stair skeleton.
+- `scripts/validate_scene_batch_diversity.py` passes for multi-scene batches;
+  no duplicate structural signature, overused template, or single-band PCS
+  batch is accepted.
 - Different PCS labels refer to genuinely different modeled geometry and exact
   counts. Never relabel one render as several PCS variants.
 - Main-scene white/snow matches the detail icon's neutral white; do not accept
