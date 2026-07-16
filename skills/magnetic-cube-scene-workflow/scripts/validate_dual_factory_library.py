@@ -13,14 +13,20 @@ LIBRARY_ROOT = SKILL_ROOT / "assets" / "dual_factory_library"
 FACE_NAMES = ("top", "front", "right")
 WORKBOOK_BACKGROUND = (255, 245, 212)
 EXPECTED_VERSIONS = {
-    "table1": "table1_three_visible_faces_v3",
-    "table2": "table2_three_visible_faces_v3",
+    "table1": "table1_three_visible_faces_v4",
+    "table2": "table2_three_visible_faces_v4",
 }
 EXPECTED_TEXTURE_PROFILE = {
-    "name": "fine_print_v3",
-    "deblock_radius": 1.0,
-    "deblock_blend": 0.28,
-    "saturation_factor": 1.055,
+    "name": "fine_print_v4_balanced_smooth",
+    "source_profile": "fine_print_v3",
+    "unsharp_radius": 0.9,
+    "unsharp_percent": 145,
+    "unsharp_threshold": 1,
+    "contrast_factor": 1.09,
+    "saturation_factor": 1.018,
+    "soften_radius": 0.9,
+    "soften_blend": 0.3,
+    "texture_interpolation": "Linear",
     "geometry_policy": "Preserve source artwork, line positions, and face registration exactly.",
 }
 

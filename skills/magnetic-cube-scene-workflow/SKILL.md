@@ -40,6 +40,10 @@ Use this skill to produce wholesale-ready magnetic cube scene assets. The output
   Store only `top`, `front`, and `right` source-backed textures. The
   production camera must not reveal left/back/bottom. Runtime aliases may close
   the mesh, but they are not factory artwork and must never be exported as such.
+- The approved two-table runtime finish is `fine_print_v4_balanced_smooth`.
+  It preserves the registered top/front/right artwork, strengthens readable
+  edges, and lightly blends only internal high-frequency blocks. Do not apply
+  another sharpen, blur, saturation, or mosaic pass in scene composition.
 - Mixed-library scenes are allowed. Every parts-detail cell must show the
   source-aware label from the manifest, such as `表1-026` or `表2-026`, with
   `×quantity` centered below the cube. A bare `026` is invalid in a mixed scene.

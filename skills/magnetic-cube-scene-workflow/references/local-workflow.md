@@ -20,6 +20,9 @@ treated as a six-face turntable asset.
 
 Current production baseline:
 
+- Runtime texture profile: `fine_print_v4_balanced_smooth`, upgraded once from
+  `fine_print_v3` with the approved clear-edge/light-internal-blend pass.
+
 - Camera: `(span*0.22, -span*1.82, span*0.64)` from scene center.
 - Cube edge: `1.0`; coordinates: integer; bevel: `0.001`.
 - Material: roughness `0.66`, specular IOR level `0.065`, coat `0`, no

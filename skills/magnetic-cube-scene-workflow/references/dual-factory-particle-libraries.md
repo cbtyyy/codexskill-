@@ -56,17 +56,21 @@ rectangular panel or a white halo around the cube.
 
 ## Fine Print Texture Profile
 
-- The locked runtime profile is `fine_print_v3` for both tables.
+- The locked runtime profile is `fine_print_v4_balanced_smooth` for both tables.
 - Preserve source artwork, face registration, line positions, and every
   ID-to-image relationship. This profile is a restrained print finish, not a
   redraw or content-generation pass.
-- Reduce coarse resampling blocks with a `1.0 px` Gaussian deblock source mixed
-  at `0.28`; then raise color saturation by a factor of `1.055`.
-- Apply the same profile to all top/front/right runtime faces and source cube
-  thumbnails. Do not apply another scene-only sharpening, blur, saturation, or
-  brightness adjustment after Blender rendering.
-- Validation must require `table1_three_visible_faces_v3`,
-  `table2_three_visible_faces_v3`, and the exact profile parameters above.
+- Start from the preserved `fine_print_v3` source. Apply unsharp mask radius
+  `0.9`, amount `145`, threshold `1`, contrast `1.09`, and saturation `1.018`.
+  Then blend a `0.9 px` Gaussian-softened copy at `0.30` and render with Linear
+  texture interpolation. This keeps the approved clearer silhouette while
+  reducing the hard mosaic effect inside the print.
+- Apply the same profile to all top/front/right runtime faces. Scene cubes and
+  newly rendered detail icons must load those same files. Do not apply another
+  scene-only sharpening, blur, saturation, or brightness adjustment after
+  Blender rendering. Preserve the original Excel-embedded source images.
+- Validation must require `table1_three_visible_faces_v4`,
+  `table2_three_visible_faces_v4`, and the exact profile parameters above.
 
 ## Scene And Detail Use
 
@@ -152,6 +156,8 @@ rectangular panel or a white halo around the cube.
 - Render metadata confirms `scene_color_adjustment: false`, gamma `1.0`, shared
   source-color emission enabled, exposure `0`, and cast shadows disabled.
 - For all selected top/front/right faces, compare icon face polygons against the
-  authoritative source files. Require median luminance error `<=1/255`, P95
-  `<=3.5/255`, maximum `<=7/255`, P95 channel-median error `<=4/255`, and P95
-  saturation error `<=0.02`.
+  authoritative source files. Under the v4 Linear-sampling profile, require
+  median luminance error `<=1/255`, P95 `<=3.5/255`, maximum `<=9/255`, P95
+  channel-median error `<=5.5/255`, and P95 saturation error `<=0.03`. These
+  limits allow only the expected edge interpolation and still reject visible
+  palette drift or a scene-only color pass.
