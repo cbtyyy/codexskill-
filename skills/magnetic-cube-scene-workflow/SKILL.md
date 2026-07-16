@@ -86,15 +86,13 @@ Use this skill to produce wholesale-ready magnetic cube scene assets. The output
   platform dominates the scene, it has no readable opening, or it repeats the
   same low-front/high-back character lineup. Rebuild its topology rather than
   changing decals, color, or PCS.
-- In the current two-table factory catalog, load
-  `references/dual-factory-role-registry.json`. Every complete person, animal,
-  monster, or face-bearing character is an isolated one-cube foreground
-  component. Never use one as a wall, roof, floor, tree, bridge, or other
-  structural cube. Reject the scene when a role particle is face-adjacent to
-  the main component or when its connected-component size is not 1. Body-only
-  `role_components` are prohibited from the one-cube catalog workflow. Keep
-  each registered role key to one cube per scene unless the user explicitly
-  approves duplicates.
+- In the current two-table factory catalog, every source particle classified as
+  a person, head, face character, or creature head is an isolated one-cube
+  foreground component. Never use one as a wall, roof, floor, tree, bridge, or
+  other structural cube. Reject the scene when a figure particle is face-
+  adjacent to the main component or when its connected-component size is not 1.
+  Keep each registered figure key to one cube per scene unless the user
+  explicitly approves duplicates.
 - Avoid long flat strips, large empty planes, random material blocks, misaligned characters, and repeated generic figures.
 - Apply a premium-toy design gate: repeated decoration cannot be used as PCS filler. Every visible print block must have a role such as wall, window, door, fireplace, foliage, tree ornament, gift, lamp, or character.
 - Keep white/snow blocks white, but preserve seams with thin gray edges.
@@ -247,11 +245,10 @@ Before final response, check:
 - Grid audit reports zero fractional coordinates, one identical cube edge
   length, and exact one-unit center spacing for every adjacent pair.
 - Exactly one connected main component; only complete one- or two-cube figures may be separate.
-- For the current two-table factory catalog, all registered people, animals,
-  monsters, and face-bearing characters are separate one-cube components.
-  Their component sizes must all equal 1, the embedded-figure count must equal
-  0, the duplicate-figure count must equal 0, and no body-only role component
-  may appear in scene parts.
+- For the current two-table factory catalog, all person/head/face-character
+  particles are separate one-cube components. Their component sizes must all
+  equal 1, the embedded-figure count must equal 0, and the duplicate-figure
+  count must equal 0.
 - Geometry audit reports zero enclosed cubes, zero camera-hidden cubes, zero low-visibility cubes, and zero cube-size errors. Use at least 12 visible face samples per cube for the production camera.
 - White blocks do not merge into the background or each other.
 - Top and side faces have no milky veil: side ink remains saturated, white tops remain neutral white, and their thin gray perimeter survives final downscaling.
