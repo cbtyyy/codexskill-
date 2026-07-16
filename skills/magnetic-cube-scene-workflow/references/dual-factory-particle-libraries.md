@@ -10,8 +10,11 @@ Use this reference when a scene may combine particles from `表格1.xlsx` and
 - Table 2 workbook: `assets/dual_factory_library/workbooks/表格2.xlsx`
 - Table 1 manifest: `assets/dual_factory_library/table1_manifest.json`
 - Table 2 manifest: `assets/dual_factory_library/table2_manifest.json`
+- Character and creature registry: `references/dual-factory-role-registry.json`
+- Three-face role audit sheets: `assets/dual_factory_role_audit/`
 - Blender loader: `scripts/dual_library_materials_blender.py`
 - Validator: `scripts/validate_dual_factory_library.py`
+- Role validator: `scripts/validate_dual_factory_roles.py`
 
 The processed workbooks contain only `编号`, `图片`, and `尺寸`. They do not
 contain a product-name field.
@@ -78,6 +81,7 @@ rectangular panel or a white halo around the cube.
 
    ```powershell
    python scripts/validate_dual_factory_library.py
+   python scripts/validate_dual_factory_roles.py
    ```
 
 2. Load selected materials by namespaced keys:
@@ -98,11 +102,16 @@ rectangular panel or a white halo around the cube.
 
 ### Figure Isolation
 
-- Current audited one-cube figure/head registry used by the factory scene batch:
-  `table1:030`, `table1:151`, `table1:162`, `table1:168`, `table2:129`,
-  `table2:134`, and `table2:181`.
-- These keys are display particles, not structural materials. Each must be a
-  detached foreground component with connected-component size exactly `1`.
+- Load the complete audited registry from
+  `references/dual-factory-role-registry.json`. Do not maintain a smaller
+  hand-written figure set inside a scene script.
+- `complete_roles` includes people, animals, monsters, and other face-bearing
+  one-cube characters. Every category has the same geometry rule: it is a
+  detached display particle with connected-component size exactly `1`.
+- `role_components` contains body/costume-only particles without a complete
+  face. They are not valid one-cube catalog characters and are prohibited from
+  the current scene workflow. Never use them as structural materials or display
+  them without an explicitly approved multi-cube character design.
 - Never place a registered figure/head key in a wall, roof, floor, tree canopy,
   bridge, or other main component. The final geometry audit must report
   `embedded_figure_count: 0`.
@@ -113,9 +122,13 @@ rectangular panel or a white halo around the cube.
   leave a hole in the model.
 - Require `duplicate_figure_count: 0`; each registered figure key may occur at
   most once per scene unless the user explicitly approves duplicates.
-- Before using a new face/character-like SKU, inspect its three source faces and
-  add it to the scene's explicit figure registry. Do not infer figure status
-  from coordinates or from whether the legacy model happened to detach it.
+- For a batch of five or more scenes, rotate role keys across the batch. When
+  the approved registry contains enough theme-compatible choices, one role key
+  may appear in only one scene. Include people, animals, and monsters where the
+  theme supports them instead of repeatedly selecting the same two human heads.
+- Before using a new face/character-like SKU, inspect all three source faces and
+  add it to the central JSON registry. Do not infer role status from coordinates
+  or from whether a legacy model happened to detach it.
 
 ## Fixed Camera And Tone
 
@@ -151,6 +164,9 @@ rectangular panel or a white halo around the cube.
 - Repeated source artwork remains separate when its source IDs differ.
 - Every registered figure/head key has component size `1`; embedded figure count
   is zero.
+- No key from `role_components` appears in scene parts or geometry.
+- In a multi-scene batch, the role-usage report lists category and subject for
+  every detached role and reports no unexplained repeated role key.
 - Alpha-normalized pixel comparison of every detached figure/head cube against
   its exact detail icon has median RGB and luminance error at most `4/255`.
 - Render metadata confirms `scene_color_adjustment: false`, gamma `1.0`, shared
