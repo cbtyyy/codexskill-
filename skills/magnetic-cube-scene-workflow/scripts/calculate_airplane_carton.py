@@ -46,10 +46,10 @@ def color_box_for_pcs(
     if pcs <= 0 or pcs > 200 or (pcs < 80 and not allow_legacy_below_80):
         raise ValueError("PCS must be between 80 and 200")
     if pcs <= 120:
-        return (17.5, 11.0, 7.0)
+        return (21.5, 13.5, 4.5)
     if pcs <= 160:
-        return (23.5, 11.0, 7.0)
-    return (23.5, 11.0, 9.0)
+        return (19.5, 13.5, 6.5)
+    return (19.5, 13.5, 8.5)
 
 
 def carton_weight_options(
