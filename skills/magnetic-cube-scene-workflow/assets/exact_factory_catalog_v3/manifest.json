@@ -1,0 +1,1976 @@
+{
+  "schema_version": 1,
+  "library_id": "exact_factory_catalog_v3",
+  "source_policy": "Exact source-cell crops; no redraw, recolor, perspective reconstruction, sharpening, or saturation adjustment.",
+  "particle_count": 196,
+  "workbook": {
+    "path": "workbooks/factory-particle-catalog-v3.xlsx",
+    "sha256": "99a0fe22a8e81bb670c6084afb586cde559ca74188e4f73ad0d3deb623caec8a"
+  },
+  "overview": {
+    "path": "overview.png",
+    "sha256": "32eb0983a7d3b80c9a0b7499e9a62add9c3eb4ca5313af450a154394d5b77cfb"
+  },
+  "particles": [
+    {
+      "id": "001",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/001.png",
+      "sha256": "abb09bb9d5aa4654742a06310b6ecc8a04edf302ca46f30eb461bf76ee409b74",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "002",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/002.png",
+      "sha256": "b0c1441d631178c426f6008a216458c0db0484edbaba1db1a578ddd5afb7ff9f",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "003",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/003.png",
+      "sha256": "e5a8d022e269fc7b5ea0c0e4c750a5f8fb4d3fb7914aad6c5df50c0706822054",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "004",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/004.png",
+      "sha256": "59a9b24303ed3a9046890e8c16ff17cad7f006e6fc1ff7fd3f2cf86a5c342358",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "005",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/005.png",
+      "sha256": "86e15dca108e0837f6485730115fbd2b1dbffcf2812427505e84e2891767eed0",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "006",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/006.png",
+      "sha256": "682982f6d527b7ee4bce387bf9f1c586591f4b4d285cfb5dec6a3658278cf16b",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "007",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/007.png",
+      "sha256": "c79fa48be27002dbb39b101464bd8319070839ba22a048eccdab226c95e5aa45",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "008",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/008.png",
+      "sha256": "33e55d76c84c97da1a311fc9d16f41a2beee765102f12605100a077f77cbbeb4",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "009",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/009.png",
+      "sha256": "e4caaa78bbbeb506204d8a597addbd8de25c17c13445e512b931ef4a0b60c299",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "010",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/010.png",
+      "sha256": "07426c8c29444c9dacba8fb3e73081955e2b1730addd763667e5c02ed0963b85",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "011",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/011.png",
+      "sha256": "e8eba8b5f734e10b8401a0adb33779c708410de0396c806c1b6147aed86d21a5",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "012",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/012.png",
+      "sha256": "d728330701e622e95524c5f74009a0438b1cc6d2d21ae4135bc0a082028799a5",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "013",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/013.png",
+      "sha256": "c2206f6b9e175c83075e0c70bdb5abf8725b24f5e2de180cefdc31595c451d40",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "014",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/014.png",
+      "sha256": "a236924d5dc3a3c84fa3f2978784ef9f91b049dbba9d34bd749b25b3d511be0e",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "015",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/015.png",
+      "sha256": "978f30507d9861af70da2215c64416ef5ec2f3af29c5cbdee1b4e34260591518",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "016",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/016.png",
+      "sha256": "659a4628ed65d7fbce12fd6c41944044ebe7c96385520b8735d999de7c33f9a9",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "017",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/017.png",
+      "sha256": "f6f7771f2a35c5e024fa21ff5856f0dad28bd5b960184a312732934b6104a973",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "018",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/018.png",
+      "sha256": "17b25de25feb2419ed7747f4618bdd78c10c933f0e18cfe27d4ef99727f256b2",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "019",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/019.png",
+      "sha256": "920889258a12cca1247ba84535fc33b555658e78feb96bbb49b7899f390ec7e1",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "020",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/020.png",
+      "sha256": "955aa751293c3d0245fc202cc7fbc195018e6c4244b24e5beeda80204a9c2958",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "021",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/021.png",
+      "sha256": "3e6803bbf733f2a9e90f25ac4e9141fa3419eb266bb8e9e420612cb87415cc35",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "022",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/022.png",
+      "sha256": "f110fac3676e2b2e1813c2c404e260ef1b8c3aafc2cd0dbcdc8fff6b49dc9eda",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "023",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/023.png",
+      "sha256": "74b6f40884bd9d14838d2111adb1237f863c4523404e75c5eeca4130a38688a9",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "024",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/024.png",
+      "sha256": "f4368c3c1a772ed83892f40096c34b41bad8f9cfdb61e372229210b104336dd4",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "025",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/025.png",
+      "sha256": "40b25ab404aecc16f119945ff3bcba6650720c5073230628d7c32d6224228955",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "026",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/026.png",
+      "sha256": "bd0630892afa2b5d79199e4b695dbed6fbf24cefc71aa00028a4e7c79b32580a",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "027",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/027.png",
+      "sha256": "d51dea1bfc03ba4ab3e58564681e311e3710be0d5d51cdc8cb4ed32e368369ea",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "028",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/028.png",
+      "sha256": "30703f5f59eb085c283fc6616b2cdc64c6da9c74aa755fc64f0e1a8810c793b9",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "029",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/029.png",
+      "sha256": "30a44f223ac02f3bb8c5ffdc8d370f4e4ad253191687c3108e7d63396d4602ee",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "030",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/030.png",
+      "sha256": "3ce20138fa02dce9cd43831bf900482ff21198c4ac47effb7bebea3e98ecd06f",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "031",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/031.png",
+      "sha256": "810b76be3339ffc86156bbf64a02aa8a919797238e48cb96d58a18af78234172",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "032",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/032.png",
+      "sha256": "9b32b7c1f4d754d281c2b33d26aa0499310f9c93a41c1cfb8e9761e9e1967859",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "033",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/033.png",
+      "sha256": "656627e11d925400d1f0fcd2b1de8a1fe8d9f64ef8151a78b2b7cb37b8ae75ec",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "034",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/034.png",
+      "sha256": "2bf49685e2fae771fc4c784c00e69135d871c34643b800b44df855bf77eb08f3",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "035",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/035.png",
+      "sha256": "5bcc078358bf72b655a3c40b5519d33a28119dac1840cde254dda2911662aeb8",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "036",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/036.png",
+      "sha256": "0a63a1bc3fe4547b15b815608c8d58f8247ff5772e9f3b4b3c67c7036db44e17",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "037",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/037.png",
+      "sha256": "d40a3c6240d41a1552b283f71c642b510f26438e554f948cc846f6000a67c46e",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "038",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/038.png",
+      "sha256": "679b4b4da5b7a018f0c394de4bbb60922eb324f1d57be77128ce8e20a9608556",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "039",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/039.png",
+      "sha256": "44b6dfec1ffbc0140b8d61204e9f0d47a98fba2f7bf29ba4184a25d8395ab06e",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "040",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/040.png",
+      "sha256": "b42131378c78fdb27608e3b838b9e19103a9cba44fb1a7670dc9f668e8f11bc1",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "041",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/041.png",
+      "sha256": "9ba62c2e20f93434d4a9d5697338cd25432b6775b5a4443b7a2aed1c97db1917",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "042",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/042.png",
+      "sha256": "2f6d7451df9509db90ab733342fecdda364977b04f8f4dd0ae9e6e72b055e87f",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "043",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/043.png",
+      "sha256": "75c7ea012475e491b9b17a99919f8efa5908f8c6425bd7ebdf1c14dc09a2e35b",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "044",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/044.png",
+      "sha256": "ada526e948c56f90862c64c71da11669629e098da7d931520c041415f4ac15a7",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "045",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/045.png",
+      "sha256": "4f7939642f91b2eb7c73735431a751160669ea7bf145671c5962f77226284ee3",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "046",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/046.png",
+      "sha256": "30eb178dffdd951253e662e19fb4a77e42022aa0ce9ecc70dd75c182e0fc221d",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "047",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/047.png",
+      "sha256": "b9426aea298c796d17c9943cf68bb22eee187ee5f3f168e41a77803047fee304",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "048",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/048.png",
+      "sha256": "ee249fa60acc672dbbd1a9662a532bdbf78388a0f8082f76994605f04ea06682",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "049",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/049.png",
+      "sha256": "38740cb1252085912d97370a76cfaf3f62b94a77dd252398ea690481d25841a9",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "050",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/050.png",
+      "sha256": "7a80f86fe1aa3d8f44d11a9d802552f992e668b795ee8a916e99d5ba2391593a",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "051",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/051.png",
+      "sha256": "57f0bd5e970cb51b29894350a94f4532b9f32f7795541e88fb422f97f4f75ba3",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "052",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/052.png",
+      "sha256": "00991d4ed514fd9594d8ce3ecb31358ed6a4177c126bc7dca7129f4ccfec187e",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "053",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/053.png",
+      "sha256": "4d21669f33a0b464419a0adcab0709923823aaecac8051954a3b595940a9a6cb",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "054",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/054.png",
+      "sha256": "b598a7b18224cfcf2f5a151557723854a374cac482ed66af4007d3cb6055d26e",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "055",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/055.png",
+      "sha256": "6a878ebbd9e7b71a1dd101e388d3e51ceca6970a0dfff3a4e2886be5a900458a",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "056",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/056.png",
+      "sha256": "42ebbe18d02eb7f383a6cd884af6ebe20701b70d4aa63f1c9689fd9e86f370f3",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "057",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/057.png",
+      "sha256": "c64986621064a0caaba325022cd365a0d88637a3bd11018fc7f2e30111111304",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "058",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/058.png",
+      "sha256": "91147061ee233ad7e9be00e663166726114eb3ed72002c32c3aa4b191c444df9",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "059",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/059.png",
+      "sha256": "950e6d207c67f054cd7283e1dbf512fd421926c9ff2ffadf29b1ec09f09abb41",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "060",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/060.png",
+      "sha256": "98175c9c301552d82a054a6cebcc03ba48ff5ae333dbee429cbb92fdabc4c3d1",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "061",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/061.png",
+      "sha256": "f266a68eb3b693530e73d87381ea3d3f6b55c8e182b655b32218ad8f7bb4ed5d",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "062",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/062.png",
+      "sha256": "c60ceb9dff9882e2b7a8e87793fe7839f8b65c865531da74d3a9260b154c4901",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "063",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/063.png",
+      "sha256": "d3e35502e2746056b9df751391176f6d5517643322d4e1c7ffd0e1ab5df5446f",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "064",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/064.png",
+      "sha256": "58f8c2d9655a1dbebc98b19b52765b458b84d33ab099f4164cacee5c98f54166",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "065",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/065.png",
+      "sha256": "41d3f227b40e1393aca239b6701f78707b077bd903d85747ee0b24501a216455",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "066",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/066.png",
+      "sha256": "c48032c8c37f8a9f090eb4deb03157fbad31c1910ee6efd765d94cb176cf8c4d",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "067",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/067.png",
+      "sha256": "f7c8c7e880191c051e75d3f146b81bd097dbd98ad50f50618bbdee3d02a9666b",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "068",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/068.png",
+      "sha256": "b499bd9e43bdf3b8d20b0f91dba708649dc28eb97328d47c823bb3ebccdc0389",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "069",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/069.png",
+      "sha256": "86fcca71f0917b2c732f36382bedbf4e7e0bf87b5abe879a2474b94383dab118",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "070",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/070.png",
+      "sha256": "daac6ff95d9a9a2f4e28fa06c3af150263467a38569d225440b9772fc6d6baad",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "071",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/071.png",
+      "sha256": "ef8f13ee4cc144feca5feadc03b15d729eb3365e840345ba4e73566d445981ea",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "072",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/072.png",
+      "sha256": "fbc9e9929b3fd7e3b59e0e49ccfb931cc7e9da4b17e439d6d6baba85ffe63597",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "073",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/073.png",
+      "sha256": "7f525219a5ec6bd2dcdba81339cc6e892299aaaf3b19c18fa16f32a05dce1463",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "074",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/074.png",
+      "sha256": "c61ed163f10fce4bfccf69d6ed6ced77fe56cc772754308c57199b59ed4041aa",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "075",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/075.png",
+      "sha256": "166679899ee1d343ca2008b3ebe530f782ddaa2e506b2dcc6da2bb464ca21098",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "076",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/076.png",
+      "sha256": "4a4546fc4530ff4f602e697b36469df2181824b3a3f9297ff0c5f338f3c33801",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "077",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/077.png",
+      "sha256": "86700ffe60dea5f9dc61ab5b3eeebc7a3f7ed4be5e34d6611a0488d38fdfdb46",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "078",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/078.png",
+      "sha256": "9a5d463a8c2b7c2c469e83b2c1c445ff4610b2755e61f8f94bae34f9edae3ae5",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "079",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/079.png",
+      "sha256": "eb4faa531984daf50d5c818223bc7c9b61b7d918a9d01a53d81e8f24a2240f8b",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "080",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/080.png",
+      "sha256": "ef0bffc504059999ac7bb75c1575aa34427c0604ebda0aa0004cffc3f6ea394d",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "081",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/081.png",
+      "sha256": "ca72db18ee5d5a9fd63ab1f09e960938308c4f6f8058c65a4d182cbe09490f36",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "082",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/082.png",
+      "sha256": "3657c14cf580094315d922d881565d33af935a9676e6ff5200bcdc90df60b8fc",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "083",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/083.png",
+      "sha256": "5ee163b00a015e15193173e7db1605dfa88495c5ad0e9515e273940da5a95195",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "084",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/084.png",
+      "sha256": "d3ee7293adf351fc4f8ab9302f82c0ce2435c5d5516221afb7fc1b6dd2bfaff9",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "085",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/085.png",
+      "sha256": "b37ac1280ae297ca7c3b23fe790f849f60e26616e4ef5726238228bd16c6b38e",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "086",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/086.png",
+      "sha256": "24fe0cde0c112dd3c5aa72b3a492fc549f75073533d374a95a31b1f74f2435d5",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "087",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/087.png",
+      "sha256": "3d91d9e0d5bcbf2d61591dae5d9edadddc1c3921c98a809c3fb111c8c9ff8e79",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "088",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/088.png",
+      "sha256": "9a52291e105719c6450002d5cfbd09f5a5607b315921f2df086e0926fd7a2736",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "089",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/089.png",
+      "sha256": "856e2b74167f6fded39a0e4e9740051ecab7fbb80c1116631582cdd519fd6c80",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "090",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/090.png",
+      "sha256": "b1a77c504c2a97e967137a5d254194f6bb559486c4e29d7f1036b6426a30d077",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "091",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/091.png",
+      "sha256": "56525ead6cccef457a01f9b970d16ae81545b95743886ecc3655292922179299",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "092",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/092.png",
+      "sha256": "6c9e64f3a29cc6669e843bc183d7ff96826303eb9f0a73e7d7ecd70bee4d0e33",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "093",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/093.png",
+      "sha256": "24063e1cd96f69ec00458408346af822a034b89a8b03fd0679dcac2414b1802a",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "094",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/094.png",
+      "sha256": "10a3128466c1d182a8b24e82d9104c9b569a13a97edc856130fe7d3c96fb9fa9",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "095",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/095.png",
+      "sha256": "d4cf693496836d7cbeeafd4b27de13d907d04d34fc43f79d3bfb6017f457b3bb",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "096",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/096.png",
+      "sha256": "8f64fb74f441e6eadd543ffac03b4567c710af6c47984c96f82761b8660da942",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "097",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/097.png",
+      "sha256": "ae8050018da6b65fef60babe55411b48444f0d6fcb30d7034543cfea897d2248",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "098",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/098.png",
+      "sha256": "0f8c37711c87d4033fc92c4cfd9749e4d13e914aaf7465c50a90018adc4e46d6",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "099",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/099.png",
+      "sha256": "4742e813c1e93ba86c9541c5b0556809d2208999dd10d423293ca9ef56587e88",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "100",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/100.png",
+      "sha256": "61294e470a71941af6623761cc11d3c96cb00d66f5cd35495ca21e6fc76b4f0f",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "101",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/101.png",
+      "sha256": "887b7858d0a696bb78a2f008f44c50731bbc93916fe60087382e06c9f3e3564c",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "102",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/102.png",
+      "sha256": "311c831a897d1a1e4bf1c83a3f8857d6f0e49e5bfb28f55f67f820966a82e573",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "103",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/103.png",
+      "sha256": "d005635e36dea30491f1c0eccebd4e03826397e7d326e5f8a53116276e34e96b",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "104",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/104.png",
+      "sha256": "99c6832c6734db9011c82e6bc2678f62f7b7a96bc15c651c7af82805feacc39a",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "105",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/105.png",
+      "sha256": "9591e56bda6c2441d4e4afaf57ea60a502a7c5695bbf364e6973813d93f61eb8",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "106",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/106.png",
+      "sha256": "1770b8a6cfed1809c5304e69d02680d1567c6de8a3c30c39b4933667f5b34847",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "107",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/107.png",
+      "sha256": "5dc77c8aad0c9cfbd1a229f5402d88a179a780bc9c13ddef4dd453f3eb27217a",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "108",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/108.png",
+      "sha256": "4cb33ad708697f3947c5a8e0e25949f66b9e2e57c9553ad6e4efd02b9b35d6ae",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "109",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/109.png",
+      "sha256": "4634376dfbd609fd779e40f2f6f1fa7b88459079fb89b8cb9ba3aeaddc8ec61f",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "110",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/110.png",
+      "sha256": "17dd4f6eafd488a8c1070c182ce953fe82dec08d7e88147cb8b0a97486132ad4",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "111",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/111.png",
+      "sha256": "201c2abc025263841d552cfc70785d8bb2c7234f4f97d9c4ba678774732e2288",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "112",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/112.png",
+      "sha256": "d375cf05db62d977c89e375cc65b411aa490eb273da954bcf6fe8b9e7d50b429",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "113",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/113.png",
+      "sha256": "8de4315197f4562b0cd6e256df005d39c7a99f440c517018094c7f9c4c5507d7",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "114",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/114.png",
+      "sha256": "2a2bd564841a405bbb2978766791113a2e747dba930afec3c8edf104dc259330",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "115",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/115.png",
+      "sha256": "fab9fe2d761ef0484ad1e0574874405d812c5b8838afb9421c22d66d0dbeb5e9",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "116",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/116.png",
+      "sha256": "3c6bfa04f2eabae3bd7aa78d4e1630e3bc06a473e5f16146c21aaf199173098f",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "117",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/117.png",
+      "sha256": "dd545540c375c477c93d3566154a76ba3a2ac4f7445b1adc77523fc7b39db65e",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "118",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/118.png",
+      "sha256": "cad0082df4d1e64bcb4f9d48eaecb11701ba2688684d00250baca0296fb13c11",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "119",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/119.png",
+      "sha256": "6e9c003b7341c3c3e4dc7d846e10aeb0d4221a31085cec24494a1df5c950b42a",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "120",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/120.png",
+      "sha256": "3c8eb600e3c6d2f92011db8d8162bdfa6a43e7ace54187cc31419baa62c31a14",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "121",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/121.png",
+      "sha256": "576ad21b2d1bbf8f2c8537452cc19fd481d9fcca496dfffe6e603463a8566e8a",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "122",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/122.png",
+      "sha256": "3a01164d1151eacb4cb4b9354172b76ca3908a624460bb0592251b696f99c628",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "123",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/123.png",
+      "sha256": "c7432986334af0b6e776560171e06c2e84a84c138bf8d0657f33c3d0f9babf17",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "124",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/124.png",
+      "sha256": "33711e37e4bc5cb30c94b7f930af347403f643ad88e8896d782cb46342b49977",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "125",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/125.png",
+      "sha256": "a5b3d5afb6077ce5a2e92ba2189b5cf3e00fe307b038f749928fc0e338078409",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "126",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/126.png",
+      "sha256": "ffe1c0b9d2ec4636e74766cc494ea284a30d91a93b4982b251e8bcb0dcb6028e",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "127",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/127.png",
+      "sha256": "a48c397989284b385f2d528a33af8964e680a051e1c7a5875aa7d39d7a0f3cd4",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "128",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/128.png",
+      "sha256": "df7d6796c57d9bef729fc6c514a77278ec5ceb2777a842034ef96a6baf482ad1",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "129",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/129.png",
+      "sha256": "d65704e262126cb6745db3ba69ab67b564c528c00f62fb1a2dd320d6f8d9da09",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "130",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/130.png",
+      "sha256": "506aa9f626b3bc0fbda88e167fe17d5aeca63874f4a064cd514260394ed5023f",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "131",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/131.png",
+      "sha256": "bb0067aa330588b5dcc15c493dfb7e9c328b5779ae6430a4d3899d00cc9e47e3",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "132",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/132.png",
+      "sha256": "8ca3ad97a8b193091a26a7ac4476413aecf9196769772b9470287e53dbcbe108",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "133",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/133.png",
+      "sha256": "bbe6ca6eb84a052b50480ec957dbd0276f030707946609312d539e2c681aba2b",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "134",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/134.png",
+      "sha256": "82d8423b75b2adb505eb7230b2d2c57e39356f294060f21f8f2c0df05c80284d",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "135",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/135.png",
+      "sha256": "1e47eead189f3adab808f059570c3b87927f07112e72734402efcf1314271baa",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "136",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/136.png",
+      "sha256": "58b2531101c0005655957cbbcdd310b151fd573800a652c4e59bdbe5146e4fbd",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "137",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/137.png",
+      "sha256": "48e2ec2a340504df57aff50c60ba939befebc8940491a5a9fe5d9bbed813086a",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "138",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/138.png",
+      "sha256": "337dc2f16f76315b92dae2974d623398d3b4208c2e39f2dee58d56a1f977e834",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "139",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/139.png",
+      "sha256": "bd0796a1e86c3d314e57ec890e7b4c4846b42b11c8aa9c67a70b78da7e909fa3",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "140",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/140.png",
+      "sha256": "7277fb15fc563cda5b2c9628bc8e856c56abbd17bb1966f69f3a7455a513c8cd",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "141",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/141.png",
+      "sha256": "8b9c15cc14f94c58c75fd44ba4b2fa7fffe9a7325f58729b0bc056fa68ec7626",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "142",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/142.png",
+      "sha256": "81ef38d9d639dfdd0fd472baabe104d7431c78e133c0baf25960f996513c8c05",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "143",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/143.png",
+      "sha256": "2ea708f7f3bc928340201be6cbd7b37046c18ff600a1f3533c290ed0145edb5a",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "144",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/144.png",
+      "sha256": "71ea553c2f61fa0af4ccee8a73a42992a514228317ab66463933323cc5760708",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "145",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/145.png",
+      "sha256": "181a1d2e4556015421bf397cbb96271172690ad237be868728c7a8404d7db408",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "146",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/146.png",
+      "sha256": "b2f5b5ae8bff01cf1792ea5943632388b9401ce1a8d7b6f516445cd3f319b8de",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "147",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/147.png",
+      "sha256": "b9acadf60cff5e398f287fb2837aa7e7f04fb6778d72c4df870ecc31f685da90",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "148",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/148.png",
+      "sha256": "e5460021668743f4f3a5e899a20be9cd66cc819a03f81f111123240663930ad2",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "149",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/149.png",
+      "sha256": "a70b36898b3e7fa584211776baf0919f63dc6edf3481230bae91caa134a4bf86",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "150",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/150.png",
+      "sha256": "f744298f5f1c99f5b29e8d2f7fcb5f29984dee4b6ae84602ccd0200dc29b7d0b",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "151",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/151.png",
+      "sha256": "89fe1a13a7313b8c6c114840761c45a877bffba68be41284faebeef503757104",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "152",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/152.png",
+      "sha256": "a71bad792adb5f6432fd124933982de0ad4347c7a2ef5515febc49f38c188056",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "153",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/153.png",
+      "sha256": "342193db06b0e54e90142d107ce24cf7d80ae677d0707d7058252e793f84816a",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "154",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/154.png",
+      "sha256": "eea4e5a9037e8e5460f77650257735ee59201bf6133922dcef314169a1eb4dd1",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "155",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/155.png",
+      "sha256": "ae8edf0603c92ad0146e72f9b8f8afcdcd82f87370320c136ea6257dd2509567",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "156",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/156.png",
+      "sha256": "f6fba8ee191586c34d4a6438836304c600271d31dcfc22150918ddc042b92643",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "157",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/157.png",
+      "sha256": "285ea451901dbf377bca3ce31d9c07f30ff051691cc119150d8fedebd431a12b",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "158",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/158.png",
+      "sha256": "24be201ac735d5de342374e80ea48a4556277635bd5df2b51ea274703bfe5ccb",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "159",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/159.png",
+      "sha256": "a6c5a2de394d0883a0399a5de494e09a90eed89def661c6982610dcce96a9a80",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "160",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/160.png",
+      "sha256": "387ec536373c9c62e0115af8b88ff2824a7a4c8289327f3760389e65ed82ff86",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "161",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/161.png",
+      "sha256": "15eed0bc6ccd0e4d50925394080c7709012b56abc8725faaf547897e40ee0696",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "162",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/162.png",
+      "sha256": "119f16a417016b80be64c434518c3e582fcb82a1b008e9be10e2a2070813ecb2",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "163",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/163.png",
+      "sha256": "ce8c2ea5f36e7c927daa362d4db04b2e388107e766c443e66917f0cc2fd46883",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "164",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/164.png",
+      "sha256": "067e55ed97e67e201b251eb32b3c077ba6e1f0e4572f4a0b125a75622bc68ac5",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "165",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/165.png",
+      "sha256": "0bc6ad6b9b9755a9cdac64d61cea96327984928d5b69437bb4c3abb895916c07",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "166",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/166.png",
+      "sha256": "eedb9d4d69eb683bae224bb2097fd3c5128613ff5722bdf589a5e8bfa3ad8eca",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "167",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/167.png",
+      "sha256": "37c723bf38e4740d09ea5a616384e0739f491e1c56ec66015e7b9a3cd2c7f427",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "168",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/168.png",
+      "sha256": "fa6984ce163647889a8be22cbcbeee0cd51400afcae31a3fb72de83ef0b53bf0",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "169",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/169.png",
+      "sha256": "4bcfb0f0266d267e5cbbd885fb445975997b7d70bda49a567a1e48f3eec16936",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "170",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/170.png",
+      "sha256": "61b7d1011ab56533bb5a4ec0bc0e0aaa8bc43639bfa8ff7845894694fe677d1e",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "171",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/171.png",
+      "sha256": "c4676ba960abb4d575168304d01b2c1cc922b538137b954ea3ac63f1e19aebf0",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "172",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/172.png",
+      "sha256": "86000831c42b81a12a5f17f8966bd2ce69e326eab98bda058eb8fe3d00576b03",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "173",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/173.png",
+      "sha256": "4d9f042920641398d3aeec5cd7944eee88a829564ecfc4beea2155c1a8e338b7",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "174",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/174.png",
+      "sha256": "d948e673f4ae8ac096a099ab0d5b740595b92f0f65140bc5d7ee7ef15cf99ab9",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "175",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/175.png",
+      "sha256": "f12ab4aa891771c56c99352b901382f013eaf2c6e542a675ea1be40253615f35",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "176",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/176.png",
+      "sha256": "d6ebbb53bf5a736ddbea6c1fe1bfd2929f7ad3e62181c62184af60ed5053b79a",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "177",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/177.png",
+      "sha256": "286a570eac04e8dcd58840b27e719b88ff664a435f669c1bcb185eb3be75295c",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "178",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/178.png",
+      "sha256": "1e39f0a90e43fe24806b9011c45465b124cef3907e6b0d888c4a34c5a84e7b98",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "179",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/179.png",
+      "sha256": "7d95b2c3720d5704420e475db16157ad9e08293ee4961fcc6ab3282b06b27a90",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "180",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/180.png",
+      "sha256": "efa1edf8faf1a0cb409f6d5b24ca6a58e115efa93b2bdef8b8db677e83c7baf1",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "181",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/181.png",
+      "sha256": "65e27d341806ddfbabeb98429f69949062a682819a9fbde380fb60612ddad46b",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "182",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/182.png",
+      "sha256": "cac8945be02230e72f2b6e14d80c4009f3d97b4063b925e7f7f5078512ca7ca1",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "183",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/183.png",
+      "sha256": "3648325bf49480100800a81182a206fb818ce077d1efd3fa3702edd4f7e0a176",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "184",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/184.png",
+      "sha256": "9a183b67e89d41e0517f055d8ce5123093643ec7a01d33a1a583f9b46eb39acd",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "185",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/185.png",
+      "sha256": "bb6e9f6a416583e4bed35f08886b20aabdac4e0146d084d5f8d8a644cfdc20b9",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "207",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/207.png",
+      "sha256": "6bdd8c690e4a987cf9f558894b7a9323542726d18b3dd553d83b599bea9f2605",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "273",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/273.png",
+      "sha256": "78787b920c014cd61077e6efff078abdb5afda5291982a97e58119ba6b59ea7f",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "283",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/283.png",
+      "sha256": "9a753a7a6f18289105cadd598379d30d803362455ac0e6ec35d97f3219925d6d",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "289",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/289.png",
+      "sha256": "4d5c92371ac10d72394018f48fce50377e4160b06b50d7bc5444ad4e5d4fef58",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "484",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/484.png",
+      "sha256": "1a5b944a381aac8b2f1e9d4f1846eea8b773a0acc4de0c43c139a645e1bd366c",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "485",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/485.png",
+      "sha256": "c63ca07f6c4ca6650cda9347420cce6e9c1ba220cb2e1c0ecb1dc1fa552d89a9",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "486",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/486.png",
+      "sha256": "2c23e160107ae41de3a94d752e4fcdd297c1ee4eef2492526a0455d947447bc5",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "A01",
+      "kind": "accessory",
+      "size": "4x6x0.5 cm",
+      "icon": "icons/A01.png",
+      "sha256": "b4c5d7c187f8abf47381d21dcfd14f88351e2ce938d815b3f64c7bd4bd05dd1e",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "A02",
+      "kind": "accessory",
+      "size": "6x6x0.5 cm",
+      "icon": "icons/A02.png",
+      "sha256": "7ca17a0492e81646245ba53278e342c6ce91c51260746477219bd744d5ba22a4",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "A03",
+      "kind": "accessory",
+      "size": "4x4x0.5 cm",
+      "icon": "icons/A03.png",
+      "sha256": "bc53a96b4a6213f931fea56c8f3ad89d910fe91c6bd38b3bf2e6c2264dd017c8",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    },
+    {
+      "id": "270",
+      "kind": "cube",
+      "size": "2x2x2 cm",
+      "icon": "icons/270.png",
+      "sha256": "fc1fd33802b4c455daf6fdf9fa151a7c6b630f8fb22313af5afb0b08ea735d78",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB"
+    }
+  ]
+}

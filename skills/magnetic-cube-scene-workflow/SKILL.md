@@ -31,6 +31,11 @@ Use this skill to produce wholesale-ready magnetic cube scene assets. The output
   Use Excel cells for formal IDs and the factory overview for pattern/color
   review. Never map workbook images by drawing order or load a perspective
   thumbnail crop as a cube material.
+- For the current exact factory identity catalog, read
+  `references/exact-factory-catalog-v3.md` and use
+  `assets/exact_factory_catalog_v3/` as the authoritative ID-to-image and
+  parts-detail source. Its perspective icons are catalog references only; use
+  verified top/front/right face assets for modeled scene materials.
 - For the current two-table factory catalog, read
   `references/dual-factory-particle-libraries.md` and use
   `assets/dual_factory_library/` as the authoritative source. Keep every key
@@ -106,7 +111,7 @@ Use this skill to produce wholesale-ready magnetic cube scene assets. The output
 For scene pictures, SKU images, catalog sheets, “这种图片”, or requests to generate another theme in the same style:
 
 1. Read [references/approved-catalog-template.md](references/approved-catalog-template.md).
-2. Read [references/dual-factory-particle-libraries.md](references/dual-factory-particle-libraries.md) for two-table work, or [references/factory-particle-library.md](references/factory-particle-library.md) for the legacy locked set, and validate the selected manifest before rendering.
+2. Read [references/exact-factory-catalog-v3.md](references/exact-factory-catalog-v3.md) for current ID and detail-panel identity, [references/dual-factory-particle-libraries.md](references/dual-factory-particle-libraries.md) for two-table runtime face work, or [references/factory-particle-library.md](references/factory-particle-library.md) for the legacy locked set, and validate the selected manifest before rendering.
 3. Use [assets/approved-catalog-template.png](assets/approved-catalog-template.png) as the visual acceptance target.
 4. Compose with `scripts/compose_approved_catalog_sheet.py`; do not restart background/layout exploration unless the user explicitly asks.
 5. Treat packaging as a separate optional workflow. Do not produce color boxes when the request is only for scene/SKU images.
