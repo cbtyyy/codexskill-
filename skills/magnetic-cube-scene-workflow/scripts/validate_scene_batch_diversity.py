@@ -25,12 +25,12 @@ def load_scenes(path: Path) -> list[dict]:
 
 
 def band(pcs: int) -> str:
-    if 80 <= pcs <= 119:
-        return "80-119"
-    if 120 <= pcs <= 159:
-        return "120-159"
-    if 160 <= pcs <= 200:
-        return "160-200"
+    if 80 <= pcs <= 120:
+        return "80-120"
+    if 121 <= pcs <= 160:
+        return "121-160"
+    if 161 <= pcs <= 198:
+        return "161-198"
     return "out-of-range"
 
 
@@ -51,8 +51,8 @@ def validate(scenes: list[dict]) -> dict:
         if not isinstance(pcs, int) or isinstance(pcs, bool):
             errors.append(f"{name}: pcs must be an integer")
             pcs = -1
-        elif not 80 <= pcs <= 200:
-            errors.append(f"{name}: {pcs} PCS is outside 80-200")
+        elif not 80 <= pcs <= 198:
+            errors.append(f"{name}: {pcs} PCS is outside 80-198")
         pcs_values.append(pcs)
 
         signature = scene.get("structure_signature")
@@ -85,7 +85,7 @@ def validate(scenes: list[dict]) -> dict:
 
     if len(scenes) >= 6:
         present_bands = {band(pcs) for pcs in pcs_values}
-        missing_bands = [name for name in ("80-119", "120-159", "160-200") if name not in present_bands]
+        missing_bands = [name for name in ("80-120", "121-160", "161-198") if name not in present_bands]
         if missing_bands:
             errors.append(f"missing PCS bands: {', '.join(missing_bands)}")
 

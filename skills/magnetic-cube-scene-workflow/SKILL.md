@@ -17,7 +17,7 @@ Use this skill to produce wholesale-ready magnetic cube scene assets. The output
   hue-matched printed perimeter; never use a visible gap or contact-shadow band
   to simulate the seam.
 - Cube count must match the displayed PCS exactly. If PCS is not specified,
-  finish the scene first, keep the result within 80-200 PCS, then display the
+  finish the scene first, keep the result within 80-198 PCS, then display the
   actual modeled count; never add filler only to reach a preset number.
 - For an unspecified-PCS batch, vary PCS naturally when the finished designs
   support it, but never weaken a scene merely to force coverage of every count
@@ -167,13 +167,13 @@ For color-box creation or catalog insertion:
    - Skip themes that have no readable silhouette, no dedicated print vocabulary, or tend to become flat walls/long strips.
    - Use `MAGNETIC_SCREEN_THEMES=1` for scripted screening reports.
 6. Select core elements by PCS and visual clarity:
-   - 80-119 PCS: 1 core element.
-   - 120-169 PCS: 2 core elements.
-   - 170+ PCS: 2-3 core elements.
+   - 80-120 PCS: 1 core element.
+   - 121-160 PCS: 1-2 core elements.
+   - 161-198 PCS: 2-3 core elements.
    - Aesthetic clarity beats using every listed element.
 7. If PCS is unspecified, use aesthetic-count mode (`MAGNETIC_AESTHETIC_PCS=1`)
    with a soft planning cap. Complete the silhouette, support element and props,
-   skip generic target filling, then use the actual 80-200 PCS result.
+   skip generic target filling, then use the actual 80-198 PCS result.
 8. Build a model-based scene around one primary silhouette. Add support elements only when they improve recognizability.
 9. For each theme, apply its dedicated archetype template before filling PCS.
    For a new or recently rejected theme family, build at least three low-detail
@@ -232,7 +232,7 @@ Aim for the competitor median brightness range, not raw overexposure:
 Before final response, check:
 
 - Exact PCS count.
-- When PCS was not specified, every result is within `80-200 PCS` and the
+- When PCS was not specified, every result is within `80-198 PCS` and the
   actual modeled count is used without filler.
 - Color-box tier, carton quantity, declared net/gross weight, and carton size
   match `scripts/calculate_airplane_carton.py`; all declared weights and carton

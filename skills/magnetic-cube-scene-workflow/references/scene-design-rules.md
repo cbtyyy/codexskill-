@@ -52,14 +52,14 @@ Use the Excel column `可搭建核心元素` as the source of buildable objects.
 
 Element count by PCS:
 
-- `<120`: one main element, optional tiny figure/decor.
-- `120-169`: one main element plus one support element.
-- `170+`: one main element plus one or two support elements.
+- `80-120`: one main element, optional tiny figure/decor.
+- `121-160`: one main element plus one support element.
+- `161-198`: one main element plus one or two support elements.
 
 Reject or postpone themes where no strong buildable core exists.
 
 When the user does not specify PCS, do not select a target first. Use a soft
-80-200 PCS planning range, complete only aesthetically necessary geometry, and
+80-198 PCS planning range, complete only aesthetically necessary geometry, and
 use the final modeled count in the badge, detail totals and packaging formulas.
 
 ## Buildability Screening
@@ -126,7 +126,7 @@ Use these material/template modules before generic PCS filling:
 - Ice palace: central ice tower + bridge. Use `ice_palace_window`, `ice_crystal`, `ice_crown`, `snowflake_print`, `ice`, and `snow_stone`. Snow should stay white with seams, not gray.
 - Christmas town: brick/snow house + tree + gifts. Use `brick_snow_cap`, `roof_snow`, `xmas_tree_icon`, `xmas_tree_snow`, `wreath_print`, `gift_red`, `gift_blue`, and `fireplace`. Avoid blue ice dominance and avoid plain white/grid blocks as roof decoration.
 
-When PCS is 120-169, use one primary element plus one support element. When PCS is 170+, use one primary element plus two support elements only if they improve recognizability. If a support element weakens the subject, replace filler cubes with theme print blocks instead.
+When PCS is 121-160, use one primary element plus one support element. When PCS is 161-198, use one primary element plus two support elements only if they improve recognizability. If a support element weakens the subject, replace filler cubes with theme print blocks instead.
 
 ## Texture Rules
 
@@ -230,7 +230,7 @@ When PCS is 120-169, use one primary element plus one support element. When PCS 
 
 ## Aesthetic-First PCS Rule
 
-- When PCS is unspecified, `80-200 PCS` is the delivery range, not one fixed
+- When PCS is unspecified, `80-198 PCS` is the delivery range, not one fixed
   target. If a theme cannot reach 80 without filler, reject or redesign it. If
   it exceeds 200, simplify secondary structures while preserving the hero.
 - PCS is an output of the approved scene, not a quota that the model must fill. Stop adding cubes when the hero silhouette, supporting structure, character story, and foreground rhythm are complete.
@@ -238,10 +238,10 @@ When PCS is 120-169, use one primary element plus one support element. When PCS 
 - After the scene passes visual review, count the actual cubes and propagate that exact number to the badge, parts detail, package, dimensions, weights, and carton calculations.
 - Different themes in the same batch may have different PCS. Visual quality and theme readability take precedence over matching counts.
 - A batch of six or more scenes must include at least one result in each band:
-  `80-119`, `120-159`, and `160-200`. Do not satisfy the high band by enlarging
+  `80-120`, `121-160`, and `161-198`. Do not satisfy the high band by enlarging
   a flat platform; use a genuinely more complete building, terrain system,
   bridge, tower, courtyard, or paired core element.
-- Select support-element count from visual need: normally one primary silhouette plus one support element below 120 PCS, one or two supports at 120-159 PCS, and up to three supports at 160-200 PCS only when each support improves recognition or story. These are soft limits; delete a support that weakens the composition.
+- Select support-element count from visual need: normally one primary silhouette plus one support element at 80-120 PCS, one or two supports at 121-160 PCS, and up to three supports at 161-198 PCS only when each support improves recognition or story. These are soft limits; delete a support that weakens the composition.
 - Do not start batch production from a requested theme list. First complete and approve one full sample through particle sheet, geometry audit, raw scene, detail panel, and package-scene color matching.
 
 ## Anti-Template Layout Gate

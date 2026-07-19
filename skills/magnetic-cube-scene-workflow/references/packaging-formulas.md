@@ -3,26 +3,25 @@
 ## Cube And Box Size
 
 - Magnetic cube size: `2cm x 2cm x 2cm`.
-- Magnetic cubes connect into compact rows. The airplane-box width is fixed at
-  six connected cubes.
+- Magnetic cubes connect into compact rows. Every tier uses two connected-cube
+  layers. The packing width increases by tier to keep the airplane box compact.
 - Use these locked packing tiers and finished outside airplane-box dimensions
   (`L x W x H`):
-  - `80-120 PCS`: `10 x 6 x 2 = 120` capacity, cube occupancy
-    `20 x 12 x 4cm`, finished outside size `21.5 x 13.5 x 4.5cm`.
-  - `121-160 PCS`: `9 x 6 x 3 = 162` capacity, cube occupancy
-    `18 x 12 x 6cm`, finished outside size `19.5 x 13.5 x 6.5cm`.
-  - `161-200 PCS`: `9 x 6 x 4 = 216` capacity, cube occupancy
-    `18 x 12 x 8cm`, finished outside size `19.5 x 13.5 x 8.5cm`.
+  - `80-120 PCS`: `9 x 7 x 2 = 126` capacity, cube occupancy
+    `18 x 14 x 4cm`, finished outside size `19.5 x 15.5 x 4.5cm`.
+  - `121-160 PCS`: `10 x 8 x 2 = 160` capacity, cube occupancy
+    `20 x 16 x 4cm`, finished outside size `21.5 x 17.5 x 4.5cm`.
+  - `161-198 PCS`: `11 x 9 x 2 = 198` capacity, cube occupancy
+    `22 x 18 x 4cm`, finished outside size `23.5 x 19.5 x 4.5cm`.
 - Finished color-box length and width are each `1.5cm` larger than cube
   occupancy; finished height is `0.5cm` larger. Do not introduce a separate
   effective-inner-size field.
-- The `80-120 PCS` tier is always two layers. With six cubes across, ten cubes
-  along the length are required for 120-piece capacity; a five-cube length is
-  only 60-piece capacity and is not valid for this tier.
+- Every tier is exactly two layers. Tier widths are seven, eight, and nine
+  connected cubes; tier lengths are nine, ten, and eleven cubes respectively.
 - Tier boundaries are inclusive: `120` uses the first tier, `160` uses the
-  second tier, and `161` starts the third tier. Do not search for a different
-  box grid from the exact PCS count.
-- The production scene range remains `80-200 PCS`. The below-80 exception only
+  second tier, `161` starts the third tier, and `198` is the maximum supported
+  scene count. Do not search for a different box grid from the exact PCS count.
+- The production scene range remains `80-198 PCS`. The below-80 exception only
   allows existing audited SKUs to use the smallest box; it does not permit new
   below-80 scene generation.
 - Dimensions shown on the sheet must be outside the color box with straight dimension lines.

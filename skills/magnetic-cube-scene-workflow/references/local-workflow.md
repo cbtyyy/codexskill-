@@ -85,10 +85,10 @@ Use model-based rendering with:
 - When PCS is not specified, also set `MAGNETIC_AESTHETIC_PCS=1` and use
   `MAGNETIC_AESTHETIC_PLANNING_PCS=150`. The planning value is only a soft
   size guide; skip generic filling and publish the final modeled count if it is
-  within 80-200 PCS.
+  within 80-198 PCS.
 - Before rendering a batch, write PCS and `structure_signature` metadata, then
   run `python scripts/validate_scene_batch_diversity.py <metadata.json>`.
-  Batches of six or more must cover `80-119`, `120-159`, and `160-200`.
+  Batches of six or more must cover `80-120`, `121-160`, and `161-198`.
 - Do not set `MAGNETIC_FLAT_DETAIL_RENDER=1` for main scene rendering. Main scenes need real lit plastic material, ambient occlusion, and contact shadows.
 - Render parts-detail icons with `render_part_icons_blender.py` after the main scene render. The parts panel must prefer these real Blender icons over flat exported face textures so the scene and details share the same material, lighting, and post-processing.
 - Render parts icons with `MAGNETIC_ICON_LIGHTING_SPAN` equal to the scene metadata `scene_span`.
