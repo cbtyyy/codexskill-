@@ -1,15 +1,15 @@
 {
   "schema_version": 1,
   "library_id": "exact_factory_catalog_v3",
-  "source_policy": "Exact source-cell crops; no redraw, recolor, perspective reconstruction, sharpening, or saturation adjustment.",
+  "source_policy": "Factory-source catalog identity. Approved IDs 002, 006, 020, 026, 036, 076, 097, 107, 116, and 155 use source-faithful semantic vector redraws for clearer printing and scene rendering; all other IDs retain exact source-cell crops.",
   "particle_count": 196,
   "workbook": {
     "path": "workbooks/factory-particle-catalog-v3.xlsx",
-    "sha256": "99a0fe22a8e81bb670c6084afb586cde559ca74188e4f73ad0d3deb623caec8a"
+    "sha256": "bbdcab41bc0cd60f26602f9ca0ca312215df6f2312ff334cb1752d6f76e529f9"
   },
   "overview": {
     "path": "overview.png",
-    "sha256": "32eb0983a7d3b80c9a0b7499e9a62add9c3eb4ca5313af450a154394d5b77cfb"
+    "sha256": "bb6d69505fa868be3ccff0018a45a4b8f7521b361563667732e0bbda047eae29"
   },
   "particles": [
     {
@@ -27,10 +27,11 @@
       "kind": "cube",
       "size": "2x2x2 cm",
       "icon": "icons/002.png",
-      "sha256": "b0c1441d631178c426f6008a216458c0db0484edbaba1db1a578ddd5afb7ff9f",
+      "sha256": "358a5ef4d739b6a981ed1e91b4e1ebba1fd9b61ab88d08a47e40fb559b96d951",
       "width": 512,
       "height": 512,
-      "mode": "RGB"
+      "mode": "RGB",
+      "artwork_profile": "source_faithful_semantic_vector_v1"
     },
     {
       "id": "003",
@@ -67,10 +68,11 @@
       "kind": "cube",
       "size": "2x2x2 cm",
       "icon": "icons/006.png",
-      "sha256": "682982f6d527b7ee4bce387bf9f1c586591f4b4d285cfb5dec6a3658278cf16b",
+      "sha256": "4375c105c666261bb9f86f45de0ca2cf4ca83944706950273524e5a29e223fc4",
       "width": 512,
       "height": 512,
-      "mode": "RGB"
+      "mode": "RGB",
+      "artwork_profile": "source_faithful_semantic_vector_v1"
     },
     {
       "id": "007",
@@ -207,10 +209,11 @@
       "kind": "cube",
       "size": "2x2x2 cm",
       "icon": "icons/020.png",
-      "sha256": "955aa751293c3d0245fc202cc7fbc195018e6c4244b24e5beeda80204a9c2958",
+      "sha256": "3c7e894f37a48c8058288bb506e8326b5cfa2923a8c19915ae3d60b5140cc012",
       "width": 512,
       "height": 512,
-      "mode": "RGB"
+      "mode": "RGB",
+      "artwork_profile": "source_faithful_semantic_vector_v1"
     },
     {
       "id": "021",
@@ -267,10 +270,11 @@
       "kind": "cube",
       "size": "2x2x2 cm",
       "icon": "icons/026.png",
-      "sha256": "bd0630892afa2b5d79199e4b695dbed6fbf24cefc71aa00028a4e7c79b32580a",
+      "sha256": "c7bc5b2a5455980eddea6ec11639b316ad16a69488b7633af53756c0747535cc",
       "width": 512,
       "height": 512,
-      "mode": "RGB"
+      "mode": "RGB",
+      "artwork_profile": "source_faithful_semantic_vector_v1"
     },
     {
       "id": "027",
@@ -367,10 +371,11 @@
       "kind": "cube",
       "size": "2x2x2 cm",
       "icon": "icons/036.png",
-      "sha256": "0a63a1bc3fe4547b15b815608c8d58f8247ff5772e9f3b4b3c67c7036db44e17",
+      "sha256": "6e2bc493edaac8bd73958111cf9d8e0d0ef0b49cbbc70744007562fd91eec8be",
       "width": 512,
       "height": 512,
-      "mode": "RGB"
+      "mode": "RGB",
+      "artwork_profile": "source_faithful_semantic_vector_v1"
     },
     {
       "id": "037",
@@ -767,10 +772,11 @@
       "kind": "cube",
       "size": "2x2x2 cm",
       "icon": "icons/076.png",
-      "sha256": "4a4546fc4530ff4f602e697b36469df2181824b3a3f9297ff0c5f338f3c33801",
+      "sha256": "3ccd76fab4d22466833c2bf0e68dbd9976e5620ecd98f9e3dbbb8d674a490966",
       "width": 512,
       "height": 512,
-      "mode": "RGB"
+      "mode": "RGB",
+      "artwork_profile": "source_faithful_semantic_vector_v1"
     },
     {
       "id": "077",
@@ -977,10 +983,11 @@
       "kind": "cube",
       "size": "2x2x2 cm",
       "icon": "icons/097.png",
-      "sha256": "ae8050018da6b65fef60babe55411b48444f0d6fcb30d7034543cfea897d2248",
+      "sha256": "a3e26b55103a34ee8452fc9e9274fb357392eb8c8f5815f21cccc6a916cb31e2",
       "width": 512,
       "height": 512,
-      "mode": "RGB"
+      "mode": "RGB",
+      "artwork_profile": "source_faithful_semantic_vector_v1"
     },
     {
       "id": "098",
@@ -1077,10 +1084,11 @@
       "kind": "cube",
       "size": "2x2x2 cm",
       "icon": "icons/107.png",
-      "sha256": "5dc77c8aad0c9cfbd1a229f5402d88a179a780bc9c13ddef4dd453f3eb27217a",
+      "sha256": "9e00532c07e81eb655ec4b12728ecb3debc98528d20b296b413955e4857f438f",
       "width": 512,
       "height": 512,
-      "mode": "RGB"
+      "mode": "RGB",
+      "artwork_profile": "source_faithful_semantic_vector_v1"
     },
     {
       "id": "108",
@@ -1167,10 +1175,11 @@
       "kind": "cube",
       "size": "2x2x2 cm",
       "icon": "icons/116.png",
-      "sha256": "3c6bfa04f2eabae3bd7aa78d4e1630e3bc06a473e5f16146c21aaf199173098f",
+      "sha256": "f7a5dd091a22ad9a2d02b8183a474acdc77fbc220fe1440bb8612fd7cb0157c6",
       "width": 512,
       "height": 512,
-      "mode": "RGB"
+      "mode": "RGB",
+      "artwork_profile": "source_faithful_semantic_vector_v1"
     },
     {
       "id": "117",
@@ -1557,10 +1566,11 @@
       "kind": "cube",
       "size": "2x2x2 cm",
       "icon": "icons/155.png",
-      "sha256": "ae8edf0603c92ad0146e72f9b8f8afcdcd82f87370320c136ea6257dd2509567",
+      "sha256": "ba1a7764df50ecbf2211b4329a7ab5458b567b39bf61fd5a258f8661ade255f4",
       "width": 512,
       "height": 512,
-      "mode": "RGB"
+      "mode": "RGB",
+      "artwork_profile": "source_faithful_semantic_vector_v1"
     },
     {
       "id": "156",
@@ -1972,5 +1982,25 @@
       "height": 512,
       "mode": "RGB"
     }
-  ]
+  ],
+  "structured_redraw_profile": {
+    "name": "source_faithful_semantic_vector_v1",
+    "particle_ids": [
+      "002",
+      "006",
+      "020",
+      "026",
+      "036",
+      "076",
+      "097",
+      "107",
+      "116",
+      "155"
+    ],
+    "visible_faces": [
+      "top",
+      "front",
+      "right"
+    ]
+  }
 }

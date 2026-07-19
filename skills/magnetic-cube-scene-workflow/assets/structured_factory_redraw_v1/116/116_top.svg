@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="20mm" height="20mm" viewBox="0 0 32 32" shape-rendering="crispEdges">
+<title>116 顶面 structured redraw</title>
+<metadata>structured semantic redraw; no embedded raster; no tracing; physical-size=20mm</metadata>
+<rect x="0" y="0" width="32" height="32" fill="#e58f95"/>
+<rect x="8" y="0" width="8" height="4" fill="#f0a8aa"/>
+<rect x="12" y="0" width="4" height="8" fill="#ed9ca1"/>
+<rect x="16" y="0" width="8" height="4" fill="#f0a8aa"/>
+<rect x="20" y="0" width="4" height="8" fill="#f0a8aa"/>
+<rect x="24" y="0" width="4" height="4" fill="#d77f87"/>
+<rect x="28" y="0" width="4" height="4" fill="#ed9ca1"/>
+<rect x="0" y="4" width="4" height="4" fill="#d77f87"/>
+<rect x="4" y="4" width="4" height="4" fill="#d77f87"/>
+<rect x="8" y="4" width="4" height="4" fill="#d77f87"/>
+<rect x="12" y="4" width="4" height="4" fill="#f0a8aa"/>
+<rect x="16" y="4" width="4" height="4" fill="#d77f87"/>
+<rect x="28" y="4" width="4" height="4" fill="#d77f87"/>
+<rect x="0" y="8" width="4" height="8" fill="#d77f87"/>
+<rect x="4" y="8" width="4" height="4" fill="#d77f87"/>
+<rect x="8" y="8" width="4" height="8" fill="#cf747e"/>
+<rect x="12" y="8" width="8" height="4" fill="#d77f87"/>
+<rect x="20" y="8" width="4" height="4" fill="#ed9ca1"/>
+<rect x="24" y="8" width="4" height="4" fill="#ed9ca1"/>
+<rect x="28" y="8" width="4" height="4" fill="#d77f87"/>
+<rect x="0" y="12" width="4" height="4" fill="#cf747e"/>
+<rect x="4" y="12" width="4" height="4" fill="#ed9ca1"/>
+<rect x="8" y="12" width="8" height="8" fill="#ed9ca1"/>
+<rect x="12" y="12" width="4" height="8" fill="#f0a8aa"/>
+<rect x="20" y="12" width="4" height="4" fill="#ed9ca1"/>
+<rect x="28" y="12" width="4" height="8" fill="#cf747e"/>
+<rect x="0" y="16" width="4" height="4" fill="#f0a8aa"/>
+<rect x="4" y="16" width="4" height="4" fill="#cf747e"/>
+<rect x="8" y="16" width="8" height="8" fill="#ed9ca1"/>
+<rect x="12" y="16" width="4" height="4" fill="#d77f87"/>
+<rect x="16" y="16" width="8" height="4" fill="#cf747e"/>
+<rect x="20" y="16" width="4" height="8" fill="#d77f87"/>
+<rect x="8" y="20" width="4" height="8" fill="#f0a8aa"/>
+<rect x="16" y="20" width="8" height="8" fill="#d77f87"/>
+<rect x="20" y="20" width="4" height="8" fill="#ed9ca1"/>
+<rect x="24" y="20" width="8" height="8" fill="#f0a8aa"/>
+<rect x="28" y="20" width="4" height="4" fill="#cf747e"/>
+<rect x="4" y="24" width="4" height="4" fill="#cf747e"/>
+<rect x="8" y="24" width="8" height="4" fill="#d77f87"/>
+<rect x="12" y="24" width="4" height="8" fill="#ed9ca1"/>
+<rect x="24" y="24" width="8" height="4" fill="#cf747e"/>
+<rect x="28" y="24" width="4" height="4" fill="#ed9ca1"/>
+<rect x="0" y="28" width="4" height="4" fill="#ed9ca1"/>
+<rect x="12" y="28" width="8" height="4" fill="#cf747e"/>
+<rect x="16" y="28" width="8" height="4" fill="#f0a8aa"/>
+<rect x="20" y="28" width="4" height="4" fill="#f0a8aa"/>
+<rect x="24" y="28" width="4" height="4" fill="#d77f87"/>
+</svg>

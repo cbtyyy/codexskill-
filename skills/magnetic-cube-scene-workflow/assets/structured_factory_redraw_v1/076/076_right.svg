@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="20mm" height="20mm" viewBox="0 0 32 32" shape-rendering="crispEdges">
+<title>076 右侧面 structured redraw</title>
+<metadata>structured semantic redraw; no embedded raster; no tracing; physical-size=20mm</metadata>
+<rect x="0" y="0" width="32" height="32" fill="#a96d22"/>
+<rect x="0" y="2" width="32" height="12" fill="#b97826"/>
+<rect x="0" y="17" width="32" height="13" fill="#a96d22"/>
+<rect x="2" y="4" width="4" height="1" fill="#80531d"/>
+<rect x="8" y="7" width="3" height="1" fill="#d08c32"/>
+<rect x="20" y="5" width="4" height="1" fill="#8d5d21"/>
+<rect x="26" y="9" width="3" height="1" fill="#c1812d"/>
+<rect x="3" y="11" width="5" height="1" fill="#916123"/>
+<rect x="22" y="12" width="3" height="1" fill="#ce8931"/>
+<rect x="2" y="19" width="4" height="1" fill="#80531d"/>
+<rect x="8" y="22" width="3" height="1" fill="#c1812d"/>
+<rect x="21" y="19" width="4" height="1" fill="#95631f"/>
+<rect x="27" y="23" width="3" height="1" fill="#ca8731"/>
+<rect x="3" y="27" width="5" height="1" fill="#8e5d20"/>
+<rect x="21" y="28" width="3" height="1" fill="#c5842f"/>
+<rect x="0" y="0" width="32" height="2" fill="#3d3b36"/>
+<rect x="0" y="14" width="32" height="3" fill="#3a3a37"/>
+<rect x="0" y="30" width="32" height="2" fill="#3d3b36"/>
+</svg>

@@ -49,6 +49,14 @@ Use this skill to produce wholesale-ready magnetic cube scene assets. The output
   It preserves the registered top/front/right artwork, strengthens readable
   edges, and lightly blends only internal high-frequency blocks. Do not apply
   another sharpen, blur, saturation, or mosaic pass in scene composition.
+- Approved structured-redraw exception: Table 2 IDs `002`, `006`, `020`,
+  `026`, `036`, `076`, `097`, `107`, `116`, and `155` use the locked vector
+  sources in `assets/structured_factory_redraw_v1/` and their 512 px runtime
+  copies in `assets/dual_factory_library/table2_faces/`. Use these files
+  directly. Do not enlarge the old thumbnail, rerun the fine-print filter, or
+  generate replacement markings.
+- Run `scripts/validate_structured_factory_redraw.py` after editing any of
+  those vector sources, runtime faces, catalog icons, or manifest records.
 - Mixed-library scenes are allowed. Every parts-detail cell must show the
   source-aware label from the manifest, such as `表1-026` or `表2-026`, with
   `×quantity` centered below the cube. A bare `026` is invalid in a mixed scene.
@@ -193,9 +201,10 @@ For color-box creation or catalog insertion:
       dimensions from `references/packaging-formulas.md`; never infer a new box
       grid from the exact PCS count.
     - Weight is locked to `0.0025kg` per cube plus `0.070kg` per finished color
-      box. Carton quantity is the largest multiple of `12` whose declared gross
-      weight is at most `22kg`; declared net weight rounds upward to `0.5kg`,
-      and declared gross weight is net plus `1.5kg`.
+      box. The `19.5 x 15.5 x 4.5cm` first tier is fixed at `36` boxes per
+      carton. Higher tiers use the largest multiple of `12` whose declared
+      gross weight is at most `22kg`; declared net weight rounds upward to
+      `0.5kg`, and declared gross weight is net plus `1.5kg`.
 11. Run `work/audit_scene_geometry_blender.py` before catalog composition. Reject any duplicate, enclosed, hidden, low-visibility, wrong-size, or unexpected non-figure component.
 12. Compare against competitor references before stopping. If it looks like colored material blocks instead of a recognizable scene, revise the model/texture plan.
 13. When color direction is not approved, render the same geometry in controlled saturation variants. Do not change the model, materials, PCS, or layout between variants, and validate scene/detail/package tone separately for each variant.

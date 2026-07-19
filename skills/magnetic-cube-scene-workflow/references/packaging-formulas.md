@@ -33,6 +33,9 @@ Use the user's fixed rule:
 - One cube weight: `0.0025kg`.
 - One finished color box weight: `0.070kg`.
 - Carton quantity must be a multiple of `12`.
+- The `80-120 PCS` / `19.5 x 15.5 x 4.5cm` tier is fixed at `36` color boxes
+  per master carton. Do not increase it even when the weight limit permits a
+  larger quantity.
 - Exact packed-box weight = `pcs * 0.0025 + 0.070` kg.
 - Exact packed-carton weight before the master-carton allowance =
   `exact packed-box weight * carton quantity`.
@@ -40,7 +43,8 @@ Use the user's fixed rule:
   This conservative rounding is required because a 12-multiple quantity will
   generally not produce an exact integer or half-kilogram result.
 - Declared gross weight = declared net weight + `1.5kg`.
-- Choose the largest multiple of `12` where declared gross weight is `<=22kg`.
+- For `121-198 PCS`, choose the largest multiple of `12` where declared gross
+  weight is `<=22kg` and the HTML layout is valid.
 - Under this user-specific convention, declared net weight includes the 70g
   color box. Label it as packed-goods net weight internally; customs pure net
   weight would require a separate cube-only calculation.
@@ -62,10 +66,12 @@ Match `D:/Users/Administrator/Desktop/整合系统.html`:
   carton quantity exactly.
 - Add corrugation and clearance, then round every carton dimension upward to an
   integer or `0.5cm`.
-- Label the largest finished dimension as carton length. Sort the remaining two
-  so width is the smaller and height is the larger.
-- Enforce the HTML limits: height `40-78cm`, width at most `60cm`, length at
-  most `91.44cm`, and reject length/height ratios above `2.5`.
+- Keep the HTML placement axes fixed as carton length, width, and height. Never
+  sort or rename dimensions after calculation.
+- Enforce the HTML limits: carton length and carton height must both be greater
+  than carton width; width must be `22-60cm`; height must be `40-78cm`; length
+  must be at most `91.44cm`; both the length/height ratio and the largest
+  length-or-height divided by width must be at most `2.5`.
 - Use the HTML scoring rule to select the preferred valid layout.
 
 ## Table Labels

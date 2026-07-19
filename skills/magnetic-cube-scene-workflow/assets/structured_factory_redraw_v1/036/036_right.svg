@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="20mm" height="20mm" viewBox="0 0 32 32" shape-rendering="crispEdges">
+<title>036 右侧面 structured redraw</title>
+<metadata>structured semantic redraw; no embedded raster; no tracing; physical-size=20mm</metadata>
+<rect x="0" y="0" width="32" height="32" fill="#b87d55"/>
+<rect x="0" y="7" width="32" height="2" fill="#72503e"/>
+<rect x="0" y="15" width="32" height="2" fill="#72503e"/>
+<rect x="0" y="23" width="32" height="2" fill="#72503e"/>
+<rect x="18" y="0" width="1" height="6" fill="#805642"/>
+<rect x="21" y="2" width="2" height="1" fill="#d29a70"/>
+<rect x="15" y="4" width="1" height="1" fill="#8a5c44"/>
+<rect x="28" y="2" width="4" height="1" fill="#6f4937"/>
+<rect x="11" y="5" width="1" height="1" fill="#d29a70"/>
+<rect x="6" y="1" width="1" height="1" fill="#6f4937"/>
+<rect x="23" y="3" width="1" height="1" fill="#d29a70"/>
+<rect x="2" y="5" width="1" height="1" fill="#8a5c44"/>
+<rect x="9" y="9" width="1" height="6" fill="#805642"/>
+<rect x="17" y="14" width="1" height="1" fill="#d29a70"/>
+<rect x="1" y="10" width="1" height="1" fill="#8a5c44"/>
+<rect x="6" y="14" width="4" height="1" fill="#8a5c44"/>
+<rect x="28" y="10" width="2" height="1" fill="#d29a70"/>
+<rect x="18" y="12" width="1" height="1" fill="#8a5c44"/>
+<rect x="16" y="10" width="2" height="1" fill="#6f4937"/>
+<rect x="3" y="11" width="1" height="1" fill="#d29a70"/>
+<rect x="21" y="17" width="1" height="6" fill="#805642"/>
+<rect x="17" y="18" width="4" height="1" fill="#6f4937"/>
+<rect x="12" y="21" width="1" height="1" fill="#d29a70"/>
+<rect x="24" y="21" width="2" height="1" fill="#6f4937"/>
+<rect x="7" y="22" width="2" height="1" fill="#8a5c44"/>
+<rect x="10" y="22" width="2" height="1" fill="#6f4937"/>
+<rect x="3" y="21" width="2" height="1" fill="#6f4937"/>
+<rect x="21" y="19" width="4" height="1" fill="#6f4937"/>
+<rect x="13" y="25" width="1" height="6" fill="#805642"/>
+<rect x="25" y="30" width="2" height="1" fill="#6f4937"/>
+<rect x="8" y="26" width="1" height="1" fill="#8a5c44"/>
+<rect x="22" y="29" width="2" height="1" fill="#d29a70"/>
+<rect x="28" y="30" width="1" height="1" fill="#6f4937"/>
+<rect x="19" y="30" width="4" height="1" fill="#8a5c44"/>
+<rect x="2" y="27" width="4" height="1" fill="#8a5c44"/>
+<rect x="29" y="28" width="4" height="1" fill="#8a5c44"/>
+</svg>

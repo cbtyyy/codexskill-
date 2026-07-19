@@ -11,6 +11,7 @@ COLOR_BOX_WEIGHT_KG = 0.070
 GROSS_ALLOWANCE_KG = 1.5
 MAX_GROSS_KG = 22.0
 QUANTITY_MULTIPLE = 12
+FIRST_TIER_CARTON_QUANTITY = 36
 
 CORRUGATION_CM = 0.6
 LOGISTICS_CLEARANCE_CM = 0.5
@@ -57,7 +58,12 @@ def carton_weight_options(
 ) -> tuple[float, list[tuple[int, float, float, float]]]:
     packed_box_weight = pcs * CUBE_WEIGHT_KG + COLOR_BOX_WEIGHT_KG
     valid: list[tuple[int, float, float, float]] = []
-    for quantity in range(QUANTITY_MULTIPLE, 1000, QUANTITY_MULTIPLE):
+    quantities = (
+        [FIRST_TIER_CARTON_QUANTITY]
+        if pcs <= 120
+        else range(QUANTITY_MULTIPLE, 1000, QUANTITY_MULTIPLE)
+    )
+    for quantity in quantities:
         exact = packed_box_weight * quantity
         declared_net = round_up_half(exact)
         declared_gross = declared_net + GROSS_ALLOWANCE_KG
@@ -72,57 +78,61 @@ def html_carton_layout(
     color_box: tuple[float, float, float], quantity: int
 ) -> tuple[tuple[int, int, int], tuple[float, float, float]]:
     length, width, height = color_box
-    # Exact airplane-box axis mapping from the supplied HTML: H, L, W.
-    units = (height, length, width)
     padding = CORRUGATION_CM + LOGISTICS_CLEARANCE_CM
-    candidates: list[tuple[float, tuple[int, int, int], tuple[float, float, float]]] = []
+    orientations = (
+        ("HxLxW", (height, length, width)),
+        ("HxWxL", (height, width, length)),
+    )
 
-    for length_count in range(1, quantity + 1):
-        for row_count in range(1, quantity + 1):
-            per_layer = length_count * row_count
-            if quantity % per_layer:
-                continue
-            layer_count = quantity // per_layer
-            counts = (length_count, row_count, layer_count)
-            inner = tuple(
-                count * (unit + BOX_DIRECTION_ALLOWANCE_CM)
-                for count, unit in zip(counts, units)
-            )
-            placement_outer = tuple(round_up_half(value + padding) for value in inner)
-            sorted_outer = sorted(placement_outer, reverse=True)
-            carton_length = sorted_outer[0]
-            carton_width = min(sorted_outer[1:])
-            carton_height = max(sorted_outer[1:])
-            aspect_ratio = carton_length / carton_height
-
-            if aspect_ratio > 2.5:
-                continue
-            if carton_width >= 20 and carton_height <= carton_width:
-                continue
-            if not MIN_OUTER_HEIGHT_CM <= carton_height <= MAX_OUTER_HEIGHT_CM:
-                continue
-            if carton_length > MAX_OUTER_LENGTH_CM or carton_width > MAX_OUTER_WIDTH_CM:
-                continue
-
-            penalty = 50 if aspect_ratio > 1.8 else 0
-            score = (
-                100
-                - abs(1 - aspect_ratio) * 30
-                - abs(carton_height - TARGET_OUTER_HEIGHT_CM) * 0.5
-                - penalty
-            )
-            candidates.append(
-                (
-                    score,
-                    counts,
-                    (carton_length, carton_width, carton_height),
+    for _, units in orientations:
+        candidates: list[
+            tuple[float, tuple[int, int, int], tuple[float, float, float]]
+        ] = []
+        for length_count in range(1, quantity + 1):
+            for row_count in range(1, quantity + 1):
+                per_layer = length_count * row_count
+                if quantity % per_layer:
+                    continue
+                layer_count = quantity // per_layer
+                counts = (length_count, row_count, layer_count)
+                inner = tuple(
+                    count * (unit + BOX_DIRECTION_ALLOWANCE_CM)
+                    for count, unit in zip(counts, units)
                 )
-            )
+                outer_l, outer_w, outer_h = tuple(
+                    round_up_half(value + padding) for value in inner
+                )
+                if outer_l <= outer_w or outer_h <= outer_w:
+                    continue
+                if not 22.0 <= outer_w <= MAX_OUTER_WIDTH_CM:
+                    continue
+                if not MIN_OUTER_HEIGHT_CM <= outer_h <= MAX_OUTER_HEIGHT_CM:
+                    continue
+                if outer_l > MAX_OUTER_LENGTH_CM:
+                    continue
 
-    if not candidates:
-        raise ValueError("No carton layout satisfies the supplied HTML constraints")
-    _, arrangement, carton = max(candidates, key=lambda candidate: candidate[0])
-    return arrangement, carton
+                aspect_ratio = max(outer_l, outer_h) / min(outer_l, outer_h)
+                overall_ratio = max(outer_l, outer_h) / outer_w
+                if aspect_ratio > 2.5 or overall_ratio > 2.5:
+                    continue
+
+                penalty = 50 if aspect_ratio > 1.8 else 0
+                score = (
+                    100
+                    - abs(1 - aspect_ratio) * 30
+                    - abs(outer_h - TARGET_OUTER_HEIGHT_CM) * 0.5
+                    - max(0, overall_ratio - 1) * 10
+                    - penalty
+                )
+                candidates.append((score, counts, (outer_l, outer_w, outer_h)))
+
+        if candidates:
+            # Python max keeps the first layout on a score tie, matching the
+            # HTML's stable Array.sort over the same loop order.
+            _, arrangement, carton = max(candidates, key=lambda item: item[0])
+            return arrangement, carton
+
+    raise ValueError("No carton layout satisfies the supplied HTML constraints")
 
 
 def calculate(

@@ -48,6 +48,12 @@ rectangular panel or a white halo around the cube.
 - Table 2 runtime textures are the perspective-rectified top, front, and right
   faces only. Broad studio-light gradients may be reduced, but print lines,
   palette, and source image identity must not be redrawn or invented.
+- Approved exception: Table 2 IDs `002`, `006`, `020`, `026`, `036`, `076`,
+  `097`, `107`, `116`, and `155` use the source-faithful semantic vector
+  profile `source_faithful_semantic_vector_v1`. Their top/front/right artwork
+  is locked in `assets/structured_factory_redraw_v1/`, with 512 px runtime
+  files referenced by `table2_manifest.json`. These files replace the earlier
+  raster enlargements without changing ID, pattern semantics, or factory color.
 - When a Table 2 record contains multiple source drawings, the topmost visible
   source drawing is the runtime primary. The workbook still preserves every
   drawing object associated with that record.
@@ -57,6 +63,8 @@ rectangular panel or a white halo around the cube.
 ## Fine Print Texture Profile
 
 - The locked runtime profile is `fine_print_v4_balanced_smooth` for both tables.
+- The 10 structured-redraw IDs listed above are the explicit exception: load
+  their manifest files directly and do not apply the v4 filter a second time.
 - Preserve source artwork, face registration, line positions, and every
   ID-to-image relationship. This profile is a restrained print finish, not a
   redraw or content-generation pass.
