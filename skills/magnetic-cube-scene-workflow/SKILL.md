@@ -1,6 +1,6 @@
 ---
 name: magnetic-cube-scene-workflow
-description: Generate and refine production-ready magnetic cube product scenes, approved-format catalog/SKU images, parts-detail panels, and optional packaging specifications. Use when the user asks for magnetic cube scene pictures, “这种图片”, SKU资料图, multi-theme generation from Excel, same-size aligned cube modeling, PCS-accurate parts lists, competitor-style optimization, or color-box/carton work. Default scene-image requests to the approved blue catalog template with 12-15 particle types unless the user explicitly requests another layout.
+description: Generate and refine production-ready magnetic cube product scenes, catalog/SKU images, parts-detail panels, and packaging specifications from factory Excel and artwork. Use for 厂图搭建场景, magnetic cube scene images, SKU资料图, dimensional 2x2x2 cm and 4x2x2 cm particle modeling, PCS-accurate parts lists, competitor-style optimization, color boxes, or carton work. Default scene-image requests to the approved blue catalog template with 12-15 particle types unless the user explicitly requests another layout.
 ---
 
 # Magnetic Cube Scene Workflow
@@ -10,7 +10,14 @@ Use this skill to produce wholesale-ready magnetic cube scene assets. The output
 ## Non-Negotiables
 
 - Model first. Do not rely on image generation for cube geometry.
-- Every cube must be identical size, square/cubic, grid-aligned, and line-to-line connected when part of the scene.
+- Read the particle's physical size before modeling. A `2x2x2 cm` particle is
+  one unit cube. A `4x2x2 cm` particle is one `2x1x1` rectangular prism: it
+  occupies two grid cells but still counts as one object and `1 PCS`. Never
+  split it into two cubes or add an internal seam. Rotation may make a door
+  upright, but rotation must not change its physical proportions.
+- Unit cubes and dimensional particles must be grid-aligned and line-to-line
+  connected when part of the scene. All instances of the same physical SKU
+  must use the same dimensions.
 - In strict magnetic-cube renders, every modeled coordinate must be an integer
   grid point, cube edge length must equal exactly one grid unit, and adjacent
   faces must share the same plane. Use only a near-zero bevel and a thin
@@ -168,7 +175,10 @@ For color-box creation or catalog insertion:
      `right`, `back`, `top`, and `bottom` artwork. The current dual-table
      fixed-camera catalog is the explicit exception and uses only source-backed
      top/front/right.
-   - Render every particle as one identical 3D cube and review the unit-cube contact sheet.
+   - Render each particle with the physical dimensions registered in the
+     authoritative manifest. Review unit cubes and dimensional particles in
+     separate contact sheets; do not normalize a rectangular particle into a
+     cube for scene or detail rendering.
    - Save the approved set as a versioned particle manifest with relative paths and SHA-256 hashes. Scene code may reference only manifest materials.
    - If modeling reveals a missing particle, return to the particle library, add and re-audit it; never draw an improvised texture inside the scene stage.
    - Mix natural, clean graphic, and illustrated particles according to the theme. Do not force the entire set into pixel art.
@@ -212,7 +222,12 @@ For color-box creation or catalog insertion:
       carton. Higher tiers use the largest multiple of `12` whose declared
       gross weight is at most `22kg`; declared net weight rounds upward to
       `0.5kg`, and declared gross weight is net plus `1.5kg`.
-11. Run `work/audit_scene_geometry_blender.py` before catalog composition. Reject any duplicate, enclosed, hidden, low-visibility, wrong-size, or unexpected non-figure component.
+11. Run `work/audit_scene_geometry_blender.py` before catalog composition. For
+    the latest MC catalog, also use
+    `scripts/mc_particle_geometry_blender.py` and reject physical grid-cell
+    overlap. PCS is the number of particle objects, not occupied grid cells.
+    Reject any duplicate, enclosed, hidden, low-visibility, wrong-size, or
+    unexpected non-figure component.
 12. Compare against competitor references before stopping. If it looks like colored material blocks instead of a recognizable scene, revise the model/texture plan.
 13. When color direction is not approved, render the same geometry in controlled saturation variants. Do not change the model, materials, PCS, or layout between variants, and validate scene/detail/package tone separately for each variant.
 14. For the two-table factory catalog, render the main scene and every detail
