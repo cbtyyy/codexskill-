@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="20mm" height="20mm" viewBox="0 0 32 32" shape-rendering="crispEdges">
+<title>097 正面 structured semantic redraw</title>
+<metadata>registered 32-unit semantic vector redraw; no embedded raster; physical-size=20mm</metadata>
+<rect x="0" y="0" width="32" height="32" fill="#9b6e2d"/>
+<rect x="1" y="1" width="30" height="30" fill="#815923"/>
+<rect x="3" y="3" width="12" height="8" fill="#5a421f"/>
+<rect x="17" y="3" width="12" height="8" fill="#5a421f"/>
+<rect x="5" y="4" width="4" height="5" fill="#dce5e5"/>
+<rect x="5" y="4" width="4" height="1" fill="#ffffff"/>
+<rect x="10" y="4" width="4" height="5" fill="#dce5e5"/>
+<rect x="10" y="4" width="4" height="1" fill="#ffffff"/>
+<rect x="19" y="4" width="4" height="5" fill="#dce5e5"/>
+<rect x="19" y="4" width="4" height="1" fill="#ffffff"/>
+<rect x="24" y="4" width="4" height="5" fill="#dce5e5"/>
+<rect x="24" y="4" width="4" height="1" fill="#ffffff"/>
+<rect x="3" y="13" width="26" height="2" fill="#5b421f"/>
+<rect x="15" y="1" width="2" height="30" fill="#66471f"/>
+<rect x="3" y="17" width="12" height="11" fill="#9d702d"/>
+<rect x="17" y="17" width="12" height="11" fill="#9d702d"/>
+<rect x="4" y="18" width="10" height="1" fill="#bb8838"/>
+<rect x="18" y="18" width="10" height="1" fill="#bb8838"/>
+<rect x="24" y="14" width="4" height="2" fill="#252b2b"/>
+</svg>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="20mm" height="20mm" viewBox="0 0 32 32" shape-rendering="crispEdges">
+<title>073 顶面 structured semantic redraw</title>
+<metadata>registered 32-unit semantic vector redraw; no embedded raster; physical-size=20mm</metadata>
+<rect x="0" y="0" width="32" height="32" fill="#b98a50"/>
+<rect x="0" y="0" width="32" height="11" fill="#f2eee5"/>
+<rect x="0" y="11" width="32" height="21" fill="#b53939"/>
+<rect x="0" y="11" width="32" height="3" fill="#d65a54"/>
+<rect x="2" y="2" width="28" height="2" fill="#ffffff"/>
+<rect x="3" y="16" width="26" height="2" fill="#c84843"/>
+</svg>

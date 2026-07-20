@@ -36,6 +36,12 @@ Use this skill to produce wholesale-ready magnetic cube scene assets. The output
   `assets/exact_factory_catalog_v3/` as the authoritative ID-to-image and
   parts-detail source. Its perspective icons are catalog references only; use
   verified top/front/right face assets for modeled scene materials.
+- For requests that mention the latest MC factory catalog, `MC零件对照表`, or
+  the July 2026 canonical redraw, read
+  `references/mc-factory-catalog-20260720.md` and use
+  `assets/mc_factory_catalog_20260720/` as the authoritative source. The Excel
+  cell ID owns the artwork identity. Use `face_png/` for Blender rendering and
+  retain `face_svg/` plus `particle_svg/` as the scalable master artwork.
 - For the current two-table factory catalog, read
   `references/dual-factory-particle-libraries.md` and use
   `assets/dual_factory_library/` as the authoritative source. Keep every key
@@ -120,6 +126,7 @@ For scene pictures, SKU images, catalog sheets, “这种图片”, or requests 
 
 1. Read [references/approved-catalog-template.md](references/approved-catalog-template.md).
 2. Read [references/exact-factory-catalog-v3.md](references/exact-factory-catalog-v3.md) for current ID and detail-panel identity, [references/dual-factory-particle-libraries.md](references/dual-factory-particle-libraries.md) for two-table runtime face work, or [references/factory-particle-library.md](references/factory-particle-library.md) for the legacy locked set, and validate the selected manifest before rendering.
+   For the latest MC factory catalog, use [references/mc-factory-catalog-20260720.md](references/mc-factory-catalog-20260720.md) instead and run `scripts/validate_mc_factory_catalog_20260720.py`.
 3. Use [assets/approved-catalog-template.png](assets/approved-catalog-template.png) as the visual acceptance target.
 4. Compose with `scripts/compose_approved_catalog_sheet.py`; do not restart background/layout exploration unless the user explicitly asks.
 5. Treat packaging as a separate optional workflow. Do not produce color boxes when the request is only for scene/SKU images.

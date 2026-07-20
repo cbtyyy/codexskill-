@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="20mm" height="20mm" viewBox="0 0 32 32" shape-rendering="crispEdges">
+<title>073 右侧面 structured semantic redraw</title>
+<metadata>registered 32-unit semantic vector redraw; no embedded raster; physical-size=20mm</metadata>
+<rect x="0" y="0" width="32" height="32" fill="#a9773f"/>
+<rect x="0" y="0" width="32" height="8" fill="#eee9df"/>
+<rect x="0" y="8" width="32" height="3" fill="#6d4a2e"/>
+<rect x="7" y="11" width="2" height="21" fill="#815b37"/>
+<rect x="15" y="11" width="2" height="21" fill="#815b37"/>
+<rect x="23" y="11" width="2" height="21" fill="#815b37"/>
+<rect x="0" y="17" width="32" height="1" fill="#c39862"/>
+<rect x="0" y="25" width="32" height="1" fill="#c39862"/>
+</svg>
